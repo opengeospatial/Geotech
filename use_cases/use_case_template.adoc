@@ -1,0 +1,38 @@
+= Use Case: title
+
+*Version:* version number of use case, start at 1.0
+*Author:* submitter
+*Date:* YYYY-MM-DD
+
+== Description
+//brief description of use case
+
+== Goal
+//what is accomplished in the use case
+
+== Actors
+// who participates in the use case and what are their roles
+
+== Stakeholders
+//individuals or organizations with a vested interest in the outcome of the use case
+
+== Course of events
+//numbered sequence of steps that occur in the use case
+
+== Alternative course
+//optional: list of causes and effects of alternative actions in the course of events
+
+== Trigger
+//optional: event that causes the use case to be initiated
+
+== Precondition
+//optional: list of condition(s) that must be satisfied for the use case to initiate
+
+== Postcondition:
+//optional: the state of the system after the use case is fulfilled
+
+== Related use cases:
+//optional: provide links to the descriptions of other use cases documented in this effort. Link to the description document in GitHub.
+
+== Notes
+//optional: any other information

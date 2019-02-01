@@ -1,0 +1,20 @@
+= Standard: add the title of the standard or specification here
+
+*Organization:* name of organization maintaining the standard or specification
+*Version:* version number referenced
+*Date:* YYYY-MM-DD date of publication
+*Organization type:*
+//place an "X" inside the appropriate brackets below
+[ ]Standards Development Organization
+[ ]Industry Association
+[ ]Commercial
+*URL:* URL to download or buy standard
+
+== Summary
+//summary of the standard, best to just lift the Abstract or Summary from the document itself
+
+== Related standards
+//list of other standards cataloged in this effort which are related to this standard. Link to the description document in GitHub.
+
+== Applicable use cases
+//list of Use Cases developed in this effort in which the standard plays a part. Link to the description document.
