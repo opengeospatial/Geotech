@@ -34,7 +34,7 @@ This repository is open to the public and anyone can create new [Issues](https:/
 ### Download a local copy of the GitHub repository
 To get a local version of the repository, click the "Clone or download" green button and select "Open in Desktop."
 
-<img src="https://github.com/opengeospatial/IDBE-Geotech/blob/master/img/clone.png"/>
+<img src="https://github.com/opengeospatial/IDBE-Geotech/blob/master/img/clone.png" width="500"/>
 
 The local files of the repository will be placed in your filesystem. You can navigate to the files through the GitHub Desktop application. You are best-off editing the documents using your favorite text editor (lots of GitHub users like [Atom](https://atom.io/)).
 
