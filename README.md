@@ -34,7 +34,7 @@ This repository is open to the public and anyone can create new [Issues](https:/
 ### Download a local copy of the GitHub repository
 To get a local version of the repository, click the "Clone or download" green button and select "Open in Desktop."
 
-<img src="https://github.com/opengeospatial/IDBE-Geotech/img/clone.png"/>
+<img src="https://github.com/opengeospatial/IDBE-Geotech/blob/master/img/clone.png"/>
 
 The local files of the repository will be placed in your filesystem. You can navigate to the files through the GitHub Desktop application. You are best-off editing the documents using your favorite text editor (lots of GitHub users like [Atom](https://atom.io/)).
 
@@ -78,7 +78,7 @@ We promise, the end results will look very nice when rendered in HTML.
 
 Once you are finished creating new files and making edits, be sure to save your work. Then go back to GitHub Desktop and you will see changes listed to the left in the application. Under the list of changes, type in a short summary to describe your changes and optionally some more details. Then commit those changes to the repository by clicking "Commit to master" at the bottom-left. See the example below.
 
-<img src="https://github.com/opengeospatial/IDBE-Geotech/img/commit.png"/>
+<img src="https://github.com/opengeospatial/IDBE-Geotech/blob/master/img/commit.png"/>
 
 Once the commit is complete, click on "Publish branch" in the upper part of the GitHub Desktop interface. This will update the central repository with your changes.
 
