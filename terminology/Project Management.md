@@ -38,6 +38,7 @@ Owner? All to contribute.
 This follows naturally from 1.4 and 1.5. All to contribute.  Owners as per 1.4/1.5.
 
 ### 1.7 Identify significant conflicts
+Wait
 
 ### 1.8 Collate proposed solution and create draft lexicon (with commentary where required)
 Wait
