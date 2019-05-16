@@ -10,11 +10,10 @@ Complete
 Complete - although we are still accepting latecomers
 
 ### 0.3 Review and develop actions and programme
-Started - kick-off meeting will take this forward
+Started - kick-off meeting 20/5/19 will confirm this
 
 ### 0.4 Set up collaborative working platform
 This is it! NCC to add relevant docs and provide briefing.
-
 
 
 ## Stage 1 – Initial review and draft recommendations
@@ -24,14 +23,19 @@ Provisional target date: end of June
 Neil to kick this off
 
 ### 1.2 Agree general scope of terms to be considered for this study
+Neil to kick this off (as it goes with 1.`)
 
 ### 1.3 Initial identification of known troublesome terms (including online meeting)
+Owner? All to contribute.
 
 ### 1.4 Identify relevant codes, standards and publications to review
+Owner? All to contribute.
 
 ### 1.5 Identify other relevant organisations and projects (stakeholders), and make first contact
+Owner? All to contribute.
 
 ### 1.6 Collate existing terms and definitions from the above
+This follows naturally from 1.4 and 1.5. All to contribute.  Owners as per 1.4/1.5.
 
 ### 1.7 Identify significant conflicts
 
