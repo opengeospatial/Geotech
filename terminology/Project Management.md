@@ -21,6 +21,7 @@ This is it! NCC to add relevant docs and provide briefing.
 Provisional target date: end of June
 
 ### 1.1 Identify the different categories of terms that we may wish to consider
+Neil to kick this off
 
 ### 1.2 Agree general scope of terms to be considered for this study
 
