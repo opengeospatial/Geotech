@@ -19,5 +19,6 @@ NCC: I think ISO uses American English (check) so, reluctantly, I will concede t
 **This is a test**
 <details>
   <summary>Test expandable section</summary>
-  This is the text in the expandable bit
-  </details>
+  This is the text in the expandable bit.
+  Unfortunately this only seems to work in Chrome
+</details>
