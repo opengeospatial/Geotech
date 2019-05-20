@@ -17,7 +17,6 @@ e.g. standardisation or standardization
 NCC: I think ISO uses American English (check) so, reluctantly, I will concede this one!
 
 **This is a test**
-<details>
-<summary>Test expandable section</summary>
+<details><summary>Test expandable section</summary>
 This is the text in the expandable bit
 </details>
