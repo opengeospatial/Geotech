@@ -9,9 +9,10 @@ This some terms that are different/additional to EC7
 Can be used to find terms defined in all ISO standards:
 https://www.iso.org/obp/ui
 
-**OGC GeoSciML.** add link
+**OGC GeoSciML.** 
+http://docs.opengeospatial.org/is/16-008/16-008.html
 
-**CGI Geoscience Vocabularies for Linked Data.** (part used by GeoSciML). http://resource.geosciml.org/
+**CGI Geoscience Vocabularies for Linked Data.** (part used by GeoSciML). http://resource.geosciml.org/  Broken link!
 
 **OGC Observations and Measurements(O & M).**
 add link
