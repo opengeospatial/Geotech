@@ -12,7 +12,7 @@ NC: I wanted to use this term to include design models too, but this would clash
 
 From: http://nora.nerc.ac.uk/id/eprint/508530/1/C25%20Final%20011013.pdf
 
-The Observational Engineering Geological Model. These are typically 
+The **Observational Engineering Geological Model** These are typically 
 created from information generated during the site-specific ground 
 investigation and are constrained by observational and measured data and 
 should present geological information in space or time. They should verify 
@@ -28,7 +28,7 @@ associated with observational models should be reduced. However, the
 derivation of an appropriate observational model is still dependent upon 
 the knowledge and experience of those involved. 
  
-The Analytical Model. This model is used to interpret how the ground is 
+The **Analytical Model** This model is used to interpret how the ground is 
 likely to behave when it is impacted by the engineered project during the 
 construction process. Analytical models are likely to vary considerably 
 depending upon the nature of the ground, itself, and the particular 
@@ -42,16 +42,26 @@ This doc also has a definition (on page 9) of 'Ground model' same as eng geol mo
 
 Suggest:
 
-**(Observational) (Engineering) Geological model** for interpreted models.
+**Observational (Engineering Geological) model** for interpreted models.
 Any parameters included 'should' be informative, e.g. summary of observed data, rather than for design
-Ground model is alternative term (but best avoid as its ambigious). 
-Also avoid using 'geotechnical model model' for this.
+Ground model is alternative term (but maybe best avoid as its ambigious). 
+Also avoid using 'geotechnical model' for this - see below.
 Note also that it may not be Geological (e.g. hydrogeological)
 
 **Analytical model** for any type of model ready to be used in design or analysis.
-@Design' model acceptable altnrative.  Geotechncail design model also ok, and ties in with EC7.
+'Design' model acceptable alternative.  Prefix with Geotechnical is ok (or other domain). This would tie in with EC7 definition.
 
-We still don't have an overall  ?? model term (ground domain model - yuk!)
+**Domain prefix** options include: Geological (or Engineering Geological), Hydrogeological, Geotechnical, Geoenvironmental (or Contamination?)
+
+But We still don't have an overall ??? model term (ground domain model - yuk!)
+
+Options:
+
+Geotechnical model : NO. Implies 'design'. Also too narrow (geology and hydrogeology are not subsets of geotechnical)
+
+Geomodel: Not keen as 'Geo' can be geographic i.e. on surface as well as below surface. However, from some Google I see that the term geomodeling is sometimes used. However, it is also used by some companies and products.
+
+Ground domain model: perhaps technically correct but too cumbersome.
 
 
 
