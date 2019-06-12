@@ -1,3 +1,10 @@
+From Draft for update to EC7
+
+3.1.1.13 **geotechnical unit**: 
+volume of ground or ground layer that is defined as a single material in a Geotechnical Design Model
+
+
+
 From OGC GeoscilML spec https://docs.opengeospatial.org/is/16-008/16-008.html#15
 
 8.4.1.3   **GeologicUnit**
