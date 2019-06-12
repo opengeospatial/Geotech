@@ -2,8 +2,6 @@
 
 The following are from draft revision to EC7:
 
-3.1.1.13 **geotechnical unit**: volume of ground or ground layer that is defined as a single material in a Geotechnical Design Model
-
 3.1.1.14 **Ground Model** model of the ground based on results from ground investigations and other available data
 
 NC: I wanted to use this term to include design models too, but this would clash.
