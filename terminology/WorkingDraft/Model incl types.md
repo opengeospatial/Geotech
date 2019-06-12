@@ -1,3 +1,4 @@
+## ????? Model ##
 
 The following are from draft revision to EC7:
 
@@ -5,9 +6,12 @@ The following are from draft revision to EC7:
 
 3.1.1.14 **Ground Model** model of the ground based on results from ground investigations and other available data
 
-NC: 
+NC: I wanted to use this term to include design models too, but this would clash.
 
 3.1.1.15 **Geotechnical Design Model**: ground information for engineering design purposes developed for a particular design situation and limit state
+
+
+
 
 GeoSciML has the object 'GeologicUnit', which can be of a type from this this:
 
