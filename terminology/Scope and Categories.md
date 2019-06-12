@@ -3,18 +3,24 @@ Lead: Neil Chadwick
 But anyone in terminology task team is welcome to add/edit
 
 ## Scope
-To be confirmed. Scope should naturally develop from identifying relevant categories
+Terms anticipated to be required to support and inform development of the conceptual schema for ground/geotechnical data.
+To include terms describing schema, models, components of models and project workflows. To include general terms relating to site/ground investigation, but this phase of work will not attempt to define terms for individual geotechical tests or parameters.
 
 ## Suggested categories
 
-**Phases / Elements of a workflow / project.**
-Consider the flow through desk study, ground investigation, factual data, interpretation, design, construction, monitoring. Also terms used worldwide for different project stages, e.g. feasibility, concept design, scheme design, detailed design.
+**Schema definition.**
+Clarify the technical terms relevant to data schema development and deifiaiton. These will be pre-existing terms in common use, 
+but it may be helpful to restate and possibly clarify these.
 
 **Model & types of model.**
 Define what we mean by model, and the different types of model we might consider.
 
-**Parts of a model.**
+**Components of a model.**
 e.g. geological unit
+
+**Phases / Elements of a workflow / project.**
+Consider the flow through desk study, ground investigation, factual data, interpretation, design, construction, monitoring. 
+Also terms used worldwide for different project stages, e.g. feasibility, concept design, scheme design, detailed design.
 
 **Properties / Parameters.**
 Define headings, but individual properties/parameters out of scope for Phase 1?
