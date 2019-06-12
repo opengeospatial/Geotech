@@ -2,6 +2,9 @@
 
 Lead: TBC
 
+**Stratum / Unit / Formation**.
+Clarify correct terms that we should use (engineers are pretty bad at this).
+
 **Ground? model.**
 
 We need a parent (all encompassing) term to cover ALL types of model. See Working Draft section.
