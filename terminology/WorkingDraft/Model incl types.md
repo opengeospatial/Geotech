@@ -10,7 +10,7 @@ NC: I wanted to use this term to include design models too, but this would clash
 
 3.1.1.15 **Geotechnical Design Model**: ground information for engineering design purposes developed for a particular design situation and limit stat
 
-From:
+From: http://nora.nerc.ac.uk/id/eprint/508530/1/C25%20Final%20011013.pdf
 
 The Observational Engineering Geological Model. These are typically 
 created from information generated during the site-specific ground 
