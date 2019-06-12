@@ -1,4 +1,4 @@
-##Feature##
+## Feature
 Source: The OpenGIS® Abstract Specification Topic 6: The Coverage Type and its Subtypes Version 6. 
 http://www.opengis.org/techno/abstract/00-106.pdf
 The starting point for modeling of geographic information. Abstraction of a real world phenomenon. 
