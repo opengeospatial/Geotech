@@ -5,11 +5,11 @@ Lead: TBC
 **Stratum / Unit / Formation**.
 Clarify correct terms that we should use (engineers are pretty bad at this).
 
-*NCC: (geological) Unit used by OGC, Leapfrog, BGS and others. Geotechnical unit by EC7. 
+* NCC: (geological) Unit used by OGC, Leapfrog, BGS and others. Geotechnical unit by EC7. 
 Stratum rarely found in search of relevant technical sites. Suggest we should not use stratum or stratigraphy.
 Suggest use --> XXX Unit where XXX is domain
 
-For geology, a unit may be a Group, Formation or Bed - depends on what modeller wants to represent*
+For geology, a unit may be a Group, Formation or Bed - depends on what modeller wants to represent *
 
 **Ground? model.**
 
