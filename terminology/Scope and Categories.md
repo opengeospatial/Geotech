@@ -7,6 +7,9 @@ To be confirmed. Scope should naturally develop from identifying relevant catego
 
 ## Suggested categories
 
+**Subject areas.**
+The different ground related disciplines. These are well known and well defined to most of us in our part of the industry, but less so to others in construction. e.g. geotechnical engineer vs geologist vs engineering geologist. Definitions maybe not essential here, but I think it would be helpful to include them.
+
 **Phases / Elements of a workflow / project.**
 Consider the flow through desk study, ground investigation, factual data, interpretation, design, construction, monitoring. Also terms used worldwide for different project stages, e.g. feasibility, concept design, scheme design, detailed design.
 
@@ -20,4 +23,4 @@ e.g. geological unit
 Define headings, but individual properties/parameters out of scope for Phase 1?
 
 **Ground investigation.**
-'Hole' types, reporting, other elements?
+'Hole' and 'Test' types, reporting, other elements?
