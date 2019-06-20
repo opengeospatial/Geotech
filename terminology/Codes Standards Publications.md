@@ -9,6 +9,9 @@ This some terms that are different/additional to EC7
 Can be used to find terms defined in all ISO standards:
 https://www.iso.org/obp/ui
 
+**OGC Glossary of terms.**. Useful for general stuff.
+https://www.opengeospatial.org/ogc/glossary
+
 **OGC GeoSciML.**
 http://docs.opengeospatial.org/is/16-008/16-008.html
 
@@ -19,3 +22,8 @@ add link
 
 **IAEG Commission 25 paper on geological modelling**. Engineering Geological Models - an introduction: IAEG Commission 25. S. Parry, F. J. Baynes, M. G. Culshaw, M. Eggers, J. F. Keaton, K. Lentfer, J. Novotny & D. Paul.
 http://nora.nerc.ac.uk/id/eprint/508530/1/C25%20Final%20011013.pdf
+
+**ISRM glossary (definitions of geotechnical and geological terms)
+https://www.isrm.net/gca/?id=1189
+
+

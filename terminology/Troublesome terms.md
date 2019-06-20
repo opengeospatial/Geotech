@@ -2,12 +2,13 @@
 
 Lead: TBC
 
-**Ground model.**
-NCC: My preference was to use this as a parent term covering all types of model.
-However, this term has a narrower meaning in EC7 (for modelling existing ground only, with geotechnical model used for 'design' models).
+**Stratum / Unit / Formation**.
+Clarify correct terms that we should use (engineers are pretty bad at this).
 
 **Borehole.**
 NCC: Investigations comprise much more than boreholes- we need a more generic parent terms (then borehole can be correctly used as a particular type of investigation.
+
+Options: Exploratory Hole (or Point or Profile or Location or ?), or Investigation Point (or Hole or Profile or Location or?)
 
 **Ground investigation or site investigation (or survey).**
 NCC: We (sort of) have a definition in the uk, albeit the terms are still often incorrectly used.
