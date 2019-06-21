@@ -9,4 +9,3 @@ Examples of features include almost anything that can be placed in time and spac
 cities, trees, forest stands, ecosystems, delivery vehicles, snow removal routes, oil wells, oil pipelines, oil spill, and so on. 
 Features are usually managed in groups as feature collections. The terms feature and object are often used synonymously. 
 The terms feature, feature collection and coverage are defined in line with OpenGIS."
-
