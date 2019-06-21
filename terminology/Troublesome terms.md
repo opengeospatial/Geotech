@@ -4,6 +4,9 @@ Lead: TBC
 
 **Stratum / Unit / Formation**.
 Clarify correct terms that we should use (engineers are pretty bad at this).
+Unit used by OGC, Leapfrog, BGS.
+*Stratum rarely found in search of relevant technical sites. Suggest using Unit, not stratum.*
+
 
 **Borehole.**
 NCC: Investigations comprise much more than boreholes- we need a more generic parent terms (then borehole can be correctly used as a particular type of investigation.
