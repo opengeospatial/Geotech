@@ -14,10 +14,11 @@ A digital visual representation of ground related data.
 In the context of this lexicon, this term is an all-encompassing/umbrella term used to describe any type of digital visual model 
 in the ground domain, including conceptual, observational and analytical models.
 
-***Note (if we use ground model):*** *It is recognised that some Codes and publications * 
-*define ground model more narrowly, e.g. Eurocode 7 reserves the term for an observational * 
-*model. However, for clarity it is useful define an umbrella term for models in the ground * 
-*domain and it has been decided that, in the absence of an acceptable suitable concise * 
+***Note (if we use ground model):*** 
+*It is recognised that some Codes and publications* 
+*define ground model more narrowly, e.g. Eurocode 7 reserves the term for an observational* 
+*model. However, for clarity it is useful define an umbrella term for models in the ground* 
+*domain and it has been decided that, in the absence of an acceptable suitable concise* 
 *alternative, ground model may be adopted.*
 
 ### Subsurface model
@@ -34,10 +35,10 @@ A specified sphere of activity or knowledge. In the context of this lexicon, dom
 Concise definition incorporating the category and domain of the model., and any further definition that may be required.
 Use of the formally defined category and domain names is preferred, but some acceptable alternative terms.
 
-## Name (of model)
+### Name (of model)
 Concise title that incorporates the model type and any other key information required to define the model within the context it is to be used, e.g. within a project.
 
-## Specified purpose (of model)
+### Specified purpose (of model)
 The intended and/or permitted usage of the model. May incorporate excluded uses where appropriate. Examples: (i) Visualisation of geology only; not to be used for design, (ii) EC7 design of foundations.
 
 
