@@ -6,7 +6,7 @@
 
 In the context of this lexicon, a digital visual representation of data.
 
-***Note:*** *The model may be 3D, e.g. volume model, or 2D, e.g. GIS based plan.*
+***Note:*** *The model may be 3D, e.g. volume model, or 2D, e.g. GIS based plan, or even without a defined geometric representation, like a conceptual model that points out the principle architecture of the ground (e.g. sedimentary sequence, erosions, intrusions, folding and faults).*
 
 ### Ground model or geomodel?
 
@@ -20,6 +20,9 @@ in the ground domain, including conceptual, observational and analytical models.
 *model. However, for clarity it is useful define an umbrella term for models in the ground* 
 *domain and it has been decided that, in the absence of an acceptable suitable concise* 
 *alternative, ground model may be adopted.*
+
+***Note by Jonas:***
+*Should we add that we assume that the "ground domain" includes the natural ground (including anthropogenic land fill?) and excludes artificial structures like buildings, ground imrpovement etc.?*
 
 ### Subsurface model
 A model of man-made structures or infrastructure within the ground, either existing or proposed.
