@@ -1,67 +1,63 @@
-## ????? Model ##
+#Model
 
-The following are from draft revision to EC7:
+##Model general concepts
 
-3.1.1.14 **Ground Model** model of the ground based on results from ground investigations and other available data
+###Model
 
-NC: I wanted to use this term to include design models too, but this would clash.
+In the context of this lexicon, a digital visual representation of data.
 
-3.1.1.15 **Geotechnical Design Model**: ground information for engineering design purposes developed for a particular design situation and limit stat
+***Note:*** *The model may be 3D, e.g. volume model, or 2D, e.g. GIS based plan.*
 
-From: http://nora.nerc.ac.uk/id/eprint/508530/1/C25%20Final%20011013.pdf
+###Ground model or geomodel?
 
-The **Observational Engineering Geological Model** These are typically 
-created from information generated during the site-specific ground 
-investigation and are constrained by observational and measured data and 
-should present geological information in space or time. They should verify 
-or refine the conceptual engineering geological model. In particular, they 
-should focus on potential engineering issues identified in the conceptual 
-engineering geological model but about which little or nothing is known 
-for the specific site.  Observational engineering geological models are 
-particularly relevant at the engineering design stage. Later stage 
-verification and refinement of the observational engineering geological 
-model should take place during construction. If observational models are 
-developed initially using high quality conceptual models, the uncertainties 
-associated with observational models should be reduced. However, the 
-derivation of an appropriate observational model is still dependent upon 
-the knowledge and experience of those involved. 
- 
-The **Analytical Model** This model is used to interpret how the ground is 
-likely to behave when it is impacted by the engineered project during the 
-construction process. Analytical models are likely to vary considerably 
-depending upon the nature of the ground, itself, and the particular 
-engineering process being applied. Engineering geological parameters 
-such as shear strength, hydraulic conductivity, and deformation modulus 
-have to be understood and provided in a suitably simplified but realistic 
-framework for analysis, i.e. in terms of their distribution within the 
-observational models.
+A digital visual representation of ground related data.
+In the context of this lexicon, this term is an all-encompassing/umbrella term used to describe any type of digital visual model in the ground domain,
+including conceptual, observational and analytical models.
 
-This doc also has a definition (on page 9) of 'Ground model' same as eng geol model but includes parameters.
+***Note (if we use ground model):*** *It is recognised that some Codes and publications * *define ground model more narrowly, e.g. Eurocode 7 reserves the term for an observational * *model. However, for clarity it is useful define an umbrella term for models in the ground * *domain and it has been decided that, in the absence of an acceptable suitable concise * *alternative, ground model may be adopted.*
 
-Suggest:
+###Subsurface model
+A model of man-made structures or infrastructure within the ground, either existing or proposed.
+A ground model/geomodel *(delete as applicable)* may be incorporated within the subsurface model. 
 
-**Observational (Engineering Geological) model** for interpreted models.
-Any parameters included 'should' be informative, e.g. summary of observed data, rather than for design
-Ground model is alternative term (but maybe best avoid as its ambigious). 
-Also avoid using 'geotechnical model' for this - see below.
-Note also that it may not be Geological (e.g. hydrogeological)
+###Category (of model)
+Conceptual, observational or analytical, as defined below.
 
-**Analytical model** for any type of model ready to be used in design or analysis.
-'Design' model acceptable alternative.  Prefix with Geotechnical is ok (or other domain). This would tie in with EC7 definition.
+###Domain (of model)
+A specified sphere of activity or knowledge. In the context of this lexicon, domain may include ground (parent domain), geology, hydrogeology,  geoenvironmental and geotechnical.
 
-**Domain prefix** options include: Geological (or Engineering Geological), Hydrogeological, Geotechnical, Geoenvironmental (or Contamination?)
+###Type (of model)
+Concise definition incorporating the category and domain of the model., and any further definition that may be required.
+Use of the formally defined category and domain names is preferred, but some acceptable alternative terms.
 
-But We still don't have an overall ??? model term (ground domain model - yuk!)
+##Name (of model)
+Concise title that incorporates the model type and any other key information required to define the model within the context it is to be used, e.g. within a project.
 
-Options:
-
-Geotechnical model : NO. Implies 'design'. Also too narrow (geology and hydrogeology are not subsets of geotechnical)
-
-Geomodel: Not keen as 'Geo' can be geographic i.e. on surface as well as below surface. However, from some Google I see that the term geomodeling is sometimes used. However, it is also used by some companies and products.
-
-Ground domain model: perhaps technically correct but too cumbersome.
-
-Subsurface - but include man made.
+##Specified purpose (of model)
+The intended and/or permitted usage of the model. May incorporate excluded uses where appropriate. Examples: (i) Visualisation of geology only; not to be used for design, (ii) EC7 design of foundations.
 
 
+##Categories of model
 
+###Conceptual model
+Abstract description of a system, such as geology or hydrogeology, based on understanding of local and regional processes and relationships.
+
+###Observational model
+Model predominantly based on observations and measurements of the ground. This may incorporate interpretation of anticipated conditions in areas between the observation and measurement points. Generally not suitable for direct use in analysis or design without further interpretation. Observational models should be developed from a conceptual model.
+
+###Analytical model
+Model suitable for direct use in analysis or design for a specified purpose. Normally based on development and interpretation of an observational model taking into account uncertainty, requirements of Codes and analysis/design methodology.
+
+##Types of model
+
+###Geological model
+Acceptable abbreviated description for an engineering geology observational model. This model will show the anticipated location and extent of geological units and other geological features.
+
+###Geotechnical design model
+Acceptable alternative description for a geotechnical analytical model intended for use in design. This model will define, for the specified purpose only, the location and extent of geological/geotechnical units and parameters.
+
+###Geotechnical model
+Non-preferred abbreviated form of geotechnical design model.
+
+###Hydrogeological model
+Acceptable abbreviated description for an hydrogeological observational model. This model will show the anticipated location and extent of hydrogeological units, e.g. aquifers.
