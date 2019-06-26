@@ -4,8 +4,27 @@ Lead: TBC
 
 **Stratum / Unit / Formation**.
 Clarify correct terms that we should use (engineers are pretty bad at this).
-Unit used by OGC, Leapfrog, BGS.
+**Unit** used by OGC, Leapfrog, BGS.
 *Stratum rarely found in search of relevant technical sites. Suggest using Unit, not stratum.*
+
+**Factual data**.
+(NCC- this is my thinking - not checked for existing definitions)
+The record of observations and measurements relating to the ground
+*(made in situ, remotely or in a laboratory)*.
+In order to comply with reporting requirements, a limited degree of processing and/or interpretation of the original observations and
+measurements may be required, e.g. derivation of reported results from test measurements.
+
+**Interpretation**.
+Process of....
+
+**Interpreted data/information?**.
+(NCC- this is my thinking - not checked for existing definitions) Information, including but not limited to properties or parameters, collated and/or derived from factual data.
+Interpretation should take into account the provenance of the factual data, correlation with other data, knowledge of expected conditions,  established relationships, uncertainty and intended use of the data.
+Interpretation may undertaken in several stages, e.g. (i) interpretation of anticipated geological profile followed by (ii) interpretation of a profile and parameters suitable for use in design.
+
+**Conceptual (data) model/schema**
+NCC: We have already used conceptual model. what are we (IDBE) trying to deliver. Is it a data model? Model vs Schema probably not important.
+LandInfra example http://www.opengeospatial.org/standards/landinfra.
 
 
 **Borehole.**

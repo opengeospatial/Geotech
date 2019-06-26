@@ -26,4 +26,6 @@ http://nora.nerc.ac.uk/id/eprint/508530/1/C25%20Final%20011013.pdf
 **ISRM glossary (definitions of geotechnical and geological terms)
 https://www.isrm.net/gca/?id=1189
 
-
+**OGC LandInfra**
+CC: This has some relevant terms (that are not in OGC Glossary)
+http://docs.opengeospatial.org/is/15-111r1/15-111r1.html#6
