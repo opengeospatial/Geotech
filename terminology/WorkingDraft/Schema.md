@@ -1,4 +1,4 @@
-##Feature
+## Feature
 Abstraction of a real world phenomenon for incorporation within a model. In the ground domain, examples of features include geological units, faults, water table and terrain.
 
 ## Feature - background notes
