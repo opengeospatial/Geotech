@@ -35,7 +35,7 @@ A ground model/geomodel *(delete as applicable)* may be incorporated within the 
 Conceptual, observational or analytical, as defined below.
 
 ### Domain (of model)
-A specified sphere of activity or knowledge. In the context of this lexicon, domain may include ground (parent domain), geology, hydrogeology,  geoenvironmental and geotechnical.
+A specified sphere of activity or knowledge. In the context of this lexicon, domain may include ground (parent domain), geology, geomorphology, hydrogeology,  geoenvironmental and geotechnical.
 * ***Jonas:*** This is in line with the usage of the term "domain" in IFC, although Nicks current proposal does not use "ground" but "geotechnics", which is to our understanding just a "sub-domain".
 We can also note that there are "parent" and "sub"-domains. These terms are good for our communication now, although I am not sure if we should aim to define a strict hirarchie, in the end (conceptual model task).*
 
