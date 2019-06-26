@@ -6,7 +6,12 @@
 
 In the context of this lexicon, a digital visual representation of data.
 
-***Note:*** *The model may be 3D, e.g. volume model, or 2D, e.g. GIS based plan, or even without a defined geometric representation, like a conceptual model that points out the principle architecture of the ground (e.g. sedimentary sequence, erosions, intrusions, folding and faults).*
+***Note:*** *The model may be 3D, e.g. volume model, or 2D, e.g. GIS based plan,* 
+```diff
++Jonas: *or even without a defined geometric representation, like a conceptual model that points out the principle architecture of the ground (e.g. sedimentary sequence, erosions, intrusions, folding and faults).*
+```
+
+
 
 ### Ground model or geomodel?
 
