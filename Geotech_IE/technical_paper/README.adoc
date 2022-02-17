@@ -1,0 +1,19 @@
+= Technical Paper template in Metanorma
+
+== General
+
+Technical Papers have no set structure, so organize the content as best fits your purposes
+
+== Content
+
+This GitHub repository contains the content for an OGC Technical Paper.
+
+* `document.adoc` - the main Technical Paper document with references to all sections
+* remaining ``adoc``s - each section of the Technical Paper document is in a separate document
+** follow directions in each document to populate
+* `figures` - figures go here
+* `images` - Image files for graphics go here. Image files for figures go in the `figures` directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
+
+== Building
+
+Run `make`.
