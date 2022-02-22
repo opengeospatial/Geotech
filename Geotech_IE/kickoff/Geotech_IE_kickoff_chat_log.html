@@ -1,0 +1,197 @@
+<html><head><style type="text/css"><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+body 
+{
+    max-width: 100%; /* fix our max width to 100% of our containing frame */
+    word-wrap: break-word; /* ok to break words if text wrap is needed */
+    
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    
+    line-height: 2px;
+}
+
+.msg_entry 
+{
+    font-family: arial, sans-serif;
+	display: block;
+	font-size: 14px;
+
+    /* webkit extension for rounded boxes, ok if it doesn't work */
+	-webkit-border-radius: 8px;
+	
+	/* gecko extension for rounded boxes, ok if it doesn't work */
+	-moz-border-radius: 8px;
+	
+	/* CCS3 rounded boxes, ok if it doesn't work */
+	border-radius: 8px;
+}
+
+.msg_entry h1 
+{
+	/* webkit extension for rounded boxes, ok if it doesn't work */
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes, ok if it doesn't work */
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    
+    /* CCS3 rounded boxes, ok if it doesn't work */
+    -border-bottom-right-radius: 0px;
+    -border-bottom-left-radius: 0px;
+
+    background-color: transparent;
+    
+    margin: 0px 0px;
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+    line-height: 50%;
+}
+
+.msg_entry p 
+{
+	/* webkit extension for rounded boxes */
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes */
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-topleft: 0px;
+    
+    /* CCS3 rounded boxes */
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    margin: 0px 0px;
+    line-height: 100%;
+    word-wrap: break-word; /* ok to break words if text wrap is needed */
+}
+
+.msg_entry.chat.welcome, .msg_entry.chat.message
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.chat.welcome p, .msg_entry.chat.message p
+{
+    background-color: transparent;
+}
+
+.msg_entry.chat.incoming
+{
+    margin-left: 8px;
+    margin-right: 40px;
+}
+
+.msg_entry.chat.outgoing
+{
+    margin-left: 40px;
+    margin-right: 8px;
+}
+
+.msg_entry.chat.incoming, .msg_entry.chat.outgoing
+{
+	background-color: rgb(216, 237, 254);   /* light blue */
+	border-color: rgb(216, 237, 254);       /* light blue */
+}
+
+.msg_entry.chat.incoming h1, .msg_entry.chat.outgoing h1
+{
+	color: rgb(2, 101, 203);                /* blue */
+}
+
+.msg_entry.chat.incoming.to_all
+{
+	background-color: rgb(240, 242, 245);
+}
+
+.msg_entry.chat.outgoing.to_all
+{
+    background-color: rgb(254, 237, 222);
+}
+
+.msg_entry.chat.incoming.to_all h1, .msg_entry.chat.outgoing.to_all h1
+{
+	color: rgb(0, 102, 2);                  /* green */
+}
+
+.msg_entry.chat.incoming.private, .msg_entry.chat.outgoing.private 
+{
+	background-color: rgb(254, 226, 230);
+}
+
+.msg_entry.chat.incoming.private h1, .msg_entry.chat.outgoing.private h1 
+{
+	color: rgb(153, 1, 0);                  /* red */
+}
+
+.chat-header
+{
+    font-size: 12px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a.replyTo
+{
+    color: rgb(0, 106, 500);
+    cursor: pointer;
+}
+
+.outgoing .chat-header
+{
+    color: black;
+}
+
+.timestamp
+{
+    position: relative;
+    float: right;
+    text-align: right;
+    margin-left: 16px;
+    color: darkslategrey;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+.privateDiv
+{
+    font-weight: normal;
+    color: rgb(224, 45, 82);
+    font-size: 14px;
+    padding: 6px 0px;
+}
+
+.privateFooterDiv
+{
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+hr
+{
+    margin-bottom: 10px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(225, 186, 194);
+    padding: 0;
+}
+
+</style>
+</head><body><div class="msg_entry chat outgoing to_all"><h1><div class="chat-header"><div class="timestamp">6:16 AM</div>Me to Everyone</div></h1><p>ssimmons@ogc.org</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">6:17 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200020);return false">castaing christophe</a> to Everyone</div></h1><p>many thanks for this brillant introduction</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:20 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200012);return false">Joost Gevaert</a> to Everyone</div></h1><p>Thanks for the excellent presentation Jonas! Do you have a document that describes what you just presented?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:21 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>There is no comprehensive documen(yet), but 1. the slides of today ;) and 2. the requirement analysis from 2020</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:21 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200015);return false">Neil Chadwick</a> to Everyone</div></h1><p>Thank you Jonas. Will be very interetsed in exploring the GeotechSysthesisModel concept going forward</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:23 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>but the concept is just in finalization and I am sure a detailed documentation will be elaborated soon. The essence will be shared with this group as a base for the common schema with OGC</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:24 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>@Neil: We have some more detailed slides on the GeotechSynthesisModel that could be shared, I'll check what we can distribute at this point</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:26 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200004);return false">Ryżyński Grzegorz</a> to Everyone</div></h1><p>Are the thermal parameters od subsoil (thermal conductivity and thermal capacity) also taken into account in conceptual model? They are important for thermoactive foundation elements design.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:28 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>I assume that we have some key-parameters like thermal conductivity included in the properties of "geotechnical unit". I agree that this is an impirtant application, I'll cross-check this!</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:29 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200004);return false">Ryżyński Grzegorz</a> to Everyone</div></h1><p>That's great! Thanks Jonas.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:29 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200007);return false">Joseph Kaelin</a> to Everyone</div></h1><p>Many data efforts in tunneling fail at the data capture level. Is this being addressed here?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:32 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>"Data capture level" like integration factual data to digital models?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:33 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200007);return false">Joseph Kaelin</a> to Everyone</div></h1><p>no, I am thinking of making it easy and standard to record infromation at site; in my experience this has practical links to data model requirements</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:34 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200015);return false">Neil Chadwick</a> to Everyone</div></h1><p>The extent to which we incorporate monitoring (piezometic, movement, other) data may need some thought.  May be before during or after construction! OGC O&amp;M relevant of course.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:37 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>We have two "ends" to be supported at that point:</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:38 AM</div><a class="replyTo" onclick="g2m_app.replyTo(100002);return false">Peter Baumannn</a> to Everyone</div></h1><p>I'll gladly contribute to the voxel models - if compatible with coverage standards it will be possible to combine GIS, climate, ocean, and geophysical data in services, including fusion.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:39 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200023);return false">Carlo Cipolloni</a> to Everyone</div></h1><p>Is there any possibility of working in parallel on the definition of an ontological data model somewhere in task 2?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:40 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>@Joseph: 1. a "sensor" object, making use of existing IFC concept, but has not been defined in detail for geotechnical monitoring purpose      2. if data collection on site is happening either automated or withstandardzed templates and database it can be linked to the objects of "Book A" that we developed</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:42 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200007);return false">Joseph Kaelin</a> to Everyone</div></h1><p>thanks, worth discussing further</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:43 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200018);return false">Michel Rives</a> to Everyone</div></h1><p>To add to Jonas' reply: that would incl. MWD data (into Book-A objets/data)</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:45 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200012);return false">Joost Gevaert</a> to Everyone</div></h1><p>@Peter Baumann: combining GIS, climate, ocean and geophysical data sounds like a dream. What do you mean with "fusion"?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:45 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200012);return false">Joost Gevaert</a> to Everyone</div></h1><p>dream as in great*</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:47 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>Exactly, MWD or any other data recorded automatically. What needs to happen during the processing is a first level of interpretation, like a classification based on the recorded parameters in MWD as commonly provided by the common analysis tools for these methods. This first interpretation can then be linked to the borehole object supported by the concept</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:47 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200026);return false">Jonas WEIL</a> to Everyone</div></h1><p>this was to MWD/Michel above</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:48 AM</div><a class="replyTo" onclick="g2m_app.replyTo(100002);return false">Peter Baumannn</a> to Everyone</div></h1><p>@joost gevaert: if representable as OGC/ISO coverages, then a service like WCS (Web Coverage Service) allows retrieval, including x/y/z/t subsetting. In the WCS suite there is also WCPS (Web Coverage Processing Service (WCPS), a datacube analytics language, that allows expressions combing, say, 1D sensor data, 2D maps, 3D x/y/t image timeseries and x/y/z geophysical data, 4D x/y/z/t climate data, etc. on the fly = the server deliveres the fusion result to the client.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:52 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200023);return false">Carlo Cipolloni</a> to Everyone</div></h1><p>I'm sorry but I have to leave.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:52 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200012);return false">Joost Gevaert</a> to Everyone</div></h1><p>Thanks Peter. I knew about WCS, but hadn't heard about WCPS and the opportunities it provides.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">7:56 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200011);return false">Lucas Janodet</a> to Everyone</div></h1><p>How can we indicate that we want to contribute to a specific working group?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:01 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200019);return false">Mercedes Santos</a> to Everyone</div></h1><p>Sorry, I need to go to another meeting but looking forward to hear next steps!</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:01 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200003);return false">Avila, Luis</a> to Everyone</div></h1><p>Have to hop off for another call folks. Thank you for the presentation and looking forward to the future collaboration!</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:02 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200022);return false">Allen Cadden</a> to Everyone</div></h1><p>I have to leave for another meeting as well.  Looking forward to sharing the successes of DIGGS with you all and seeing how we can benefit your efforts.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:02 AM</div><a class="replyTo" onclick="g2m_app.replyTo(100002);return false">Peter Baumannn</a> to Everyone</div></h1><p>will there be a dedicated voxel wg?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:03 AM</div><a class="replyTo" onclick="g2m_app.replyTo(100002);return false">Peter Baumannn</a> to Everyone</div></h1><p>ok, happy to give it a try + discuss</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:05 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200004);return false">Ryżyński Grzegorz</a> to Everyone</div></h1><p>Do we plan any reference to Net.CDF format that is used to efficiently store and visualize large voxel datasets?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:06 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200020);return false">castaing christophe</a> to Everyone</div></h1><p>is it clear for every body what is the next step :</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:06 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200020);return false">castaing christophe</a> to Everyone</div></h1><p>next meeting or WG and next milestone ?</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:10 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200020);return false">castaing christophe</a> to Everyone</div></h1><p>many thanks to every body, I've to leave. see you soon. May be good to report on the progress to the next technical summit of bSI.</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:10 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200015);return false">Neil Chadwick</a> to Everyone</div></h1><p>thank you</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:11 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200010);return false">GARNIER, Pierre (MERIGNAC)</a> to Everyone</div></h1><p>Thank you all</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:11 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200011);return false">Lucas Janodet</a> to Everyone</div></h1><p>Thank you</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:11 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200011);return false">Lucas Janodet</a> to Everyone</div></h1><p>Impatient to start working with you</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:11 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200004);return false">Ryżyński Grzegorz</a> to Everyone</div></h1><p>Thanks a lot! It was a pleasure to attend todays meeting. </p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:12 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200010);return false">GARNIER, Pierre (MERIGNAC)</a> to Everyone</div></h1><p>Have a nice day / afternoon / night, see you next time</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:12 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200024);return false">Dan Ponti</a> to Everyone</div></h1><p>Thank you, Scott and Mikael for organizing this experiment. Look forward to working with you all</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:12 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200013);return false">Ginger CEBTP. G.Malinge</a> to Everyone</div></h1><p>Thank you. I have to confront my desires with my working plans</p></div><br><div class="msg_entry chat incoming to_all"><h1><div class="chat-header"><div class="timestamp">8:12 AM</div><a class="replyTo" onclick="g2m_app.replyTo(200027);return false">Clément Galandrin</a> to Everyone</div></h1><p>Thank you, see you</p></div></body></html>
