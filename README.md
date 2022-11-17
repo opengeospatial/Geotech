@@ -7,7 +7,7 @@ Welcome to the Open Geospatial Consortium (OGC) Geotechnical Engineering standar
 
 This GitHub repository is the workplace for collection of use cases and identification of existing work on the topic. The repository is public to allow the maximum number of stakeholders to participate in this collection effort.
 
-If you are new to GitHub, instructions on its basic use are provided under [Using GitHub](https://github.com/opengeospatial/Geotech/blob/master/UsingGitHub.md) on this page.
+If you are new to GitHub, instructions on its basic use are provided in this [Using GitHub](https://github.com/opengeospatial/Geotech/blob/master/UsingGitHub.md) page.
 
 ## Repository Contents
 
