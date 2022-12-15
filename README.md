@@ -14,5 +14,7 @@ If you are new to GitHub, instructions on its basic use are provided in this [Us
 ### Geotech IE
 The [Geotech_IE](https://github.com/opengeospatial/Geotech/Geotech_IE) folder contains resources associated with the OGC Geotech Interoperability Experiment (IE). More information on this IE can be found at the [OGC Geotech IE initiative page](https://www.ogc.org/projects/initiatives/geotechie).
 
+For documentation, please refer to the wiki: https://github.com/opengeospatial/Geotech/wiki
+
 ### IDBE Geotech
 The [IDBE_Geotech](https://github.com/opengeospatial/Geotech/IDBE_Geotech) folder contains contains content from workshops and subsequent work performed as part of the joint OGC-bSI Integrated Digital Built Environment group. For more information on the IDBE, visit the [OGC public information page](http://www.opengeospatial.org/projects/groups/idbesc).
