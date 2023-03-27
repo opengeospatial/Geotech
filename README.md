@@ -1,7 +1,7 @@
 # Geotech
 
 <img src="http://www.opengeospatial.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" width="200"/>
- <img src="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2018/11/694_NEW_-BuildingSMART_RGB_International_colour.png" width="300"/>
+ <img src="![image](https://user-images.githubusercontent.com/17067226/228048630-9e2c9e13-48e2-432d-a241-22856962dc98.png)" width="300"/>
 
 Welcome to the Open Geospatial Consortium (OGC) Geotechnical Engineering standardization effort. Much of this effort is being performed in collaboration with buildingSMART International (bSI).
 
