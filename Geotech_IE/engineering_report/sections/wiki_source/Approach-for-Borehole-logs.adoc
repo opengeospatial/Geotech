@@ -1,0 +1,1104 @@
+[[Approach-for-Borehole-logs]]
+==== Approach for borehole logs
+
+A borehole log is a record detailing the in-situ conditions and aspects
+of geotechnical exploration activities associated with the drilling and
+sampling of a borehole. It is typically a graphical representation of
+the data collected from various locations within the hole, along with
+properties associated with the borehole, its construction, and
+associated metadata.
+
+===== Data presented on geotechnical borehole logs
+
+The specific kinds of data presented on geotechnical borehole logs
+varies greatly depending on the application, but most typically include
+descriptions of the earth materials encountered in the borehole at
+locations along the borehole’s trajectory (lithologic descriptions,
+perhaps including geological units encountered), location and
+identification of any material samples collected, summary results of any
+tests performed in the borehole or on the samples, and related
+information about the borehole as a whole (eg. name, location),
+construction/destruction information that may vary along its trajectory,
+installations, and other metadata.
+
+The following example shows a portion of a representative geotechnical
+borehole log produced for a landslide investigation by the US State of
+Ohio Department of Transportation (ODOT), and illustrates the types of
+information that may be included in such a log:
+
+.ODOT Borehole Log. Log courtesy of DataForensics, LLC and Ohio Department of Transportation. Project and location data have been anonymized, and some data altered or manufactured.
+image::https://github.com/opengeospatial/Geotech/assets/26747679/5c246338-4a49-4c3a-a65d-01a015f4e9d6[]
+
+From the log, it can be seen that the borehole was advanced by a 3.25”
+diameter hollow stem auger with continuous Standard Penetration Test
+sampling to a depth of 21 feet, at which point the advancement method
+was switched to rotary drilling with continuous rock coring (NQ2).
+Material descriptions and RQD results were made by visual inspection of
+samples recovered from the hole while it was being advanced, and other
+information resulted from laboratory testing of the recovered samples.
+The log contains the following information:
+
+Properties and metadata that apply to entire borehole
+
+[arabic]
+. Name, number and type of the project for which the borehole was
+drilled (eg. Project, PID, Type)
+. Beginning and end date for the drilling (Start, End)
+. Location data (Station/Offset, Alignment, Elevation, Lat/Long)
+. Borehole ID (Exploration ID)
+. Borehole length (EOB)
+
+Properties and metadata that apply to points
+or segments of the borehole and describe construction/destruction
+activities or information that does not directly apply to the earth
+materials encountered
+
+. Depth-specific remarks (notes) taken during drilling that note
+drilling or sampling conditions
+. Drilling methods (Drilling Method)
+. Drill rig operators (Drilling Firm, Operator)
+. Drilling equipment (Drill Rig)
+. A graphic column illustrating the depth-interval defined materials
+used to backfill the hole (in this case a bentonite/cement slurry)
+
+Observations of earth materials that occur while advancing the hole
+(in-situ observations)
+
+. Depth-interval defined material descriptions, including lithology and
+physical properties
+. Depth-specific remarks that note changes in material properties within
+a lithologic interval
+. A graphic column illustrating the depth-interval defined primary
+lithology (eg, Sandy Silt, Shale)
+. A graphic column illustrating depth-interval defined geologic units
+encountered (eg. Dunkard Group)
+. Drive set blow counts and N60 result values from SPT tests (SPT/RQD
+column above 21 ft depth, N60 column).
+
+Sampling and drilling
+activities that occur while advancing the hole
+
+. Drilling and Sampling methods (Drilling Method, Sampling Method)
+. Samplers/Observers (Sampling Firm, Logger)
+. Observing equipment and associated metadata (Hammer, Calibration Date,
+Energy Ratio)
+. Sample identifiers with their locations down hole, and recovery
+percentages (Sample ID, Rec columns)
+
+Observations from laboratory tests on samples that occur ex-situ
+
+. Results from the following tests on the samples: a) compressive
+strength from hand penetrometer (HP column), b) particle size gradation
+(Gradation columns), c) Atterberg Limits (Atterberg column, LL=liquid
+limit, PL=plastic limit, PI=plasticity index), d) natural water content
+. Soil classification of samples above 21 ft depth (ODOT Class (GI)
+column). This is a modified AASHTO classification assigned based on
+results of the particle size and Atterberg limits tests
+. RQD result from samples (SPT/RQD column below 21 ft)
+
+===== Application to the STA model
+
+A borehole log is typically a collection of several Observations and
+Sensors, along with data that are not directly observation-related, but
+all associated with one Thing (the borehole). To expose the data
+necessary to construct a borehole log, multiple queries to the FROST
+server related to the BhCollarThing of interest must be made to extract
+the information needed to populate the various components of the log.
+For the log components in the above example, below are recommended
+mappings to STA objects. With the exception of
+<<Approach-for-SPT,SPT>> and
+<<Approach-for-Atterberg-Limits,Atterberg limits>> discussed above, the other log information have not been
+considered in detail in this IE. It is also worth noting that the
+current Geotech data model and STA do not have objects specifically
+designed to handle activity information and installations that vary with
+position in the hole (eg. drill advancement data, backfill materials,
+installed casings, wells or instrument locations), or hole-point and
+hole-segment specific annotations that are not properties of earth
+materials. This information can be included within FROST as Observations
+or as properties of existing STA objects, but further evaluation of the
+data model and its STA implementation to accommodate these types of
+information is needed.
+
+*Project*
+
+Although developed as a security
+extension to represent a unit of management that ties Users in one or
+more Roles to Entities, the Project object in STA can be reasonably used
+to represent the geotechnical concept of a project, which is a business
+activity that encompasses a collection of activities, material samples,
+and observations that occur within boreholes and other sampling
+features. Example for the log above (item 1):
+
+[source,json]
+----
+    {
+    "@iot.id": 5,
+    "description": "Route 676 Improvements",
+    "name": "TEST",
+    "properties": {
+        "pid": 1116,
+        "type":"LANDSLIDE"
+        }
+    }
+----
+
+*NOTE:* Keys within the properties object should come from a
+controlled list of property terms for the Project. Different
+organizations and existing transfer standards (such as AGS and DIGGS)
+have their own keys for Project properties; this IE has not attempted to
+harmonize them to develop a standard codelist for Project:properties
+keys. For full interoperability, this harmonization is important. A
+workaround at present could be to define the context for the properties
+keys using https://json-ld.org/[json-ld].
+
+*Sensor*
+
+A Sensor instance
+should be created for each observation procedure in the log:
+
+* *Material Descriptions* (items 11, 12, 13 above)
+
+Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 15,
+        "description": "Ohio Department of Transportation Soil and Rock Descriptions",
+        "encodingType": "application/pdf",
+        "metadata":"https://www.transportation.ohio.gov/working/engineering/geotechnical/manuals/geotechnical-explorations/app/app-a",
+        "name": "Visual Soil and Rock Classification",
+        "sensorType": "Lithology Description",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *Geologic Units* (item 14) Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 16,
+        "description": "Ohio Department of Transportation Soil and Bedrock Classification",
+        "encodingType": "application/html",
+        "metadata": "https://mrdata.usgs.gov/geology/state/fips-unit.php?state=OH",
+        "name": "Geologic units in Ohio (state in United States)",
+        "sensorType": "Lithostratigraphy",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *SPT Tests* (item 15 above) See
+<<Approach-for-SPT,this discussion>> for example.
+
+* *Hand Penetrometer Tests* (item 20a above) Example
+
+[source,json]
+----
+    {
+        "@iot.id": 17,
+        "description": "Method is used to evaluate consistency and approximate unconfined compressive strength of soils by means of using a pocket penetrometer.",
+        "encodingType": "application/html",
+        "metadata": "https://www.astm.org/workitem-wk27337",
+        "name": "Pocket Penetrometer",
+        "sensorType": "Hand Penetrometer test",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *Particle Size Tests* (item 20b above) Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 18,
+        "description": "Method used to separate particles into size ranges and to determine quantitatively the mass of particles in each range. These data are combined to determine the particle-size distribution (gradation).",
+        "encodingType": "application/html",
+        "metadata": "https://www.astm.org/d6913-04r09e01.html",
+        "name": "Particle-Size Distribution (Gradation) of Soils Using Sieve Analysis",
+        "sensorType": "Particle size distribution",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *Atterberg Limits Tests* (item 20c above) See <<Approach-for-Atterberg-Limits,this discussion>> for example.
+
+* *Water Content Tests* (item 20d above) Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 19,
+        "description": "Method used to determine the water (moisture) content by mass of soil, rock, and similar materials where the reduction in mass by drying is due to loss of water, method A.",
+        "encodingType": "application/html",
+        "metadata": "https://www.astm.org/d2216-19.html",
+        "name": "Natural water content, Method A",
+        "sensorType": "Water content measure",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *ODOT Classification* (item 21 above) Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 20,        
+        "description": "Ohio Department of Transportation Soil Classification. ODOT utilizes a modified AASHTO classification system based on gradation and plastic index (PI). Percentages are based on: dry weight not volume.",
+        "encodingType": "application/pdf",
+        "metadata":"https://www.transportation.ohio.gov/working/engineering/geotechnical/manuals/geotechnical-explorations/app/app-a",
+        "name": "ODOT Soil Classification",
+        "sensorType": "Soil Classification",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+* *RQD Tests* (item 22 above) Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 21,
+        "description": "Method used to determine the rock quality designation (RQD) as a standard parameter in drill core logging of a core sample",
+        "encodingType": "application/html",
+        "metadata": "https://www.astm.org/d6032_d6032m-17.html",
+        "name": "Rock Quality Designation (RQD) of Rock Core",
+        "sensorType": "Rock Quality Designation",
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+*NOTES:*
+
+* For Sensors, the required metadata key should be a pointer to
+a resource for the specific observing procedure used.
+* The optional
+sensorType key should contain a value from a controlled list of terms
+for
+<<ObservingProcedure,ObservingProcedure>>.
+* The "`Projects`" property links the Sensor to the Project by its id.
+### BhCollarThing The BhCollarThing object is used to represent the
+borehole in its entirety. All information associated with the borehole,
+with the exception of observations, sampling and samples, its trajectory
+and locations are contained within this object. From the above log,
+these properties are in items: 2 and 4. Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 10,
+        "description": "Borehole B-001-0-20",
+        "name": "B-001-0-20",
+        "properties": {
+            "drilltartDate": "2021-01-11T00:00:00",
+            "drillEndDate": "2021-01-12T00:00:00"
+         }
+        "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+*NOTES:*
+
+* The properties keys should be values from a controlled list
+of terms for
+<<Borehole,Borehole properties>>.
+* Projects links to the associated Project object (see
+above).
+
+===== BhTrajectoryThing
+
+BhTrajectoryThing links to BhCollarThing and exposes the borehole
+lengths (item 5 above) and any offsets for downhole measurements.
+Example:
+
+[source,json]
+----
+    {
+        "@iot.id": 11,
+        "description": "Trajectory of Borehole B-001-0-20",
+        "name": "B-001-0-20 Trajectory",
+        "lengthCore": 41.0,
+        "lengthHole": 41.0,
+        "offsetCore": 0,
+        "offsetHole": 0,
+        "uom":"ftUS",
+        "BhCollarThing": [
+            {"@iot.id": 10}
+        ],
+       "Projects": [
+            {"@iot.id": 5}
+        ]
+    }
+----
+
+*NOTES:*
+
+* Projects links to the associated Project object (see above).
+
+===== Location
+
+The Location object provides the geographic locations of the
+BhCollarThing and its associated BhTrajectoryThing (item 3 above).
+Non-coordinate location information is provided in the Location instance
+associated with BhCollarThing. Examples:
+
+*Location for BhCollarThing*
+
+[source,json]
+----
+    {
+        "@iot.id": 10,
+        "name": "B-001-0-20 Collar Location",
+        "description": "Location of Borehole B-001-0-20 collar",
+        "encodingType": "application/geo+json",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -81.796858,
+                39.47466,
+                249.50928
+            ]
+        },
+        "properties":{
+            "station": "131+48",
+            "offset": "7' RT",
+            "alignment": "CL SR 676"
+        },
+        "BhCollarThings": [
+            {"@iot.id": 10}
+        ]
+    }
+----
+
+*NOTES:*
+
+* BhCollarThings links to the associated BhCollarThing object
+(see above).
+* Keys within the properties object should come from a
+controlled list of property terms for the Location. Different
+organizations and existing transfer standards (such as AGS and DIGGS)
+have their own keys for Location properties; this IE has not attempted
+to harmonize them and develop a standard codelist for
+Location:properties keys. For full interoperability, this harmonization
+is important. A workaround at present could be to define the context for
+the properties keys using https://json-ld.org/[json-ld].
+* Current implementation of STA only supports geoprocessing for geometries encoded
+as application/geo+json which requires coordinates to be in WGS84. Many
+geotech organizations maintain location data in projected CRS’s (e.g.,
+UTM, State Plane) and local vertical datums, and many at times use local
+(engineering) coordinate systems. Until STA is capable of working with
+additional geometry encodings, coordinate conversions may be necessary
+and in some cases may be impossible.
+
+*Location for BhTrajectoryThing*
+
+[source,json]
+----
+    {
+        "@iot.id": 11,
+        "name": "B-001-0-20 Trajectory Location",
+        "description": "Location of Borehole B-001-0-20 trajectory",
+        "encodingType": "application/geo+json",
+        "location": {
+            "type": "LineString",
+            "coordinates": [
+                [
+                    -81.796858,
+                    39.47466,
+                    249.50928
+                ],
+                [
+                    -81.795909,
+                    39.475026,
+                    237.01248
+                ]
+          ]
+        },
+        "BhTrajectoryThings": [
+            {"@iot.id": 11}
+        ]      
+    }
+----
+
+*NOTES:* 
+
+* BhTrajectoryThings links to the associated BhTrajectoryThing
+object (see above).
+
+===== BhSampler
+
+BhSampler implements the concept of a Sampler, which is a device or
+entity (including humans) that is used by, or implements, a
+SamplingProcedure to create or transform one or more samples
+(FeaturesOfInterest). In the above log example, borehole drilling and
+sampling of the Borehole-Hole only (e.g., SPT testing) is accomplished by
+the Drilling Firm/Operator (item 7 above) using a drill rig (item 9
+above), whereas sampling of the borehole material itself (Core) is
+accomplished by the Sampling Firm/Logger (item 17). Examples:
+
+[source,json]
+----
+    {
+        "@iot.id": 15,
+        "description": "Drilling Personnel",
+        "name": "ODOT/CAREY",
+        "samplerType":"Drilling Firm/Operator"
+        "properties":{
+            "equipment": [
+                {
+                    "name": "CME 55 TRUCK",
+                    "class": "Drill Rig"
+                }
+            ]
+        }     
+ 
+    }
+----
+
+and
+
+[source,json]
+----
+    {
+        "@iot.id": 16,
+        "description": "Sampling Personnel",
+        "name": "ODOT/WILLIAMS",
+        "samplerType":"Sampling Firm/Logger"
+   }
+----
+
+*NOTES:*
+
+* STA allows only one Sampler per Sampling (sampling activity)
+and at present does not allow Samplers to relate to each other, which
+necessitates combining the drilling/sampling personnel and related
+equipment into a single Sampler instance. More flexibility in this
+regard should be considered in a future IE.
+* The samplerType values and
+property keys should come from controlled lists of terms. Different
+organizations and existing transfer standards (such as AGS and DIGGS)
+have their own keys and allowable values for samplerType and Sampler
+properties; this IE has not attempted to harmonize them or develop
+standard codelists for these properties.
+
+===== BhSamplingProcedure
+
+BhSamplingProcedure is the process used perform a sampling activity.
+Both drilling and the collection of samples constitute sampling
+activities as both expose FeaturesOfInterest for observation. The
+example log defines four such procedures (item 15 above). Examples:
+
+* Hollow stem augering (uppermost 21 ft of the hole). Cuttings samples
+produced by the drilling may be collected for testing or observed from
+the auger flights.
+
+[source,json]
+----
+    {
+        "@iot.id": 13,
+        "description": "Drilling with 3.25\" hollow stem auger",
+        "name": "3.25\" HSA",
+        "properties":{
+            "type": "Drilling Method"
+        }
+    }
+----
+
+* Rotary drilling using a NQ2 diamond core system (below 21 ft).
+Cuttings produced by the drilling.
+
+[source,json]
+----
+    {
+        "@iot.id": 14,
+        "description": "Drilling with NQ2 diamond core system",
+        "name": "NQ2",
+        "properties":{
+            "type": "Drilling Method"
+        }
+    }
+----
+
+* Soil sampling collected as a result of performing an SPT test
+(uppermost 21 ft of the hole), producing disturbed core samples.
+
+[source,json]
+----
+    {
+        "@iot.id": 15,
+        "description": "Sampling resulting from SPT testing",
+        "name": "SPT",
+        "properties":{
+            "type": "Sampling Method"
+        }
+    }
+----
+
+* Rock core sampling using a double tube NQ core barrel below 21 ft.
+This procedure produces solid rock core
+
+[source,json]
+----
+    {
+        "@iot.id": 16,
+        "description": "Core sampling using a double tube NQ core barrel",
+        "name": "NQ2",
+        "properties":{
+            "type": "Sampling Method"
+        }
+    }
+----
+
+*NOTES:*
+
+* The properties:type is defined to distinguish sampling
+procedures that specifically are designed to collect material samples
+(Sampling Method) from those that are primarily designed to advance the
+hole (Drilling Method).
+
+===== BhFeatureType
+
+BhFeatureType is used to classify different kinds of
+BhFeaturesOfInterest. A BhFeatureOfInterest may be associated with any
+number of BhFeatureTypes. From our previous discussion on
+<<Borehole-IE-and-Sampling-Boreholes,Borehole Sampling>>, five dedicated generic feature types are defined for features
+of interest within a borehole (a BhFeatureOfInterest):
+
+* Hole
+* Core
+* Point
+* Segment
+* Entirety
+
+These feature types are used in combination to provide the appropriate
+context for the feature. Features that derive from the Hole (thus simply
+locations where observations are made in-situ), are assigned a feature
+type of Hole, plus a feature type of either Point, Segment, or Entirety
+depending on the feature’s linear extent. Material samples recovered
+from the hole (features of interest typically subjected to ex-situ
+observation), are assigned a type of Core, plus a Point, Segment, or
+Entirety feature type as with Hole features. Instances for these
+dedicated types are:
+
+*Hole*
+
+[source,json]
+----
+    {
+        "@iot.id": 1,
+        "definition": "https://ogc.org/Hole",
+        "description": "A Sample from a Borehole-Hole",
+        "name": "Hole"
+    }
+----
+
+*Core*
+
+[source,json]
+----
+    {
+        "@iot.id": 2,
+        "definition": "https://ogc.org/Core",
+        "description": "A Sample from a Borehole-Core",
+        "name": "Core"
+    }
+----
+
+*Point*
+
+[source,json]
+----
+    {
+        "@iot.id": 3,
+        "definition": "https://ogc.org/Point",
+        "description": "A Sample obtained at a Point",
+        "name": "Point"
+    }
+----
+
+*Segment*
+
+[source,json]
+----
+    {
+        "@iot.id": 4,
+        "definition": "https://ogc.org/Segment",
+        "description": "A Sample obtained at a Segment",
+        "name": "Segment"
+    }
+----
+
+*Entirety*
+
+[source,json]
+----
+    {
+        "@iot.id": 5,
+        "definition": "https://ogc.org/Entirety",
+        "description": "A Sample taken from the Entirety",
+        "name": "Entirety"
+    }
+----
+
+For BhFeaturesOfInterest that are material samples, it is often
+important to distinguish by type the primary samples from those that are
+derived from collected samples either by subsampling (Subsample) or
+aggregation (Amalgamate). In addition, for the example borehole log,
+samples subject to laboratory testing are extracted from source samples
+and prepared in various ways prior to testing. These samples are
+commonly called specimens and should be identified as such by a
+BhFeatureType:
+
+*Specimen*
+
+[source,json]
+----
+    {
+        "@iot.id": 6,
+        "definition": "https://ogc.org/Specimen",
+        "description": "A Sample prepared from an existing Sample for testing purposes",
+        "name": "Specimen",
+    }
+----
+
+The processing used to produce a specimen is described in
+BhPreparationProcedure and BhPreparationStep (see
+<<Approach-for-Atterberg-Limits,Atterberg limits>>)
+
+*NOTES:* BhFeatureType names should come from a controlled list of
+terms. Different organizations and existing transfer standards (such as
+AGS and DIGGS) have their own keys and allowable values for sample types
+(eg. disturbed, remolded, soil, rock, etc.). Beyond the generic feature
+types discussed above, this IE has not attempted to harmonize other
+sample types or develop standard codelists for BhFeatureType names.
+
+===== BhSampling and BhFeatureOfInterest
+
+BhSampling is used to expose the location of a sampling activity within
+the borehole and therefore must be associated with a borehole trajectory
+(BhTrajectoryThing). BhSampling is also optionally associated with both
+a BhSampler and a BhSamplingProcedure and produces one or more
+BhFeaturesOfInterest. BhFeatureOfInterest is associated with an
+Observation and can either be a material sample (BhFeatureType of Core,
+Core Point or Core Segment) or in the case of an in-situ observation, an
+Observation location (BhFeatureType of Hole, Hole Point or Hole
+Segment). Many BhSampling and BhFeatureOfInterest instances are required
+to represent the data in the example borehole log. Below are example
+instances of BhSampling and BhFeatureOfInterest for selected elements of
+the example log.
+
+*MATERIAL DESCRIPTIONS FROM 4.5 TO 10.5 FT DEPTH*
+
+*BhSampling* _(Sampler="`ODOT/CAREY`", Sampling Procedure = "`3.25"
+HSA`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 299,
+        "description": "Material description layer",
+        "name": "Auger interval 3",
+        "fromPosition": 4.5,
+        "toPosition": 10.5,
+        "positionUom": "ftUS",
+        "BhTrajectoryThing": {"@iot.id": 11},
+        "BhSampler": {"@iot.id": 15},
+        "BhSamplingProcedure": {"@iot.id": 13}
+    } 
+----
+
+*BhFeatureOfInterest* _(Feature Type="`CORE, SEGMENT`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 300,
+        "description": "Cuttings observed from 4.5-10.5 ft",
+        "name": "Cuttings 4-10.5 ft",
+        "BhSampling": {"@iot.id": 299},
+        "BhFeatureTypes": [{"@iot.id": 2},{"@iot.id": 4}]
+    }
+----
+
+*PHYSICAL PROPERTY CHANGE AT 6 FT DEPTH*
+
+*BhSampling* _(Sampler="`ODOT/CAREY`", Sampling Procedure = "`3.25"
+HSA`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 300,
+        "description": "Change in density remark",
+        "name": "Physical Property Remark 1",
+        "atPosition": 6,
+        "positionUom": "ftUS",
+        "BhTrajectoryThing": {"@iot.id": 11},
+        "BhSampler": {"@iot.id": 15},
+        "BhSamplingProcedure": {"@iot.id": 13}
+    } 
+----
+
+*BhFeatureOfInterest* _(Feature Types="`HOLE, POINT`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 301,
+        "description": "Observation location at 6 ft",
+        "name": "Location at 6 ft",
+        "BhSampling": {"@iot.id": 300},
+        "BhFeatureTypes": [{"@iot.id": 1},{"@iot.id": 3}]
+    }
+----
+
+*SPT TEST FROM 1.5 TO 3 FT DEPTH* )_(Multiple features of interest are
+associated to one sampling location)_
+
+*BhSampling* _(Sampler="`ODOT/WILLIAMS`", Sampling Procedure =
+"`SPT`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 301,
+        "description": "SPT Test at 1.5 ft",
+        "name": "SPT 1.5",
+        "fromPosition": 1.5,
+        "toPosition": 3.0,
+        "positionUom": "ftUS",
+        "BhTrajectoryThing": {"@iot.id": 11},
+        "BhSampler": {"@iot.id": 16},
+        "BhSamplingProcedure": {"@iot.id": 13}
+    } 
+----
+
+*BhFeatureOfInterest #1* _(Feature of interest for SPT observation
+itself, Feature Types="`HOLE ,SEGMENT`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 302,
+        "description": "Observation location 1.5 to 3 ft",
+        "name": "Location from 1.5-3.0 ft",
+        "BhSampling": {"@iot.id": 301},
+        "BhFeatureTypes": [{"@iot.id": 1},{"@iot.id": 4}]
+    }
+----
+
+*BhFeatureOfInterest #2* _(Sample collected from the SPT test, Feature
+Types="`CORE, SEGMENT`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 303,
+        "description": "SPT Sample 1.5 to 3 ft",
+        "name": "SS-1",
+        "length": 1.08,
+        "lengthUom": "ftUS",
+        "recoveryPercentage": 72,
+        "BhSampling": {"@iot.id": 301},
+        "BhFeatureTypes": [{"@iot.id": 2},{"@iot.id": 4}]
+    }
+----
+
+*BhFeatureOfInterest #3* _(Specimen created for particle size testing,
+Feature Type="`SPECIMEN`", Source sample (BhSampledFeature) = "`SS-1`")_
+
+[source,json]
+----
+    {
+        "@iot.id": 304,
+        "description": "Particle size specimen 1.5 to 3 ft",
+        "name": "Acme 123",
+        "BhSampling": {"@iot.id": 301},
+        "BhFeatureTypes": [{"@iot.id": 2},{"@iot.id": 4},{"@iot.id": 6}],
+        "BhSampledFeatures": [{"@iot.id": 303}]
+    }
+----
+
+*NOTES:*
+
+* In the example log, a Specimen BhFeatureOfInterest instance is
+required each time a source sample (eg. SS-1) is prepared for testing
+(eg. particle size, Atterberg limits, etc.).
+* A Specimen is assumed to be subsampled from its source sample(s).
+* A Specimens that constitute the entire spatial extent of its source
+sample may link to the same BhSampling entity as its source sample.
+However, if a specimen is extracted from only a portion of a source core
+sample, an additional BhSampling instance would be required to identify
+the specific location of the Specimen within the borehole trajectory.
+* A Specimen BhFeatureOfInterest instance need not be created if the
+entire source sample is consumed in testing.
+
+===== ObservedProperty
+
+ObservedProperty identifies the properties of the BhFeatureOfInterest
+that is observed by the Sensor (observing procedure). One
+ObservedProperty instance should exist for each Observation result type
+that is obtained. For the example log above the observed properties are:
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Sensor/Observing procedure |Observed Properties (see
+<<ObservableProperties,Observable Properties>>)
+|Visual Soil and Rock Classification |lithology
+description +
+lithology classification +
+lithology symbol
+|Geologic units in Ohio (state in United States) |unit name
+|SPT test |see <<Approach-for-SPT,Approach for SPT>>
+|Pocket penetrometer |uniaxial compressive strength
+|Particle size distribution |gravel content +
+coarse sand content +
+fine sand content +
+silt content +
+clay content
+|Atterberg limits |see <<Approach-for-Atterberg-Limits,Approach for Atterberg limits>>
+|Natural water content, Method A |natural water content
+|ODOT Soil Classification |lithology classification
+|Rock Quality Designation |rqd rock quality designation
+|===
+
+Below are example instances for the observed properties associated with
+soil and rock classification and pocket penetrometer:
+
+[source,json]
+----
+    {
+        "@iot.id": 29,
+        "name": "lithology classification",
+        "definition": "https://github.com/opengeospatial/Geotech/wiki/ObservableProperties",
+        "description": "The value that describes the lithology as a controlled term"
+    }
+----
+
+[source,json]
+----
+    {
+        "@iot.id": 30,
+        "name": "lithology description",
+        "definition": "https://github.com/opengeospatial/Geotech/wiki/ObservableProperties",
+        "description": "Descriptive information about the soil or rock lithology"
+    }
+----
+
+[source,json]
+----
+    {
+        "@iot.id": 31,
+        "name": "lithology symbol",
+        "definition": "https://github.com/opengeospatial/Geotech/wiki/ObservableProperties",
+        "description": "A string or numeric value that is used to define a graphic pattern"
+    }
+----
+
+[source,json]
+----
+    {
+        "@iot.id": 32,
+        "name": "uniaxial compressive stress",
+        "definition": "https://github.com/opengeospatial/Geotech/wiki/ObservableProperties",
+        "description": "The maximum axial compressive stress that a right-cylindrical sample of material can withstand under unconfined conditions"
+    }
+----
+
+*NOTE:* Ideally, the definition property should link to a registry or online
+dictionary that provides a definition and full context for the observed
+property.
+
+===== Datastream
+
+The Datastream object serves to link individual observation results to
+their associated observed properties and observing procedures (Sensors).
+It also is used to provide additional context to the observation result
+(such as unit of measure) and to the observed property. One Datastream
+instance is required for each unique combination of BhTrajectoryThing,
+Sensor, and ObservedProperty. The following are a few example Datastream
+instances for the borehole log above:
+
+* *Datastream for ObservedProperty
+= "`lithology description`" and Sensor = "`Visual Soil and Rock
+Classification`"*
+
+[source,json]
+----
+    {
+        "@iot.id": 29,
+        "description": "Datastream for B-001-0-20 lithology description",
+        "name": "B-001-0-20 Lithology description",
+        "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+        "unitOfMeasurement": {},
+        "Sensor": {"@iot.id": 15},
+        "ObservedProperty": {"@iot.id": 30},
+        "Thing": {"@iot.id": 11}
+    }
+----
+
+* *Datastream for ObservedProperty = "`uniaxial compressive stress`" and
+Sensor = "`Pocket Penetrometer`"*
+
+[source,json]
+----
+    {
+        "@iot.id": 30,
+        "description": "Datastream for B-001-0-20 Pocket penetrometer",
+        "name": "B-001-0-20 Pocket penetrometer/uniaxaal compressive stress",
+        "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+        "unitOfMeasurement": {
+           "name": "tonf[US]/ft2",
+           "symbol": "tonf[US]/ft2",
+           "definition": "US tons force per square foot"
+        },
+        "Sensor": {"@iot.id": 17},
+        "ObservedProperty": {"@iot.id": 32},
+        "Thing": {"@iot.id": 11}
+    }
+----
+
+* *Datastream for ObservedProperty = "`lithology classification`" and
+Sensor = "`ODOT Soil Classification`"*
+
+[source,json]
+----
+    {
+        "@iot.id": 31,
+        "description": "Datastream for B-001-0-20 ODOT Soil Classification",
+        "name": "B-001-0-20 ODOT Soil Classification",
+        "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+        "unitOfMeasurement": {},
+        "Sensor": {"@iot.id": 20},
+        "ObservedProperty": {"@iot.id": 29},
+        "Thing": {"@iot.id": 11}
+    }
+----
+
+* *Datastream for ObservedProperty = "`lithology classification`" and
+Sensor = "`Visual Soil and Rock Classification`"*
+
+[source,json]
+----
+    {
+        "@iot.id": 32,
+        "description": "Datastream for B-001-0-20 Soil Classification for Graphic Log",
+        "name": "B-001-0-20 Soil Classification for Graphic Log",
+        "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+        "unitOfMeasurement": {},
+        "Sensor": {"@iot.id": 15},
+        "ObservedProperty": {"@iot.id": 29},
+        "Thing": {"@iot.id": 11}
+    }
+----
+
+===== Observation
+
+The Observation object holds the result of an ObservedProperty for a
+BhFeatureOfInterest. Each Observation instance links directly to a
+BhFeatureOfInterest instance and indirectly to the result’s
+ObservedProperty through the Observation’s associated Datastream.
+
+On the example borehole log, every numeric, text or graphic entry below
+the log’s header (with the exception of depth and elevation information)
+is the result of an individual Observation instance. Below are a few
+examples: * *Observation for material description at depth interval
+between 4.5 and 10.5 feet*
+
+[source,json]
+----
+    {
+        "@iot.id": 881,
+        "phenomenonTime": "2021-01-11T00:00:00-05",
+        "result": "MEDIUM DENSE, REDDISH BROWN AND BROWN, STONE FRAGMENTS WITH SAND, SILT, AND CLAY, DAMP",
+        "FeatureOfInterest": {"@iot.id": 300},
+        "Datastream": {"@iot.id": 29}
+     }
+----
+
+* *Observation for graphic log symbolization at depth interval between
+4.5 and 10.5 feet*
+
+....
+    {
+        "@iot.id": 882,
+        "phenomenonTime": "2021-01-11T00:00:00-05",
+        "result": "STONE FRAGMENTS WITH SAND, SILT, AND CLAY",
+        "FeatureOfInterest": {"@iot.id": 300},
+        "Datastream": {"@iot.id": 32}
+     }
+....
+
+* *Observation for material description (physical property change) at 6
+ft depth*
+
+....
+    {
+        "@iot.id": 883,
+        "phenomenonTime": "2021-01-11T00:00:00-05",
+        "result": "@6.0'; DENSE",
+        "FeatureOfInterest": {"@iot.id": 301},
+        "Datastream": {"@iot.id": 29}
+     }
+....
+
+* *Observation of uniaxial compressive strength, from hand penetrometer
+test on sample from 1.5 to 3 ft depth*
+
+....
+    {
+        "@iot.id": 884,
+        "phenomenonTime": "2021-01-11T00:00:00-05",
+        "result": 1.75,
+        "FeatureOfInterest": {"@iot.id": 303},
+        "Datastream": {"@iot.id": 30}
+     }
+....
+
+* *Observation of ODOT Soil Classification, from sample collected from
+1.5 to 3 ft depth*
+
+....
+    {
+        "@iot.id": 885,
+        "phenomenonTime": "2021-01-11T00:00:00-05",
+        "result": "A-4a (1)",
+        "FeatureOfInterest": {"@iot.id": 303},
+        "Datastream": {"@iot.id": 31}
+     }
+....
+
+*NOTES:*
+
+* The Observation property "`phenomenonTime`" is required and
+will default to the server time if the phenomenonTime is not provided
+when an Observation instance is created. In geotechnics, the time of an
+observation is often not reported for laboratory tests and many in-situ
+tests. If the observation time is unknown to the data provider,
+phenomenonTime must be estimated to circumvent the default behavior. In
+either case, an estimated or default phenomenonTime for an observation
+should be identified as such in an additional Observation property.
+* Some kinds of tests, such as SPT and Atterberg limits, produce complex
+sets of Observation results that require that links be created to group
+related Observations and Datastreams together in order to distinguish
+interim or procedural observations from the final reported test results.
+Examples of these are shown in the detailed discussions for
+<<Approach-for-SPT,SPT>> and <<Approach-for-Atterburg-Limits,Atterberg limits>> tests.
+
+//section end fix

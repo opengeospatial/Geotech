@@ -1,0 +1,39 @@
+[[RiskZone]]
+==== RiskZone
+
+Discrete spatial objects representing the spatial extent of a
+combination of the consequences of an event (hazard) and the associated
+probability/likelihood of its occurrence.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC / INSPIRE Theme III: Natural Risk Zones |RiskZone |Discrete spatial
+objects representing the spatial extent of a combination of the
+consequences of an event (hazard) and the associated
+probability/likelihood of its occurrence.
+
+|IFC
+|GeotechTypicalSection |
+|===
+
+Note : In IFC, Risks are infrastructure (tunnel, bridge) focused and
+their expression is limited to the GeotechTypicalSection
+
+===== Properties
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Property Name |Definition
+|LevelOrIntensity |The level of risk is an assessment of the combination
+of the consequences of an event (hazard) and the associated
+probability/likelihood of the occurrence of the event.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/43

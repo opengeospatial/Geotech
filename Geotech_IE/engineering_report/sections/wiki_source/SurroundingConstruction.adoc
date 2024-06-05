@@ -1,0 +1,59 @@
+[[SurroundingConstruction]]
+==== Surrounding Construction
+
+Any other construction that may be impacted by the construction of the
+building or infrastructure.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC LandInfra |Facility |Facilities include buildings and civil
+engineering works and their associated siteworks. Civil engineering
+works, or infrastructure facilities, are construction works comprising a
+structure, such as a dam, bridge, road, railway, runway, utilities,
+pipeline, or sewerage system, or are the result of operations such as
+dredging, earthwork, and geotechnical processes. A facility has a life
+cycle, including planning, design, construction, maintenance, operation,
+and removal phases The design and construction phases are typically
+performed as part of a project. There may be multiple such projects
+during the life cycle of the facility to enable phased construction and
+incremental improvement.
+
+|IFC |IFC_Bridge |
+
+|IFC |IFC_Tunnel |
+
+|IFC |IFC_Road |
+
+|IFC |IFC_Building |
+|===
+
+And all other relevant facilities and construction the construction
+would like to pay attention too.
+
+===== Properties
+
+[width="100%",cols="9%,91%",options="header",]
+|===
+|PropertyName |Definition
+|assessmentOfVulnerability |Assessment of the vulnerability of the
+exposed element.
+|===
+
+===== Existing codelist for HazardType
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|INSPIRE |Codelist
+|https://inspire.ec.europa.eu/codelist/NaturalHazardCategoryValue |A
+generic classification of types of natural hazards.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/43

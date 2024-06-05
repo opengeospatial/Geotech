@@ -1,0 +1,39 @@
+=== Origin of Books A, B, C concept
+
+In order to separate the factual data from the investigation phases, the
+analysis/interpretation documents and the design documents, the AFTES
+(French Tunnelling and Underground Space Association), initially
+instituted in the recommendation GT32R1F1 of 2004 (then in the
+recommendation GT32R3F1 of 2016 which abrogates GT32R1F1), the
+structuring of the Tendering Documents, around three successive
+sub-folders or "books," using the results of the previous book to define the characteristics of the next book.
+
+=== Definition
+
+==== Book A: Factual data
+
+Factual Data Collection: This is a non-binding compilation of
+project-specific data and results. It is further divided into three
+sub-books:
+
+* A1: Geotechnical input data;
+* A2:Input data for neighbouring buildings; and
+* A3: Input data natural and human environment.
+
+==== Book B: Models and their components
+
+Geotechnical report: this contractual document gives the interpretation
+of the project manager on the whole of the data of the book A. It is
+also sub-divided into three sub-books:
+
+* B1: Geotechnical synthesis memorandum;
+* B2: Sensitivity memorandum for neighboring constructions; and
+* B3: Comments on environmental constraints.
+
+Each book B1, B2 and B3 ends with a register of uncertainties.
+
+==== Book C: Design report
+
+Design brief: this explanatory and non-contractual document produced by
+the project manager explains and justifies the design of the civil
+engineering works, the execution methods and the sizing of the works.

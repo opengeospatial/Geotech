@@ -1,0 +1,141 @@
+=== General mapping
+
+These figures propose an overview of how the geotech concepts are
+proposed to be realized with existing ISO and OGC standards (with a blue
+border) but also IFC (with a red border).
+
+Details about the mapping are then provided concept per concept.
+
+==== Model Typology
+
+.Models
+image::https://github.com/opengeospatial/Geotech/assets/17067226/c1ab282b-f13a-44ab-a1f3-56b8a13ab3b1[]
+
+==== For Geological Modeling realization
+
+.Geological Model realization
+image::https://github.com/opengeospatial/Geotech/assets/17067226/4ad2ae5d-42ae-4a06-830a-633cb96dbd4c[]
+
+==== For Hydrogeological Modeling
+
+.Hydrogeological Model
+image::https://github.com/opengeospatial/Geotech/assets/17067226/a43d6187-a962-4db1-971b-a4eef446e9f5[]
+
+==== For Geotechnical Modeling
+
+.Geotechnical Model
+image::https://github.com/opengeospatial/Geotech/assets/17067226/779a978d-1f5d-4736-8b48-19623e4f5825[]
+
+==== For Hazard and Surrounding Construction Modeling
+
+.Hazard and Surrounding Construction Model
+image::https://github.com/opengeospatial/Geotech/assets/17067226/d05ac31e-0edf-431e-837d-78cb00a0bdea[]
+
+==== For Book C
+
+.Book C
+image::https://github.com/opengeospatial/Geotech/assets/17067226/b71fd152-8279-489c-8adb-6afea2ea478e[]
+
+==== Mapping table summary
+
+[width="100%",cols="7%,17%,38%,38%",options="header",]
+|===
+|AFTES Book |Geotech concept |OGC + EPOS + INSPIRE |With OGC
+SensorThingsAPI
+|A |Borehole |gsml:Borehole |Either BhCollarThing or BhTrajectoryThing
+
+|A |BoreholeCollar |gwml2:BoreCollar |BhCollarThing
+
+|A |BoreholeTrajectory | |BhTrajectoryThing
+
+|A |The whole borehole | |BhFeatureOfInterest (with BhFeatureType = Hole
+& Entirety)
+
+|A |A part of the borehole | |BhFeatureOfInterest (with BhFeatureType =
+Hole & Segment)
+
+|A |A location in the borehole | |BhFeatureOfInterest (with
+BhFeatureType = Hole & Point)
+
+|A |MaterialSample |oms://MaterialSample/[oms:MaterialSample]
+|BhFeatureOfInterest
+
+|A |Specimen |oms://MaterialSample/[oms:MaterialSample]
+|BhFeatureOfInterest (with BhFeatureType = Specimen)
+
+|A |BoreholeCore |oms://MaterialSample/[oms:MaterialSample]
+|BhFeatureOfInterest (with BhFeatureType = Core & Entirety)
+
+|A |A part of the borehole core
+|oms://MaterialSample/[oms:MaterialSample] |BhFeatureOfInterest (with
+BhFeatureType = Core & Segment or Point)
+
+|A |A location of the borehole core
+|oms://MaterialSample/[oms:MaterialSample] |BhFeatureOfInterest (with
+BhFeatureType = Core & Point)
+
+|A |EnvironmentalMonitoringFacility |ef:environmentalMonitoringFacility
+|Sensor
+
+|A |Observation |oms:observation |
+
+|A |Geotech test |oms:observationCollection |Sensor
+
+|A |Series of observations |oms:observationCollection |DataStream
+
+|A |Individual observation |oms:observation |Observation
+
+|A |Sampling |oms://Sampling/[oms:Sampling] |BhSampling
+
+|B |Geomodel |<<Extending-eposl-ModelView,epos:ModelView>> |
+
+|B |GeologicUnit
+|<<Extending-gsml-GeologicUnit,gsml:GeologicUnit>> (with
+GeologicUnitType = LithoStratigraphicUnit)] |BhFeatureOfInterest
+
+|B |Contact |<<Extending-gsml-Contact,gsml:Contact>>
+|BhFeatureOfInterest
+
+|B |Fold |<<Extending-gsml-Fold,gsml:Fold>> |BhFeatureOfInterest
+
+|B |Hydrogeounit
+|<<Extending-gwml2-HydogeoUnit,gwml2:HydroGeoUnit>>
+|BhFeatureOfInterest
+
+|B |FluidBody |<<Extending-gwml2-FluidBody,gwml2:FluidBody>>
+|BhFeatureOfInterest
+
+|B |FluidBodySurface
+|<<Extending-gwml2-FluidBodySurface,gwml2:FluidBodySurface>>
+|BhFeatureOfInterest
+
+|B |Fault
+|<<Extending-gsml-ShearDisplacementStructure,gsml:ShearDisplacementStructure>>
+|BhFeatureOfInterest
+
+|B |GeotechnicalUnit
+|<<Adding-gsml-GeotechUnit,gsml:GeologicUnit>> (with GeologicUnitType =
+GeotechUnit)] |BhFeatureOfInterest
+
+|B |DiscreteDiscontinuity |<<Extending-gsml-Joint,gsml:Joint>>
+|BhFeatureOfInterest
+
+|B |Void |<<Extending-gwml2-HydroGeoVoid,gwml2:HydroGeoVoid>>
+|BhFeatureOfInterest
+
+|B |HazardArea |<<Extending-NZ-HazardArea,nz:HazardArea>>
+|BhFeatureOfInterest
+
+|C |Alignment |<<Reusing-LandInfra-Alignment,landinfra:Alignment>>
+|BhFeatureOfInterest
+
+|C |GeotechSynthesisModel
+|<<Extending-eposl-ModelView,epos:ModelView>> |BhFeatureOfInterest
+
+|C |GeotechTypicalSection
+|<<Extending-Facility-and-FacilityPart,landinfra:FacilityPart>>
+|BhFeatureOfInterest
+
+|C |RiskZone |<<Extending-NZ-RiskZone,nz:RiskZone>>
+|BhFeatureOfInterest
+|===

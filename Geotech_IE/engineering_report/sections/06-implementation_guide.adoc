@@ -1,0 +1,22 @@
+[[implementation-guide]]
+== Implementation guide, resources, and examples
+
+include::wiki_source/Implementation.adoc[]
+include::wiki_source/OGC-APIs.adoc[]
+include::wiki_source/FROST.adoc[]
+include::wiki_source/FROST-Plugin-for-Geotech.adoc[]
+
+=== Exposing geotech investigation data with OGC SensorThings API
+
+include::wiki_source/Approach-for-Borehole-logs.adoc[]
+include::wiki_source/Approach-for-CPT.adoc[]
+include::wiki_source/Approach-for-SPT.adoc[]
+include::wiki_source/Approach-for-Pressuremeter.adoc[]
+include::wiki_source/Approach-for-Atterberg-Limits.adoc[]
+include::wiki_source/Mapping.adoc[]
+include::wiki_source/STA-endpoints.adoc[]
+include::wiki_source/Play-with-the-FROST-Geotech-plugin.adoc[]
+
+//=== Vocabulary and codelist for geotech
+
+include::wiki_source/Vocabs.adoc[]

@@ -1,0 +1,18 @@
+=== Introduction to FROST
+
+The FRaunhofer Opensource SensorThings-Server (FROST) is an
+implementation of the
+<<Introduction-to-SensorThingsAPI-data-model,OGC SensorThings API>>. It can be deployed as a Docker image, or directly on
+an existing Tomcat or similar server. Since version 2 it has a flexible
+data model implementation that allows the data model to be extended or
+even completely replaced with little effort. This makes FROST an ideal
+platform for data model experiments.
+
+For the GeoTech IE, a plugin has been made for FROST that extends the STA
+core data model with extra entities. See
+<<FROST-Plugin-for-Geotech,FROST plugin for Geotech>>.
+
+More details can be found at the
+https://github.com/FraunhoferIOSB/FROST-Server[FROST GitHub page] or the
+https://fraunhoferiosb.github.io/FROST-Server/[FROST Documentation
+site].

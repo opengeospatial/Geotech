@@ -1,0 +1,30 @@
+[[Extending-gsml-GeologicUnit]]
+==== GeologicUnit according to GeoSciML
+
+From https://docs.ogc.org/is/16-008/16-008.html#48[GeoSciML v4.1]:
+
+____
+Conceptually, a GeologicUnit may represent a body of material in the
+Earth whose complete and precise extent is inferred to exist (e.g.,
+North American Data Model GeologicUnit, Stratigraphic unit in the sense
+of NACSN, or International Stratigraphic Code ), or a classifier used to
+characterize parts of the Earth (e.g. lithologic map unit like
+'`granitic rock`' or '`alluvial deposit`', surficial units like '`till`'
+or '`old alluvium`'). It includes both formal units (i.e. formally
+adopted and named in an official lexicon) and informal units (i.e. named
+but not promoted to a lexicon) and unnamed units (i.e., recognizable,
+described and delineable in the field but not otherwise formalised). In
+simpler terms, a geologic unit is a package of earth material (generally
+rock).
+____
+
+===== Geotech concept that can use gsml:GeologicUnit
+
+gsml:GeologicUnit is identified to realize the geotech concept called
+<<GeologicUnit,GeologicUnit>>.
+
+More specifically, gsml:GeologicUnit definition is large and enable to
+address different kind of units.
+
+In geotechnics, when speaking about a geologic unit, the most common
+understanding is "`Lithostratigraphic Unit`".

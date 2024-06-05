@@ -1,0 +1,152 @@
+== Introduction
+
+* link:home[Welcome]
+* link:Summary[Summary - Wiki overview]
+* Tips
+* Participants
+
+== Geotech concepts
+
+* link:Conceptual-model[About the data models]
+* link:++Geotechnics-is-simple-as-A,-B,--C++[Introduction to Book A&#44;
+B and C]
+
+==== Book A concepts
+
+* link:Book-A-organization-and-components[About Book A]
+
+===== Hole in the ground
+
+* Borehole
+* TrialPit
+
+===== For the activity of observation and its results
+
+* link:Observation[Observations]
+* link:ObservingProcedure[Geotech Procedures (codelist)]
+* link:ObservableProperties[Geotech Observable Properties (codelist)]
+
+===== For the activity of sampling and preparation
+
+* MaterialSample
+* link:Sampling-and-Preparation[Sampling and Preparation]
+
+==== Book B concepts
+
+* link:Book-B-organization-and-components[About Book B]
+* Geomodel #### For Geological Modeling
+* GeologicUnit
+* Fault
+* Contact
+* Fold #### For Hydrogeological Modeling
+* link:HydroGeoUnit[HydrogeoUnit]
+* FluidBody
+* FluidBodySurface #### For Geotechnical Modeling
+* GeotechUnit
+* DiscreteDiscontinuity
+* Void #### For Hazard Modeling
+* HazardArea
+* SurroundingConstruction
+
+==== Book C concepts
+
+* link:Book-C-organization-and-components[About Book C]
+* GeotechSynthesisModel
+* Alignment
+* GeotechTypicalSection
+* RiskZone
+
+== ISO & OGC GeoTech Model
+
+* link:Realizing-geotech-concepts-with-OGC-standards[Realization of the
+geotech concepts with ISO and OGC standards]
+
+==== General considerations
+
+* link:Borehole-IE-and-Sampling-Boreholes[About the Borehole IE and
+Sampling Boreholes]
+* link:Geometry-considerations[Geometry considerations]
+* link:Features-properties-vs-Observations[Features properties vs
+observations]
+
+==== ISO19148 and ISO19156
+
+* link:ISO19148-and-ISO19156-intro[A brief introduction to ISO 19148 and
+ISO 19156]
+* link:Bringing-ISO-19156-and-ISO-19148-together[Enabling linear
+referencing based observations]
+* https://github.com/opengeospatial/Geotech/wiki/Conceptual-Borehole-Model[Conceptual
+Borehole Model]
+
+==== SensorThingsAPI datamodel
+
+* link:Introduction-to-SensorThingsAPI-data-model[A brief introduction
+to the SensorThingsAPI data model]
+* https://github.com/opengeospatial/Geotech/wiki/STA-Borehole-Model[STA
+Borehole Model]
+
+==== GeoSciML
+
+* link:About-GeoSciML[A brief introduction to GeoSciML]
+* link:Extending-gsml-GeologicUnit[Extending gsml:GeologicUnit]
+* link:Extending-gsml-ShearDisplacementStructure[Extending
+gsml:ShearStructureDisplacement]
+* link:Extending-gsml-Fold[Extending gsml:Fold]
+* link:Extending-gsml-Contact[Extending gsml:Contact]
+* link:Adding-gsml-GeotechUnit[Adding gsml:GeotechUnit]
+* link:Extending-gsml-Joint[Extending gsml:Joint]
+
+==== GroundWaterML2
+
+* link:About-GWML2[A brief introduction to GroundWaterML2]
+* link:Extending-gwml2-HydogeoUnit[Extending gwml2:HydroGeoUnit]
+* link:Extending-gwml2-FluidBody[Extending gwml2:FluidBody]
+* link:Extending-gwml2-FluidBodySurface[Extending
+gwml2:FluidBodySurface]
+* link:Extending-gwml2-HydroGeoVoid[Extending gwml2:HydroGeoVoid]
+
+==== EPOS WP15
+
+* link:About-EPOS-TCS-GIM[A brief introduction to the EPOS TCS GIM]
+* link:Extending-eposl-ModelView[Extending eposl:Modelview]
+
+==== LandInfra & InfraGML
+
+* link:About-LandInfra[A brief introduction to LandInfra and InfraGML]
+* link:Reusing-LandInfra-Alignment[Reusing InfraGML:Alignment]
+* link:Extending-Facility-and-FacilityPart[Extending InfraGML:Facility
+and FacilityPart]
+
+==== INSPIRE Theme III: Natural Risk Zone
+
+* link:About-INSPIRE-NZ[A brief introduction to INSPIRE NZ]
+* link:Extending-NZ-HazardArea[Extending NZ:HazardArea]
+* link:Extending-NZ-RiskZone[Extending NZ:RiskZone]
+
+== Implementation guide, resources and examples
+
+* link:Implementation[About implementation]
+* link:OGC-APIs[About OGC APIs]
+* link:FROST[About FROST]
+* link:FROST-Plugin-for-Geotech[FROST plugin for Geotech]
+
+==== Exposing geotech investigation data with OGC SensorThings API
+
+* link:Approach-for-Borehole-logs[Approach for Borehole logs]
+* link:Approach-for-CPT[Approach for CPT]
+* link:Approach-for-SPT[Approach for SPT]
+* link:Approach-for-Pressuremeter[Approach for Pressuremeter]
+* link:Approach-for-Atterberg-Limits[Approach for Atterberg limits]
+* link:Mapping[Mappings from AGS and DIGGS]
+* link:STA-endpoints[EndPoints]
+* link:Play-with-the-FROST-Geotech-plugin[Relevant queries to FROST for
+Geotech]
+
+==== Vocabulary and codelist for geotech
+
+* link:Vocabs[Geotech vocabularies and codelists]
+
+== Conclusions
+
+* https://github.com/opengeospatial/Geotech/wiki/Future-Work[Future
+work]

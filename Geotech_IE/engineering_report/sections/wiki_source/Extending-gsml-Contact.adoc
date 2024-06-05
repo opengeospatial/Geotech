@@ -1,0 +1,17 @@
+[[Extending-gsml-Contact]]
+==== Contact according to GeoSciML
+
+From https://docs.ogc.org/is/16-008/16-008.html#84[GeoSciML v4.1]:
+
+____
+A *contact* is a general concept representing any kind of surface
+separating two geologic units, including primary boundaries such as
+depositional contacts, all kinds of unconformities, intrusive contacts,
+and gradational contacts, as well as faults that separate geologic
+units.
+____
+
+===== Geotech concept that can use gsml:Contact
+
+gsml:Contact is identified to realize the geotech concept called
+<<Contact,Contact>>.

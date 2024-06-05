@@ -1,0 +1,60 @@
+=== Semantics for geotech
+
+Controlled vocabularies are a key component of interoperability to ensure
+each terms are non ambiguous.
+
+In geotechnics, multiple controlled vocabularies can be set. This
+includes: - Procedure: this is to indicate a particular method or
+technic that have been applied to get a result, - Observable Property:
+this is to indicate which parameter was measured or observed, - Units of
+measurements: this is to characterize the (generally numerical) value
+that come with the result.
+
+==== Registries
+
+Several registries already exist and may help you to describe the test
+you made.
+
+===== BRGM GeoScience Linked Data Registry
+
+https://data.geoscience.fr/ncl/?lang=en
+
+Codelist for Methods, as described in <<ObservingProcedure,ObservingProcedure>>:
+https://data.geoscience.fr/ncl/Proc?lang=en
+
+Codelist for Observable Properties, as described in <<ObservableProperties,ObservableProperties>>:
+https://data.geoscience.fr/ncl/ObsProp?lang=en
+
+===== GeoScience EU Registry
+
+https://data.geoscience.earth/ncl/
+
+==== DIGGS Dictionaries/Schemas
+
+*_Observation Procedures:_* For DIGGS measurements (observations with
+numerical results), procedures are defined in the XML schema as concrete
+objects (XML elements of complex type) that derive, ultimately from
+gml:AbstractGMLType. These objects are defined in the following schema
+file: https://www.diggsml.org/schemas/2.5.a/Geotechnical.xsd.
+
+For DIGGS observations (category-based results), the observing procedure
+can be described using a Specification object for the entire
+ObservationSystem (a collection of observations of the same class),
+although this does not require a controlled term, or by using the
+howDetermined attribute of an individual Observation (see:
+https://diggsml.github.io/index.html#DescriptorMethodEnumType).
+
+*_Observed Properties:_* For DIGGS measurements (observations with
+numerical results), observed properties are defined in an XML dictionary
+file:
+https://www.diggsml.org/dictionaries/DIGGSTestPropertyDefinitions.xml
+
+For DIGGS observations (category-based results), observed properties are
+hard-coded XML elements, dependent on the class of observation. These
+can be found in the following schema file:
+https://www.diggsml.org/schemas/2.5.a/Kernel.xsd.
+
+*_Units of Measurement:_* All DIGGS elements of measure type (consisting
+of a numerical value plus a unit of measure) use units symbology defined
+in the Energistics Units of Measurement dictionary described here:
+https://www.energistics.org/energistics-unit-of-measure-standard.

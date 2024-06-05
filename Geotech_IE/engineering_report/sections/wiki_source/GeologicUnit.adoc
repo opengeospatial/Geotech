@@ -1,0 +1,170 @@
+[[GeologicUnit]]
+==== GeologicUnit
+
+Conceptually, a GeologicUnit may represent a body of material in the
+Earth whose complete and precise extent is inferred to exist (e.g.,
+North American Data Model GeologicUnit, Stratigraphic unit in the sense
+of NACSN, or International Stratigraphic Code ), or a classifier used to
+characterize parts of the Earth (e.g., lithologic map unit like
+'`granitic rock`' or '`alluvial deposit`', surficial units like '`till`'
+or '`old alluvium`'). It includes both formal units (i.e., formally
+adopted and named in an official lexicon) and informal units (i.e., named
+but not promoted to a lexicon) and unnamed units (i.e., recognizable,
+described and delineable in the field but not otherwise formalized). In
+simpler terms, a geologic unit is a package of earth material (generally
+rock).
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |GeologicUnit |Conceptually, a GeologicUnit may represent
+a body of material in the Earth whose complete and precise extent is
+inferred to exist (e.g., North American Data Model GeologicUnit,
+Stratigraphic unit in the sense of NACSN, or International Stratigraphic
+Code ), or a classifier used to characterize parts of the Earth
+(e.g., lithologic map unit like '`granitic rock`' or '`alluvial
+deposit`', surficial units like '`till`' or '`old alluvium`'). It
+includes both formal units (i.e., formally adopted and named in an
+official lexicon) and informal units (i.e., named but not promoted to a
+lexicon) and unnamed units (i.e., recognizable, described and delineable
+in the field but not otherwise formalized). In simpler terms, a geologic
+unit is a package of earth material (generally rock).
+
+|IFC |GeologicUnit |Same as OGC GeoSciML
+
+|DIGGS |StratigraphyObservation |Descriptions of ordered bodies of rock
+or soil, such as formations, biostratigraphic units or aquifers.
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include geological units,
+identified as such (or as a specialization) using the elementType
+attribute.
+|===
+
+===== Specializations (Types of GeologicUnit)
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|BRGM |Registry |https://data.geoscience.fr/ncl/GeolUnitType |This
+register lists all the geologic units.
+
+|CGI |Registry
+|https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/geologicunittype
+|This register lists all the geologic units.
+|===
+
+* allostratigraphic unit
+* alteration unit
+* artificial ground
+* biostratigraphic unit
+* chronostratigraphic unit
+* deformation unit
+* excavation unit
+* geomorphologic unit
+* geophysical unit
+* lithodemic unit
+* lithogenetic unit
+* lithologic unit
+* lithostratigraphic unit
+* lithotectonic unit
+* magnetostratigraphic unit
+* mass movement unit
+* pedoderm
+* pedostratigraphic unit
+* polarity chronostratigraphic unit
+
+===== Properties
+
+[width="100%",cols="6%,94%",options="header",]
+|===
+|PropertyName |Definition
+|Identifier |The identifier should have the same value as the
+corresponding GeoSciML MappedFeature identifier, if available.
+
+|Name |name is a display name for the GeologicUnit.
+
+|Description |description is a description of the GeologicUnit,
+typically taken from an entry on a geological map legend.
+
+| |
+
+|geologicUnitType |geologicUnitType contains the type of GeologicUnit
+(as defined in GeoSciML). To report an identifier from a controlled
+vocabulary, geologicUnitType_uri shall be used.
+
+|rank |rank contains the rank of GeologicUnit (as defined by ISC. e.g.,
+group, formation, member).
+
+|representativeLithology |description of the GeologicUnit’s lithology,
+possibly formatted with formal syntax (see 8.9.2.3). The description can
+be language-dependent. To report an identifier from a controlled
+vocabulary, representativeLithology_uri shall be used.
+
+|representativeAge |description of the age of the GeologicUnit (where
+age is a sequence of events and may include process and environment
+information). To report an identifier from a controlled vocabulary,
+representativeAge_uri, representativeOlderAge_uri,
+representativeYoungerAge_uri shall be used.
+
+|numericOlderAge |a numerical representation of the unit’s older age in
+million years (Ma).
+
+|numericYoungerAge |a numerical representation (Primitive::Number) of
+the unit’s younger age in million years (Ma).
+
+|observationMethod |a metadata snippet indicating how the spatial extent
+of the feature was determined. ObservationMethod is a convenience
+property that provides a simple approach to observation metadata when
+data are reported using a feature view (as opposed to observation view).
+
+| |
+
+|source |If present, the property source:Primitive::CharacterString is
+human readable text describing feature-specific details and citations to
+source materials, and if available provides URLs to reference material
+and publications describing the geologic feature. This could be a short
+text synopsis of key information that would also be in the metadata
+record referenced by metadata_uri.
+
+|metadata_uri |If present, the property
+metadata_uri:Primitive::CharacterString contains a URI referring to a
+metadata record describing the provenance of data.
+
+| |
+
+|shape |The property shape:GEO::GM_Object contains a geometry defining
+the extent of the feature of interest.
+
+|positionalAccuracy |If present, the property
+positionalAccuracy:Primitive::CharacterString is a quantitative value (a
+numerical value and a unit of length) defining the radius of an
+uncertainty buffer around a MappedFeature (e.g., a positionalAccuracy of
+100 m for a line feature defines a buffer polygon of total width 200 m
+centred on the line).
+
+| |
+
+|GeolFormation |ISO14689:2017
+
+|FaciesLithostratigraphy |The characteristics of a rock or a sediment
+unit that reflect its environment of deposition and allow it to be
+distinguished from rock or sediment deposited in an adjacent
+environment.
+
+|FaciesPetrophysics |A rock mass that can be recognized by its
+composition, structures or fossil content and mapped on the basis of
+those characteristics.
+|===
+
+===== FAQ
+
+====== What about Hydrogeologic Units?
+
+They are a type of GeologicUnit and are described in <<Hydrogeounit>>
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/7

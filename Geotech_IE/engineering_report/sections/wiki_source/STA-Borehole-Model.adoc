@@ -1,0 +1,17 @@
+[[STA-Borehole-Model]]
+==== STA Borehole Model
+
+Based on the Conceptual Borehole Model, a physical STA-based model has
+been derived. In the diagram below, you see both the core STA data model
+as well as the various extensions proposed for the GeoTech IE.
+
+.Borehole STA
+image::https://github.com/opengeospatial/Geotech/assets/11915304/74ce265b-5901-462e-8d5b-7b6d8f27e1f0[]
+
+In order to understand how this physical model has been created from the
+Conceptual Borehole Model, the following diagram sets the STA classes
+into their conceptual context, indicating which STA classes realize
+which classes from the Conceptual Borehole Model.
+
+.Borehole STA Complete
+image::https://github.com/opengeospatial/Geotech/assets/11915304/8d01d013-ee62-4435-951d-eb90de84415f[]

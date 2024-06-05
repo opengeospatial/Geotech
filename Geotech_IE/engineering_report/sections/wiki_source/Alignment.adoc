@@ -1,0 +1,30 @@
+[[alignment]]
+==== Alignment
+
+PositioningElement which provides a Linear Referencing System for
+locating PhysicalElements. An Alignment shall be continuous,
+non-branching, and non-overlapping. If it is a Project Alignment, it is
+for a single alternative, as specified by its owning ProjectPart.
+
+Note: this concept has been commonly defined between OGC LandInfra and
+bSI.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC LandInfra |Alignment |PositioningElement which provides a Linear
+Referencing System for locating PhysicalElements. An Alignment shall be
+continuous, non-branching, and non-overlapping. If it is a Project
+Alignment, it is for a single alternative, as specified by its owning
+ProjectPart.
+
+|IFC 4.4+ |Alignment |Same as OGC LandInfra
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/44

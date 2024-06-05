@@ -1,0 +1,146 @@
+[[MaterialSample]]
+==== MaterialSample
+
+A MaterialSample is a physical, tangible Sample.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC OMS |MaterialSample |A MaterialSample is a physical, tangible
+Sample.
+
+|IFC |MaterialSample
+|Same as OGC OMS
+
+|AGS |SAMP |SAMP includes information for both the sample and the
+sampling activity
+
+|DIGGS |Sample |A material sample, either solid, fluid, or gas that is
+obtained as a result of a sampling activity, for the purpose of
+observation and/or testing. This is a concrete representation of
+AbstractSample, which serves as the head of a substitution group for
+this and other sample specialties.
+
+|DIGGS |TrialGroutBatch |A specialization of Sample that also contains
+properties describing the characteristics of a batch of grout developed
+for testing to determine a grout design mix.
+
+|DIGGS |GroutBatch |A specialization of Sample that contains properties
+describing the characteristics of a batch of grout used for production
+purposes. This object must reference a DesignGroutMix object defined
+within the GroutingProgram feature.
+
+|DIGGS |AbstractSpecimen |AbstractSpecimen serves as the head of a
+substitution group for specimen specializations based on state or type:
+eg. soil, liquid, gas, rock. A specimen derives from one or more
+samples, is created as part of a test procedure, and exists only in the
+context of the test procedure that creates it.
+
+|DIGGS |GroutSpecimen |A specialization of a specimen that describes the
+physical conditions of a grout or concrete sample subjected to testing.
+
+|DIGGS |FluidSpecimen |A specialization of a specimen that describes the
+physical conditions of a fluid sample or samples subjected to testing.
+
+|DIGGS |RockSpecimen |A specialization of a specimen that describes the
+physical conditions of a rock sample or samples subjected to testing.
+
+|DIGGS |SoilSpecimen |A specialization of a specimen that describes the
+physical conditions of a soil sample or samples subjected to testing.
+|===
+
+===== Properties
+
+[width="100%",cols="3%,97%",options="header",]
+|===
+|PropertyName |Definition
+|intermalIdentifier |The value of this property is the identifier
+originally created by the authority for this feature, or that is used as
+the identifier in the authority’s internal data management system. There
+is no assumption as to the unique scope or persistence of this
+identifier. In cases where the original or internal identifier does not
+meet the semantic requirements or gml:id or gml:identifier, the internal
+identifier may be included in this property in order for the originating
+authority to "`map back`" the identifier to an internal data management
+system. The codeSpace attribute must be populated to identify the
+authority that uses the internalIdentifier value.
+
+|chainOfCustodyEvent |Contains information on the chain-of-custody for
+the sample
+
+|relatedSample |Another Sample the context Sample is related to
+
+|purpose |
+
+|status |A text string to provide information about the status of the
+object to be used to track QA/QC controls, review or release status,
+etc. The values used are intended to come from a controlled list of
+terms maintained by an organization.
+
+|role |Identifies a specific role or task performed that is associated
+with this specific feature, the person or organization that performed the
+role, and associated time frame, if applicable.
+
+|classification |A definition of the class of sample collected or
+produced, such assoil, rock, fluid, etc.)
+
+|sampleType |Type of sample. Shall refer to a codelist.
+
+|size |The size describes a physical extent of the MaterialSample.
+
+|sampleWeight |Weight of the sample following collection or production
+and prior to any subsampling or specimen preparation
+
+|sampleVolume |Volume of the sample following collection or production
+and prior to any subsampling or specimen preparation
+
+|sampleDimensions |For solid soil or rock samples, contains properties
+of the sample dimensions
+
+|samplingActivityRef |A reference to a sampling activity that is
+associated with this feature.
+
+|sampledFeatureRef |A reference to the sampled object (if any).
+
+|metadata |Identifies external files associated with this feature. This
+allows for the feature to be further elaborated with information that
+cannot be represented by ASCII text, such as a photograph or other
+media, binary data, or a formatted report.
+
+|extrusionMethod |Method by which the sample is removed from its
+sampler.
+
+|sourceLocation |The sourceLocation is the location from where the
+MaterialSample was obtained.
+
+|sampler |a device or entity (including humans) that is used by, or
+implements, a SamplingProcedure to create or transform one or more
+Sample(s).
+
+|SampleDepthRange |Top and bottom depths where a sample was retrieved
+|===
+
+===== FAQ
+
+====== What about Specimen?
+
+In geotechnics, a distinction may appear between the MaterialSample
+collected on the field and another MaterialSample made from it by
+sub-sampling. The first one is often called Sample, while the second(s)
+is/are often called Specimen(s).
+
+Here in this conceptual model, the term MaterialSample is generic and
+can be used for both. Attributes can be used to explain the lineage
+between two (or more) MaterialSample.
+
+Standards like DIGGS yet propose an explicit terminology.
+
+====== What about Sampling?
+
+The sampling activity can be described with <<Sampling>>
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/11

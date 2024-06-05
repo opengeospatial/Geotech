@@ -1,0 +1,57 @@
+
+[[ogc-iso-models]]
+== OGC and ISO models
+
+include::wiki_source/Realizing-geotech-concepts-with-OGC-standards.adoc[]
+
+=== General considerations
+
+include::wiki_source/Borehole-IE-and-Sampling-Boreholes.adoc[]
+include::wiki_source/Geometry-considerations.adoc[]
+include::wiki_source/Features-properties-vs-Observations.adoc[]
+
+=== ISO 19148 and ISO 19156
+
+include::wiki_source/ISO19148-and-ISO19156-intro.adoc[]
+include::wiki_source/Bringing-ISO-19156-and-ISO-19148-together.adoc[]
+include::wiki_source/Conceptual-Borehole-Model.adoc[]
+
+=== SensorThings API data model
+
+include::wiki_source/Introduction-to-SensorThingsAPI-data-model.adoc[]
+include::wiki_source/STA-Borehole-Model.adoc[]
+
+=== GeoSciML
+
+include::wiki_source/About-GeoSciML.adoc[]
+include::wiki_source/Extending-gsml-GeologicUnit.adoc[]
+include::wiki_source/Extending-gsml-ShearDisplacementStructure.adoc[]
+include::wiki_source/Extending-gsml-Fold.adoc[]
+include::wiki_source/Extending-gsml-Contact.adoc[]
+include::wiki_source/Adding-gsml-GeotechUnit.adoc[]
+include::wiki_source/Extending-gsml-Joint.adoc[]
+
+=== GroundWaterML2
+
+include::wiki_source/About-GWML2.adoc[]
+include::wiki_source/Extending-gwml2-HydogeoUnit.adoc[]
+include::wiki_source/Extending-gwml2-FluidBody.adoc[]
+include::wiki_source/Extending-gwml2-FluidBodySurface.adoc[]
+include::wiki_source/Extending-gwml2-HydroGeoVoid.adoc[]
+
+=== EPOS WP15
+
+include::wiki_source/About-EPOS-TCS-GIM.adoc[]
+include::wiki_source/Extending-eposl-ModelView.adoc[]
+
+=== LandInfra and InfraGML
+
+include::wiki_source/About-LandInfra.adoc[]
+include::wiki_source/Reusing-LandInfra-Alignment.adoc[]
+include::wiki_source/Extending-Facility-and-FacilityPart.adoc[]
+
+=== INSPIRE Theme III: Natural Risk Zone
+
+include::wiki_source/About-INSPIRE-NZ.adoc[]
+include::wiki_source/Extending-NZ-HazardArea.adoc[]
+include::wiki_source/Extending-NZ-RiskZone.adoc[]

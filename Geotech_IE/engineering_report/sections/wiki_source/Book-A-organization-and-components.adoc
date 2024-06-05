@@ -1,0 +1,58 @@
+=== Book A Principles
+
+The main idea of the Book A phase is to collect factual data and
+express their content. In Book A, one will find all the documents
+produced in the past on the studied area (geological maps, collection of
+geologists, etc.). Generally, it is necessary to complete these elements
+with specific investigations.
+
+==== Acts
+
+Geotechnical engineers and team can perform several acts in order to
+better understand the environment:
+
+* <<Observation>>
+* <<ObservingProcedure>>
+* <<ObservableProperties>>
+* <<Sampling-and-Preparation>>
+
+==== Proxies
+
+Observation, measurement, and sampling activities are applied on features of interest that act as proxies.
+
+These include:
+
+* <<Borehole>>; and
+* <<TrialPit>>
+
+Some proxies can be collected on the field, to be studied elsewhere (e.g., 
+in a laboratory), they are called:
+
+* <<MaterialSample>>
+
+Note: A borehole core is considered as a Material Sample.
+
+==== FAQ
+
+===== What do observations and measurements include?
+
+All kind of observation and measurements that can be performed.
+
+This include:
+
+* Geological observations,
+* Geotech in-situ tests,
+* Geotech laboratory tests,
+* Environmental analysis, and
+* Geophysics.
+
+===== Why focusing on acts and not just providing results?
+
+The proposed conceptual model follows the principles of the OGC Standard for
+Observations, Measurements, and Samples.
+
+In geotechnics and in many other domains results must be contextualized
+and can only be used in a specific context.
+
+Acts of observation, measurement or sampling provide this context and
+the necessary metadata to enable the use and reuse of the data.

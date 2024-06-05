@@ -1,0 +1,56 @@
+[[OGC-APIs]]
+=== OGC APIs
+
+OGC API standards define modular API building blocks to spatially enable
+Web APIs in a consistent way. The OGC API family of standards is
+organized by resource type.
+
+See https://ogcapi.ogc.org/ for more details.
+
+==== OGC APIs considered for geotechnics
+
+The GeotechIE proposes reliance upon:
+
+* OGC SensorThings API for the
+provision of Observations, Measurements and Sampling description; and
+* OGC API Features for the provision of observed features like Borehole,
+TrialPit, MaterialSample, but also interpreted featured like a
+GeologicUnit, Fault, HydrogeoUnit, etc.
+
+===== OGC SensorThings API
+
+The OGC SensorThings API provides an open, geospatial-enabled and
+unified way to interconnect the Internet of Things (IoT) devices, data,
+and applications over the Web. At a high level the OGC SensorThings API
+provides two main functionalities and each function is handled by a
+part. The two parts are the Sensing part and the Tasking part. The
+Sensing part provides a standard way to manage and retrieve observations
+and metadata from heterogeneous IoT sensor systems. The Tasking part is
+planned as a future work activity and will be defined in a separate
+document as the Part II of the SensorThings API.
+
+See https://ogcapi.ogc.org/sensorthings/ for more details.
+
+===== OGC API - Features
+
+OGC API - Features specifies the fundamental API building blocks for
+interacting with features. The spatial data community uses the term
+'`feature`' for things in the real world that are of interest.
+
+See https://ogcapi.ogc.org/features/ for more details.
+
+==== OGC APIs & INSPIRE
+
+Both OGC SensorThingsAPI and OGC API - Features have been assessed as
+suitable to implement the INSPIRE Directive.
+
+See:
+
+* https://www.semanticscholar.org/paper/Extending-INSPIRE-to-the-Internet-of-Things-through-Kotsev-Schleidt/6e578f99d221ee937c0ee91073e63d66fc7df888[Extending
+INSPIRE to the Internet of Things through SensorThings API]
+* https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service[INSPIRE
+SensorThings API Good Practice]
+* additional materials are
+available at https://datacoveeu.github.io/API4INSPIRE
+
+//section end fix

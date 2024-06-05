@@ -1,0 +1,349 @@
+[[approach-pressuremeter]]
+==== Approach for Pressuremeter test
+
+===== Principle
+
+The principle of the test is to carry out an in-situ loading test, using
+an expandable cylindrical probe which is placed within the ground in a
+borehole. This probe, made up of three cells, is inflated with water and
+compressed air, thus exerting strictly uniform pressures on the wall of
+the borehole.
+
+The strain of this wall are therefore accompanied by an increase in the
+volume of the probe which is then read, for each of the pressures, as a
+function of time. Thus, the pressuremeter allows to obtain a
+relationship between stress (applied pressure) and deformation
+(variation in the volume of water in the probe, directly linked to the
+strain of the soil).
+
+Please note that unlike others in-situ test such as the CPT test, the
+pressuremeter test give «ponctual information», determined by the
+measurement step chosen by the experimenter. This measurement step is
+itself limited by the size of the probe, and it can be, generally, at
+least one meter or more.
+
+The purpose and main interest of the pressurmeter test is to measure,
+trough the same test quantitative parameters of strength and deformation
+of the ground tested.
+
+These parameters, calculated after the results of the test, are the
+following:
+
+* _p_LM : Ménard pressuremeter limit pressure ;
+* _p_f : p pressuremeter creep pressure ;
+* _E_M : Ménard pressuremeter modulus.
+
+These parameters could be used to do geotechnical calculations:
+
+* Directly, through semi-empirical methods, example: foundation
+calculations; and
+* Indirectly, trough the determination of others geotechnical
+parameters, for example, the Young Modulus of the soil used in numerical
+approach, which can be obtained from the Menard pressuremeter modulus
+
+Indirectly, it is possible to link these parameters to a lithology, in
+particular the couple _p_LM _/ E_M, which could be used in the
+Pressiorama® (Baud, 2005), NF-P 94-262 annex B.
+
+.Pressiorama® diagram (Baud, 2005, extracted from NF-P 94-262 annex B)
+image::https://github.com/opengeospatial/Geotech/assets/17067226/5d4231bf-6283-432c-b23c-2a5cb12d128d[]
+
+Please note that the diagram is defined for a range of _p_LM up to 10
+MPa, which corresponds to the actual application domain of the
+pressuremeter:
+
+* _p_LM < 5 MPa : Range of values measurable by a « classic probe »,
+corresponding to the values encountered in most soil type, to soft and
+weathered rocks.
+* 5 MPa <_p_LM < 8 MPa : Range of values measurable by a « specific probe
+», corresponding to the values encountered in most soft and weathered
+rocks.
+* _p_LM > 8 MPa : This range of values couldn’t be measured with the
+actual equipment, and correspond to a rocky domain
+
+In conclusion, keep in mind that the pressuremeter has a
+relatively wide range of application, from all types of soils to soft
+and weathered rocks. However, it could not be properly use for the
+characterisation of solid rocks.
+
+===== Equipment
+
+The following is mostly extracted from the standard NF EN ISO 22476-4,
+which is about the Ménard procedure of the pressurmeter test (the «
+classical » procedure). Please notice the existence of some variants of
+this procedure, depending principally of the way to instal the probe
+within the ground. These others specific procedures are exposed on the
+norms listed at the end of this page.
+
+[arabic]
+. *General description*
+
+The pressuremeter shown schematically in §2.2 shall include:
+
+* the pressuremeter probe;
+* the string of rods to handle the probe;
+* the control unit (CU);
+* The connecting lines between the control unit and the probe.
+
+Some means of measuring the depth of the test with appropriate
+measurement error shall be provided.
+
+.Photograph of a pressuremeter set (extracted from https://www.apageo.com).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/a2207cd1-e2a7-4d83-a24c-35be42f59632[]
+
+[arabic, start=2]
+. *Probe description*
+
+If expansion is followed by the volume of the measuring cell, the
+measuring cell shall be inflated by injecting a liquid of low
+compressibility. Alternatively air can be used to inflate the measuring
+cell and the expansion followed by displacement transducers.
+
+image:https://github.com/opengeospatial/Geotech/assets/17067226/e648c656-75c2-4e13-99c9-dd5d0322fd07[]
+
+.Diagram of a Ménard pressuremeter (extracted from NF EN ISO 22476-4).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/14ae181a-af76-4f22-8e9c-3dd85f0f32d9[]
+
+*Key*
+
+* 1a pressurization, differential pressurization and injection devices
+* 1b pressure and volume measuring devices
+* 1c acquisition, storage and printing out of the data (required for CU
+type B and C)
+* 2 connecting lines:
+** 2a line for liquid injection
+** 2b line for gas injection
+* 3 depth measurement system 2b line for gas injection
+* 4 rods
+* 5 pressuremeter probe:
+** 5a upper guard cell
+** 5b central measuring cell
+** 5c lower guard cell
+* 6 ground
+* 7 pressuremeter test pocket
+* 8 hollow probe body
+* 9 probe rod coupling
+* 10 transducers
+
+[arabic, start=3]
+. *Pressure and volume control unit*
+
+The control unit shall include:
+
+* equipment to pressurize, and so to inflate the probe, and to maintain
+constant pressures as required during the test;
+* equipment to maintain an appropriate pressure difference between the
+central measuring cell and the guard cells, if relevant;
+* device which permits, according to the type defined in Table 1, the
+reading and recording of the parameters to be measured: time, pressure
+and volume.
+
+.Types of pressuremeter control units (Extracted from NF EN ISO 22476-4).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/96a036d6-45a6-424a-b512-9c56ca584d49[]
+
+The control unit shall control the probe cell expansion and permit the
+simultaneous reading of liquid and/or gas pressures and injected liquid
+volume or radius of the measuring cell as a function of time.
+
+The pressurizing device shall allow:
+
+* reaching the pressuremeter limit pressure or a pressure p r at least
+equal to the maximum pressure defined for the test;
+* holding constant each loading pressure level in the measuring cell and
+in the guard cells during the set time;
+* implementing a pressure increment of 0,5 MPa in less than 20 s as
+measured on the control unit;
+* controlling the pressure difference between the measuring cell and the
+guard cells;
+* injecting a volume of liquid in the measuring cell larger than at
+least its volume at rest V c, i.e. 700 cm 3 for a 60 mm pressuremeter
+probe.
+
+If volumetric measurement is used, a valve between the volumeter and the
+pressure measuring device shall allow stopping the injection.
+
+[arabic, start=4]
+. *String of rod/connecting lines*
+
+Not described here, to have information regarding this subject, please
+consult the norm.
+
+*Test procedure*
+
+The test procedure will not be detailed her, to consult the exact
+procedure, please consult the associate norm.
+
+However, the principle is to establish a loading program in at least 8
+to 10 steps, in which the volume of the probe increases, leading to a
+raising of the radial stress imposed to the ground. In each step, a
+constant stress is applied to the ground, during a certain time increment.
+
+A template of loading program is exposed in the following figure,
+extracted from the norm.
+
+image::https://github.com/opengeospatial/Geotech/assets/17067226/919b6bf2-377c-4b96-87fd-792ac45e3d01[]
+image::https://github.com/opengeospatial/Geotech/assets/17067226/36d303b2-cfeb-45e9-becb-08812fa162a8[]
+
+.Pressuremeter test procedure
+image::https://github.com/opengeospatial/Geotech/assets/17067226/582b665f-d78e-473d-823e-66756540245b[]
+
+===== Results and interpretation
+
+[arabic]
+. *General*
+
+The application of the loading programme results in a raw pressuremeter
+curve. Some correction should be applied to this raw curve in order to
+avoid experimental biases. The corrections procedure are well detailed
+in the norm.
+
+After this step, the corrected pressuremeter curve is used to calculate
+the pressuremeter parameters described above. A typical pressuremeter
+curve is presented in the figure below.
+
+At least three data points in the second group of readings and three
+data points in the third group shall be available to determine all three
+parameters p f, p LM and E M.
+
+If in a test, one group of readings is incomplete or missing, the
+following effects on the determination of the three parameters shall be
+considered:
+
+* when the pressuremeter curve includes only the second and third groups
+of readings and with fewer than two data points in the second group,
+values of E M and p f cannot be obtained;
+* when the pressuremeter curve includes only the first and second groups
+of readings (i.e. only one or no points in the third group), p LM and p
+f cannot be obtained.
+
+image::https://github.com/opengeospatial/Geotech/assets/17067226/3e8fcb1d-de26-44a7-b12e-753c4a67a6d9[]
+
+.Groups of pressuremeter readings
+image::https://github.com/opengeospatial/Geotech/assets/17067226/2b0e9f0c-f4a4-4dca-9d45-a01a2122ec60[]
+
+In the following, the methods of determination of the parameters will be
+synthesized to give a brief overview of the process, and may not be
+exhaustive. Please consult the norm to have the complete procedure of
+determination
+
+[arabic, start=2]
+. *Pressuremeter creep pressure p*** f**
+
+If there are at least two sets of readings both in the second and in the
+third group, the creep pressure pf shall be estimated, using the
+following graphical analysis of the (p, V 60/30) diagram: 2 straight
+lines shall be drawn on the (p, V 60/30) graph, one involving the data
+points in the second group, the second one involving the data points in
+the third group, as illustrated on Figure D.4; the abscissa of the
+intersection of the 2 straight lines give p f.
+
+.Pressuremeter creep pressure determination (Extracted from NF EN ISO 22476-4).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/8daa4b19-1f1d-4527-9f40-ffd49b27152d[]
+
+[arabic, start=3]
+. *Ménard pressuremeter limit pressure p*** LM**
+
+The Ménard pressuremeter limit pressure is conventionally defined as the
+pressure leading to the doubling of the initial volume of the pocket.
+
+It can be either obtained by direct measurement or determined using
+extrapolation methods.
+
+.Ménard pressuremeter limit pressure, with reciprocal fitting and extrapolation method (extracted from NF EN ISO 22476-4).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/585770da-8e06-4c7d-9391-ae4990918d10[]
+
+[arabic, start=4]
+. *Ménard pressuremeter modulus E*** M**
+
+The Ménard pressuremeter modulus is defined as the modulus of the
+pseudo-elastic part of the curve. The determination of this parameter
+should be done with great precaution and following the recommendation of
+the norm, that could not be detailed here.
+
+.Plot of a corrected pressuremeter curve, creep curve and slopes (Extracted from NF EN ISO 22476-4).
+image::https://github.com/opengeospatial/Geotech/assets/17067226/2c077cd4-0ab0-4247-b7d2-fa0c5395eb25[]
+
+Please note that the The Ménard pressuremeter modulus is not a Young
+Modulus of the tested soil. This Young Modulus could be calculated
+using the rheologic coefficient α, defined by Ménard, and depending on
+the soil type.
+
+In addition, please note that the young modulus of soils depend on the
+strain level : it should be corrected to be properly use in geotechnical
+calculation.
+
+.Variation of the deformation modulus in function of the strain level (Reiffsteck 2002)
+image::https://github.com/opengeospatial/Geotech/assets/17067226/f8cb91ee-eff0-415a-97c9-ec3edf773532[]
+
+.Degradation laws E/EM = f(ε) (ARSCOP, 2017)
+image::https://github.com/opengeospatial/Geotech/assets/17067226/fd2e7f3d-072e-44bd-beb6-b49835dbf49b[]
+
+*Normalization / Variants*
+
+There are different variants of this kind of geotechnical test,
+depending mostly on the probe type and on the method to insert this
+probe within the ground. These variants are described in the following
+norms :
+
+* NF EN ISO 22476-4, septembre 2021, Index : P 94-521-4, P 94-521-4 :
+Geotechnical investigation and testing - Field testing - Part 4 :
+prebored pressuremeter test by Ménard procedure
+* NF EN ISO 22476-5, French Standard approved and published by AFNOR,
+2023-04-12 : Geotechnical investigation and testing - Field testing -
+Part 5: prebored pressuremeter test
+* NF EN ISO 22476-6, octobre 2019, Index P 94-521-6 , ICS : 93.020 :
+Geotechnical investigation and testing - Field testing - Part 6 : self
+boring pressuremeter test**
+* NF EN ISO 22476-8, janvier 2018, Index : P 94-521-8, ICS : 93.020 :
+Geotechnical investigation and testing - Field testing - Part 8 : full
+displacement pressuremeter test
+
+===== Exposing Pressuremeter test with the FROST Geotech Plugin
+
+====== Sensor
+
+The PressumeterTest instance has to be declared as a Sensor with a
+SensorType referring to its nature, eg.
+https://data.geoscience.fr/ncl/Proc/94
+
+====== ObservedProperty and DataStream
+
+For each PressuremeterTest performed, one DataStream shall be declared
+per ObservedProperty.
+
+====== BhCollarThing and BhTrajectory
+
+BhCollarThing and BhTrajectory shall be used to respectively describe
+the Borehole and its trajectory
+
+====== BhSampling and BhFeatureOfInterest
+
+BhSampling enable to declare each depth at which a test has been
+performed. For example, if a test has been performed from the Depth 1m
+to the Depth 10m every 1m, then there shall be BhSamplings for the
+Depths = 1m, 2m, …, 9m, 10m.
+
+One BhFeatureOfInterest shall then be declared per Sampling.
+
+As a PressuremeterTest is an in-situ test with ponctual measures (at
+depth), the BhFeatureTypes that shall be declared are : Hole & Point
+
+===== Observation and result
+
+====== For intepreted or calculated values
+
+In this case, there shall be one Observation and Result per combination
+of DataStream / FeatureOfInterest. For example, if there are 3
+DataStreams (the different ObservedProperties) and 10
+FeaturesOfInterests (the different depth), then there shall be 30
+Observations declared.
+
+====== For raw measurements
+
+The Pressuremeter test imply several measurements of the same parameter
+at the same depth. Each measurement being associated to a step. In this
+case, there shall be for each FeatureOfInterest (the different depth) as
+much Observations as steps. For example, if the test imply 10 steps at
+one depth, then there shall be 10 observations associated to that depth.
+The number of the step shall be declared as a Parameter of the
+Observation.

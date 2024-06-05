@@ -1,0 +1,42 @@
+=== Book B Principles
+
+In their tentative to appreciate the environment of a projected
+infrastructure, geotechnical engineers pay attention to several aspects:
+
+* Geology, 
+* HydroGeology, 
+* Geotechnics, 
+* Surrounding constructions,
+* Geohazards, and
+* Environmental impact (polluted site).
+
+Models are built in order to reflect an understanding of this
+environment.
+
+Each Book B ends with a register of uncertainties: what is known, what is
+unknown.
+
+==== Concepts list
+
+The Book B is organized in Geomodels which themselves are components of
+different Features based on their thematic content.
+
+==== Primary models and their components
+
+The following components are included in geology, hydrogeology, and geotechnics models.
+
+* Geomodel
+* GeologicUnit
+* Fault
+* Contact
+* Fold
+* HydroGeoUnit
+* FluidBody
+* FluidBodySurface
+* GeotechUnit
+* DiscreteDiscontinuity
+* Void
+* HazardArea
+* SurroundingConstruction
+
+//section end fix?

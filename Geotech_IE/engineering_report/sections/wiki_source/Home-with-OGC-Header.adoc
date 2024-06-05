@@ -1,0 +1,107 @@
+**
+
+Open Geospatial Consortium**
+
+ 
+
+Submission Date: 2023-12-22
+
+Approval Date: YYYY-MM-DD
+
+Publication Date: YYYY-MM-DD
+
+External identifier of this OGC® document:
+http://www.opengis.net/doc/per/XXX
+
+Internal reference number of this OGC® document: YY-XXX
+
+Category: OGC® Engineering Report
+
+Editors: Mickael Beaufils
+
+ 
+
+**
+
+OGC Geotech Interoperability Experiment Engineering Report**
+
+ 
+
+**
+
+Copyright notice**
+
+Copyright © 2023 Open Geospatial Consortium To obtain additional rights
+of use, visit http://www.opengeospatial.org/legal/.
+
+*Warning*
+
+This document is not an OGC Standard. This document presents a
+discussion of technology issues considered in an initiative of the OGC
+Innovation Program. This document does not represent an official
+position of the OGC. It is subject to change without notice and may not
+be referred to as an OGC Standard. However, the discussions in this
+document could very well lead to the definition of an OGC Standard.
+
+*LICENSE AGREEMENT*
+
+Use of this document is subject to the license agreement at
+https://www.ogc.org/license
+
+Suggested additions, changes and comments on this document are welcome
+and encouraged. Such suggestions may be submitted using the online
+change request form on OGC web site: http://ogc.standardstracker.org/
+
+== Geotech Interoperability Experiment
+
+=== Introduction
+
+BIM, GIS & Digital Twins introduce or emphasize several requirements
+regarding the data. This mostly concern the built environment but also
+orientate the way the geoscience data are expected to be delivered.
+
+=== Semantic coherence for Geotechnics and the necessity of models federation
+
+The main concern is about semantics. As also identified as the main
+criteria of interoperability in the FAIR principles, data shall be
+described in a non-ambiguous way. Those definitions shall be shared by
+the community independently from the standard that is used. For that
+purpose, a federation of model is needed. Then OGC and bSI will derive
+logical models for OGC based and bSI based (IFC) standards.
+
+____
+*_This effort would fit into the ongoing collaboration between OGC
+initiatives and bSI projects on georeferencing, infrastructures
+alignments, procedural geometries, voxels, etc…_*
+____
+
+____
+*_Richard Petrie (bSI), Scott Simmons (OGC)_*
+____
+
+Although, this project is the opportunity to align with other standards.
+A non-exhaustive list of them include AGS/AGSi, DIGGS, Geo3DML,
+GeoValML, BoreholeML, ResqML…
+
+On the OGC side, this project is identified as the main contributor to
+leverage the OGC based standards. For the moment, the IFC schema
+extension for Geotechnics is mainly supported by the GeoSubgroup of the
+IFC Tunnel but it aims to serve all the IFC infrastructure projects.
+
+.geotech ie
+image::https://github.com/opengeospatial/Geotech/assets/17067226/e0b84d58-49c4-4d7f-b12b-af36f1a36110[geotech
+ie]
+
+== Geotech IE deliverables
+
+* Conceptual model (Work in Progress):
+https://github.com/opengeospatial/Geotech/wiki/1-Conceptual-model
+* Guidance for the use of OGC APIs (Work in Progress):
+https://github.com/opengeospatial/Geotech/wiki/OGC-APIs
+* Guidance for the display of geotech information in software (TBD)
+
+== Tour operator
+
+Want to have an overview of all the things you can find in this wiki?
+
+Follow us: https://github.com/opengeospatial/Geotech/wiki/Summary

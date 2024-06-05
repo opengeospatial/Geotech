@@ -1,0 +1,174 @@
+[[ObservingProcedure]]
+==== Observing Procedure
+
+Description of steps performed in order to determine the value of an
+observableProperty by an Observer.
+
+===== A typology of ObservingProcedure
+
+* In-situ and remote observing procedure: the observation is made on the
+field, either directly or remotely.
+* Ex-situ observing procedure: a sample is collected on the field and
+studied in a different place, generally a laboratory.
+
+===== Realizations
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|BRGM |Registry |https://data.geoscience.fr/ncl/Proc |This register
+lists the different methods and processes that can be used to acquire
+knowledge.
+
+|DIGGS |XML Schema
+|https://www.diggsml.org/schemas/2.5.a/Geotechnical.xsd |This schema
+document contains the currently adopted test procedure methods
+(objects), their properties and property definitions. In instance
+documents, these objects are contained within a parent Test or
+MaterialTest measurement object
+|===
+
+A non-exhaustive list of ObservingProcedure for geotechnics includes the following.
+
+* Particle size distribution’@en|'`Analyse granulométrique`'@fr
+* Cone penetration test’@en|'`Essai de pénétration statique au cône`'@fr
+* Mechanical cone penetration test’@en|'`Essai de pénétration statique
+pointe mécanique`'@fr
+* Electrical cone penetration test’@en|'`Essai de pénétration au cône
+électrique`'@fr
+* piezocone penetration test’@en|'`Essai de pénétration au
+piézocone`'@fr
+* Dynamic penetration test’@en|'`Essai de pénétration dynamique`'@fr
+* Standard Penetration test’@en|'`Essai de pénétration dynamique
+standard (SPT)`'@fr
+* Dynamic probing’@en|'`Essai de pénétromètre dynamique`'@fr
+* Ménard pressuremeter test’@en|'`Essai au pressiomètre Ménard`'@fr
+* Self-boring pressuremeter test’@en|'`Essai pressiométrique
+autoforé`'@fr
+* Full displacement pressuremeter test’@en|'`Essai au pressiomètre
+refoulant`'@fr
+* Dilatometer test’@en|'`Essai au dilatomètre`'@fr
+* Flexible dilatometer test’@en|'`Essai au dilatomètre flexible`'@fr
+* Borehole jack test’@en|'`Essai au dilatomètre rigide diamétral`'@fr
+* Field vane test’@en|'`Scissomètre de chantier`'@fr
+* Flat jack test’@en|'`Mesure des contraintes au vérin plat`'@fr
+* Hydraulic Testing of pre-existing fractures (HTPF)'`@en|’Mesure de
+contrainte par fracturation hydraulique (Essai HTPF)`'@fr
+* Water permeability test in a borehole using open systems’@en|'`Essai
+de perméabilité à l’eau dans un forage ouvert (essai Lefranc)`'@fr
+* Water pressure test in rock (Lugeon packer test)'`@en|’Essai de
+pression d’eau dans les roches (essai Lugeon)`'@fr
+* Pumping test’@en|'`Essai de pompage`'@fr
+* Infilirometer test’@en|'`Essai d’infiltration`'@fr
+* Water permeability test in a borehole using closed systems’@en|'`Essai
+de perméabilité à l’eau dans un forage en tube fermé`'@fr
+* Water content measure’@en|'`Mesure de la teneur en eau pondérale`'@fr
+* Bulk density’@en|'`Determination de la masse volumique du sol`'@fr
+* Particle density’@en|'`Détermination de la masse volumique de
+particules solides`'@fr
+* Incremental loading oedometer test’@en|'`Essai de compressibilité à
+l’oedométre par paliers`'@fr
+* Unconfined compression test’@en|'`Essai de compression uniaxiale`'@fr
+* Unconsolidated undrained triaxial test’@en|'`Essai triaxial non
+consolidé non drainé`'@fr
+* Consolidated undrained triaxial compression test on water saturated
+soils’@en|'`Essai triaxial consolidé non drainé`'@fr
+* Consolidated drained triaxial compression test on water saturated
+soils’@en|'`Essai triaxial consolidé drainé`'@fr
+* Direct shear test’@en|'`Essai de cisaillement direct`'@fr
+* Atterberg limits : liquid ans plastic limits’@en|'`Détermination des
+Limites d’Atterberg`'@fr
+* Shrinkage test’@en|'`Essai de dessiccation`'@fr
+* Measuring of the methylene blue adsorption capacity of a rocky soil —
+Determination of the methylene blue of a soil by means of the stain
+test’@en|'`Mesure de la capacité d’adsorption de bleu de méthylène d’un
+sol ou d’un matériau rocheux Détermination de la valeur de bleu de
+méthylène d’un sol ou d’un matériau rocheux par l’essai à la tache`'@fr
+* Determination of the organic matter content - Ignition
+method’@en|'`Détermination de la teneur pondérale en matières organiques
+d’un matériau méthode par calcination`'@fr
+* Determination of the organic matter content - Soil chemical
+test’@en|'`Détermination de la teneur pondérale en matières organiques
+d’un sol - méthode chimique`'@fr
+* Determination of the decomposition state (humification) of organic
+soils - Von Post test’@en|'`Détermination de l’état de décomposition
+(humification) des sols organiques - Essai Von Post`'@fr
+* Determination of the carbonate content - Calcimeter
+method’@en|'`Détermination de la teneur en carbonate - Méthode du
+calcimètre`'@fr
+* Determination of minimal and maximal density of cohesionless
+soils’@en|'`Détermination des masses volumiques minimale et maximale des
+sols non cohérents`'@fr
+* Laboratory vane test’@en|'`Essai scissométrique en laboratoire`'@fr
+* Oedometer swelling test - Swelling determination by testing on several
+specimens’@en|'`Essai de gonflement à l’oedomètre - Détermination des
+déformations par chargement de plusieurs éprouvette.`'@fr
+* Huder-Amberg swelling test’@en|'`Essai de gonflement Huder-Amberg`'@fr
+* Soil quality - Determination of water-soluble and acid-soluble
+sulfate’@en|'`Qualité du sol - Dosage du sulfate soluble dans l’eau et
+dans l’acide`'@fr
+* Determination of the compaction reference values of a soil type —
+Standard Proctor Test — Modified Proctor Test’@en|'`Détermination des
+références de compactage d’un matériau - Essai Proctor Normal - Essai
+Proctor modifié`'@fr
+* Indice CBR après immersion. Indice CBR immédiat. Indice Portant
+Immédiat - Mesure sur échantillon compacté dans le moule CBR.’@fr
+* Rock - Determination of water content of rock - Oven-drying
+method’@en|'`Roches - Détermination de la teneur en eau pondérale -
+Méthode par étuvage`'@fr
+* Rock - Tests for physical properties of rock - Determination of
+density - Cutting curb - Water immersion methods’@en|'`Roches - Essais
+pour déterminer les propriétés physiques des roches - Détermination de
+la masse volumique - Méthodes géométriques et par immersion dans
+l’eau`'@fr
+* Rock - Tests for physical properties of rock - Determination of
+porosity’@en|'`Roches - Essais pour déterminer les propriétés physiques
+des roches - Détermination de la porosité`'@fr
+* Rock - Determination of the ultrasonic waves velocity in laboratory -
+Transmission method’@en|'`Vitesse de propagation des ondes ultrasonores
+- méthode par transparence`'@fr
+* Rock - Determination of the uniaxial compression strength’@en|'`Roches
+- Détermination de la résistance à la compression uniaxiale`'@fr
+* Rock - Determination of the tensile strength - Indirect method -
+Brazil test’@en|'`Roches - Détermination de la résistance à la traction
+- Méthode indirecte - Essai brésilien`'@fr
+* Rock - Determination of the triaxial compressive strength’@en|'`Roches
+- Détermination de la résistance à la compression triaxiale`'@fr
+* Rock - Direct shear testing along a rock joint - Normal surface joint,
+constant load testing’@en|'`Roches - Cisaillement direct selon une
+discontinuité de roche - Essai sous un effort constant, normal à la
+surface de discontinuité`'@fr
+* Rock - Determination of the Young modulus and the Poisson
+ratio’@en|'`Roches - Détermination du module de Young et du coefficient
+de Poisson`'@fr
+* Rock - Point load strength test - Franklin test’@en|'`Roches -
+Résistance sous charge ponctuelle - Essai Franklin`'@fr
+* Rock - Determination of the drill penetration index’@en|'`Roches -
+Détermination de l’indice de résistance à la pénétration par un
+foret`'@fr
+* Rock - Determination of the rock abrasiveness - Part 1 :
+Scratching-test with a pointed tool’@en|'`Roches - Détermination du
+pouvoir abrasif d’une roche - Partie 1 : essai de rayure avec une
+pointe`'@fr
+* Rock - Determination of the rock abrasiveness - Part 2 : Test with a
+rotating tool’@en|'`Roches - Détermination du pouvoir abrasif d’une
+roche - Partie 2 : essai avec un outil en rotation`'@fr
+* Tests for mechanical and physical properties of aggregates — Part 2:
+Methods for the determination of resistance to
+fragmentation’@en|'`Essais pour déterminer les caractéristiques
+mécaniques et physiques des granulats — Partie 2 : Méthodes pour la
+détermination de la résistance à la fragmentation`'@fr
+* Tests for mechanical and physical properties of aggregates — Part 1:
+Determination of the resistance to wear (micro-Deval)'`@en|’Essais pour
+déterminer les caractéristiques mécaniques et physiques des granulats -
+Partie 1 : détermination de la résistance à l’usure (micro-Deval)`'@fr
+* Expert estimates or Engineering judgment’@en|'`Dire d’expert ou
+jugement de l’ingénieur`'@fr
+* Correlation’@en|'`Corrélation`'@fr
+* Back analysis’@en|'`Calcul de calage, méthode inverse`'@fr
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/34

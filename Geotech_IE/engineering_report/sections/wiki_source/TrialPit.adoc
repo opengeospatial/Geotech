@@ -1,0 +1,152 @@
+[[TrialPit]]
+==== Trial Pit
+
+A relatively shallow excavation into the earth’s surface, dug either
+manually or by a mechanical excavator. Samples,observations and tests in
+the trial pit are referenced in a linear referencing system only (1D).
+This is a legacy sampling feature to support AGS trial pit constructs.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |TrialPit (candidate) |Same as DIGGS.
+
+|IFC |Borehole |
+
+|AGS |LOCA |AGS LOCA includes exploratory holes of any type,
+e.g., borehole, trial pit, CPT
+
+|DIGGS |TrialPit |A relatively shallow excavation into the earth’s
+surface, dug either manually or by a mechanical excavator. Samples,
+observations and tests in the trial pit are referenced in a linear
+referencing system only (1D). This is a legacy sampling feature to
+support AGS trial pit constructs. The TrenchWall sampling feature should
+be used to represent more detail on walls of pits or trenches in 2D.
+|===
+
+===== Properties
+
+A proposed list of trial pit properties follows.
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Name |Definition
+|id |Identifier
+
+|name |A human-readable display name for the trial pit.
+
+|description |A human-readable description for the trial pit.
+
+|metadata |A URI referring to a metadata record describing the
+provenance of data.
+
+|remarks |Any general remarks about the trial pit
+
+|pitPurpose |The purpose for which the trial pit was created.
+
+|pitUse |The current use of the trial pit which could differ from the
+purpose for which the trial pit was initially created.
+
+|status |The current status of the trial pit (e.g., planned, completed,
+destroyed.
+
+|source |Details and citations to source materials for the trial pit
+and, if available, providing URLs to reference material and publications
+describing the trial pit. This could be a short text synopsis of key
+information that would also be in the metadata record referenced by
+metadata_uri.
+
+|associatedFile |Identifies external files associated with this trial
+pit. This allows for the feature to be further elaborated with
+information that cannot be represented by ASCII text, such as a
+photograph or other media, binary data, or a formatted report.
+
+|whenDestroyed |The time period during which the trial pit was destroyed
+or forever abandoned. This date must occur after all related
+observations, measurements or activities had been performed in the trial
+pit, and should reflect the time after which no observations or
+activities are possible..
+
+|constructionMethod |The method(s) used for this trial pit (manual,
+mechanical)
+
+|constructionEquipment |The equipment used to construct the trial pit
+
+|operator |The organization or agency responsible for commissioning of
+the trial pit (as opposed to the agency which drilled the trial pit).
+
+|excavator |The organization responsible for digging the trial pit (as
+opposed to commissioning the trial pit).
+
+|pitStartDate |The datetime of the start of excavation formatted
+according to ISO8601 (e.g., 2012-03-17T00:00:00).
+
+|pitEndDate |The date of the end of excavation formatted according to
+ISO8601 (e.g., 2012-03-28T00:00:00).
+
+|pitDepthPlanned |The planned depth of a trial pit e.g., in a site
+investigation program.
+
+|pitDepthConstructed |The total depth of a trial pit as constructed and
+logged.
+
+|pitLength |The length of the long horizontal dimension of the pit.
+
+|pitWidth |The length of the short horizontal dimension of the pit.
+
+|startPoint |The position relative to the ground surface that marks the
+origin for measuring distance along a trial pit’s trajectory
+
+|pitShoring |Description of shoring equipment and method.
+
+|pitBackfill |Information on construction of the trial pit backfill.
+
+|locationGeometry |2D or 3D point geometry that represents the location
+of the trial pit at the ground surface in geographic space.
+
+|srsName |The URI of a spatial reference system. If collarGeometry is a
+2D point, this is the horizontal SRS. If collarGeometry is a 3D point,
+this must be a either a 3D SRS, a known compound SRS, or the EPSG code
+of the horizontal component of a compound SRS.
+
+|elevation_srsName |The URI of a spatial reference system of the
+elevation of the collarGeometry. (e.g., mean sea level). Mandatory if
+collarGeometry and srsName is the EPSG code of the horizontal component
+of a compound SRS. elevation_srsName shall be a one dimensional vertical
+SRS (i.e., EPSG code in the range 5600-5799).
+
+|positionalAccuracy |An estimate of the accuracy of the location of the
+collarGeometry. Ideally, this would be a quantitative estimate of
+accuracy (e.g., 20 metres).
+
+|locality |Non-coordinate location information for a trial pit.
+
+|localCoordinates |A geometry object that holds the values of local
+coordinates for the trial pit location. This object is used to carry
+information about the location of a feature in its original local
+reference system if not originally recorded in a well-known SRS
+
+|trajectoryGeometry |A geometry lineString in 3D space that represents
+the top and base of the trial pit. This object is of the same SRS as
+locationGeometry.
+
+|linearReferencing |Defines the linear spatial reference system for the
+trial pit. This LSRS can then be used to define the locations of
+observations within the trial pit as a 1D position along the trial pit’s
+trajectory, rather than in geographic coordinates.
+|===
+
+===== FAQ
+
+====== How are observed properties that vary laterally in a trial pit handled in 1D?
+
+Observations of the same property where results vary laterally in the
+pit at the same depth are assigned different stratum codes. A stratum
+code is a letter or number code that links the stratum shown on a face
+sketch of the trial pit to the observation. In OMS, this would be
+accomplished by having different features of interest identified for the
+same 1D location.
+
+See Github issue: https://github.com/opengeospatial/Geotech/issues/18

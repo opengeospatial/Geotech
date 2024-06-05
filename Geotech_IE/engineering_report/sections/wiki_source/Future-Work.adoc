@@ -1,0 +1,140 @@
+=== Plans for Future Work
+
+"`Paths are made by walking`" - Franz Kafka
+
+==== GeoSciML Update
+
+The O&M based GeoSciML was last updated to V4.1 in 2017. This standard
+should be revisited in light of the developments in both O&M (updated to
+OMS) as well as the use of SensorThings API.
+
+==== GroundWaterML2 Update
+
+While GroundWaterML (OGC WaterML 2: Part 4 - GroundWaterML 2 (GWML2))
+was last updated in 2019, this was before the introduction of OMS.
+Revisiting this standard in order to integrate the new concepts from OMS
+would be valuable.
+
+==== JSON-LD Context for properties
+
+Adding JSON-LD features to the SensorThings API has been a feature
+request for a long time, but making the entire API compatible with
+JSON-LD is not likely to happen very soon. A possible intermediate
+approach may be to add a JSON-LD context to the properties of each
+entity type. This won’t make the entire response JSON-LD compatible, but
+may help with interpreting the free-form properties objects available in
+the SensorThings API.
+
+==== Thing vs. FeatureOfInterest
+
+In this edition of the GeoTech IE (assuming there will be more) borehole
+collars and trajectories are mapped to Things, while all samples are
+mapped to FeatureOfInterest. Although this split works, it is not ideal,
+and thus in the WaterQuality IE an experiment is being done with mapping
+all domain features into the FeatureOfInterest entity type, together
+with a new FeatureType entity type. This moves slightly further away
+from the STA core model, but results in a cleaner model and is currently
+considered as a basis for the SensorThings API version 2.0.
+
+The Sampling, Sampler, SamplingProcedure, PreparationStep and
+PreparationProcedure entity types from this GeoTechIE have been taken up
+and improved by the WaterQualityIE, and are very likely to also be
+adopted as standard extensions to the SensorThings API v2.0.
+
+The many extra self-relations that were added to many entities
+(RelatedBhCollarThings, RelatedDatastreams, RelatedObservations and
+RelatedFeatures) have also been improved upon in the WaterQualityIE and
+will most likely also be added as a standard extension to version 2 of
+the SensorThings API.
+
+==== Geophysics, Profiles and 2D sections, 3D subsurface models
+
+This work was mainly semantic focused with the principal intention to
+harmonize geotech concepts. A next focus should be made on the provision
+of geometry, including notably the capacity to share and query cross
+sections and 3D models. This topic, as well as Geophysics are in
+discussion as possible new activities of the OGC GeoScienceDWG.
+
+==== Semantic transposition
+
+OMS allows for provision of explicit information on observational or
+measurement data, providing detailed information on how these
+observations were created. Such additional measurement metadata is
+essential in order to determine if a specific dataset is fit for purpose
+within a specific use case. However, the complexity of the underlying
+data models can make interaction with OMS based systems difficult for
+inexperienced users, who can easily get lost in the many options. Based
+on these reflections, we came to the insight that within individual use
+cases, there are often two very different user groups interacting with
+OMS data: - Thematic experts analyzing the data for usefulness within
+the UC. These experts require access to the full complexity of the
+underlying OMS data model to understand if the data being provided is
+truly fit for purpose. - Data analysts or developers utilizing an
+already vetted dataset no longer need the details provide by the OMS
+model, for their purposes all they need is a geometry and some numbers,
+as shown in the example below.
+
+....
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            125.6,
+            10.1
+        ]
+    },
+    "properties": {
+        "O3": {
+            "value": 24.3,
+            "uom": "mg/L"
+        },
+        "NO2": {
+            "value": 16.8,
+            "uom": "ppb"
+        }
+    }
+}
+....
+
+The challenge in such a transformation pertains to how to transfer the
+content of the ObservableProperty (name="`O3`" or name="`NO2`") to the
+data structure of the simplified view, as this is transferring information
+from data content to structure. For this purpose, the term
+"`Semantic Transposition`" has been coined, defined in
+https://doi.org/10.29173/iq1051[View points on data points: A shared
+vocabulary for cross-domain conversations on data and metadata]
+
+Within the current work on updating SensorThings API to V2.0,
+integration of Semantic Transposition will be investigated.
+
+==== Simple import options for complex models
+
+In order to enable simple import to the complex models defined utilizing
+OMS and STA, once the structure for standard tests has been defined,
+simplified tools enabling data providers to easily provide their data
+must be investigated. Simple wizards could be of great help in enabling
+data provision.
+
+==== Tabular options for complex models
+
+Related to the points above on Semantic Transposition and simplified
+import, a further approach to simplified interaction with STA endpoints
+pertains to tabular views. This approach can be useful both in provided
+data as well as accessing data.
+
+* On data provision, work is ongoing at
+the European Environment Agency (EEA) on how to enable provision of OMS
+data via tabular views, especially in cases where most of the
+observational metadata has default values, as common under reporting
+obligations (e.g., the UoM and measurement methodology are predefined.
+* On data access, once the observational metadata has been checked by the
+relevant experts, a simple tabular download format would be valuable for
+further analysis as well as portrayal.
+
+==== Visualization options for results
+
+Within this IE, the focus was on utilizing the OMS model as well as the
+STA implementation for sharing of borehole data. A next step involved
+implementing various visualization options for better access to the
+retrieved data.

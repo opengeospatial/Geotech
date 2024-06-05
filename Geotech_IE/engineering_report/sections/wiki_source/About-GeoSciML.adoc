@@ -1,0 +1,34 @@
+==== Introduction to GeoSciML
+
+From the https://cgi-iugs.org/project/geosciml/[CGI-IUGS website]:
+
+____
+*GeoSciML* is an XML–based data transfer standard for the exchange of
+digital geoscientific information. It accommodates the representation
+and description of features typically found on geological maps, as well
+as being extensible to other geoscience data such as drilling, sampling,
+and analytical data. *GeoSciML* provides a standard data structure for a
+suite of common geologic features (eg, geologic units, structures, earth
+materials) and artifacts of geological investigations (e.g., boreholes,
+specimens, measurements). Supporting objects such as the geologic
+timescale and vocabularies are also provided as linked resources, so
+that they can be used as classifiers for the primary objects in the
+GeoSciML standard.
+____
+
+The latest version of the specifications of that joint CGI-IUGS and OGC
+standard can be found here: https://docs.ogc.org/is/16-008/16-008.html
+
+==== Existing concepts proposed for to reuse and extension for geotechnics
+
+* <<Extending-gsml-GeologicUnit,gsml:GeologicUnit>>
+* <<Extending-gsml-ShearDisplacementStructure,gsml:ShearDisplacementStructure>>
+* <<Extending-gsml-Fold,gsml:Fold>>
+* <<Extending-gsml-Contact,gsml:Contact>>
+* <<Extending-gsml-Joint,gsml:Joint>>
+
+==== Concepts proposed for addition to geotechnics?
+
+* <<Adding-gsml-GeotechUnit,gsml:GeotechUnit>>
+
+//section end fix

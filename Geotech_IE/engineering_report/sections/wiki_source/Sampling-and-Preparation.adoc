@@ -1,0 +1,177 @@
+[[Sampling-and-Preparation]]
+==== Sampling and Preparation
+
+Sampling is an act applying a SamplingProcedure to create or transform
+one or more MaterialSamples.
+
+Sampling Procedure is a description of steps performed by a Sampler in
+order to extract a Sample from its sampledFeature in the frame of a
+Sampling.
+
+Preparation Procedure is the description of preparation steps performed
+on a Sample.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC OMS |Sampling |Sampling is an act applying a SamplingProcedure to
+create or transform one or more Sample(s).
+
+|OGC OMS |SamplingProcedure |Sampling Procedure is a description of
+steps performed by a Sampler in order to extract a Sample from its
+sampledFeature in the frame of a Sampling.
+
+|OGC OMS |PreparationProcedure |Sampling is an act applying a
+SamplingProcedure to create or transform one or more Sample(s).
+
+|AGS |SAMP |SAMP includes information for both the sample and the
+sampling activity
+
+|DIGGS |SamplingActivity |The action taken to obtain or produce material
+samples even if the activity fails to produce a sample (eg. a core run
+that produces no recovery). The activity type must be specified, and
+indicates if the produced sample(s) are a result of collection at a
+sampling feature, sub-sampling, aggregation of two or more samples, or a
+sample created as a test or blank sample. All samples must refer to a
+SamplingActivity feature. SamplingActivity is restricted to the
+collection or creation of a new material sample, or a subsampling or
+aggregation of existing collected or created samples. The activity of
+transforming a material sample into a specimen that is being tested is
+described in the preparationProcedure property of a specimen object that
+derives from an existing material sample.
+
+|DIGGS |AbstractSpecimen |AbstractSpecimen serves as the head of a
+substitution group for specimen specializations based on state or type:
+eg. soil, liquid, gas, rock. A specimen derives from one or more
+samples, is created as part of a test procedure, and exists only in the
+context of the test procedure that creates it.
+|===
+
+===== Properties
+
+[width="100%",cols="3%,97%",options="header",]
+|===
+|PropertyName |Definition
+|intermalIdentifier |The value of this property is the identifier
+originally created by the authority for this feature, or that is used as
+the identifier in the authority’s internal data management system. There
+is no assumption as to the unique scope or persistence of this
+identifier. In cases where the original or internal identifier does not
+meet the semantic requirements or gml:id or gml:identifier, the internal
+identifier may be included in this property in order for the originating
+authority to "`map back`" the identifier to an internal data management
+system. The codeSpace attribute must be populated to identify the
+authority that uses the internalIdentifier value.
+
+|samplingFeatureRef |Pointer to the associated sampling feature object
+(eg. borehole, etc.
+
+|sourceSampleRef |A reference to a sample or samples that are used to
+create the sample(s) (identified in the sampleProduced property)
+produced by this activity. This element is only used for activities that
+subsample or aggregate samples from other samples. For aggregate
+samples, the percentage attribute optionally defines how much of the
+total new sample is composed from the source sample.
+
+| |
+
+|status |A text string to provide information about the status of the
+object to be used to track QA/QC controls, review or release status,
+etc. The values used are intended to come from a controlled list of
+terms maintained by an organization.
+
+|role |Identifies a specific role or task performed that is associated
+with this specific feature, the person or organization that performed the
+role, and associated time frame, if applicable.
+
+|activityType |A controlled list that indicates the classification of
+sampling activity. Can be used by applications to validate other
+activity info. One of the following strings must be used:collect -
+activity created a sample or samples by collection from a sampling
+feature;aggregate - activity created a sample or samples by aggregating
+existing samples; the associated Sample(s) should contain more than one
+sourceSampleRef;subsample - activity created a sample or samples by
+subsampling an existing sample; only one sourceSampleRef should be
+specified for the related Sample(s);test - activity produced a test,
+standard or blank sample that does not relate to any field sample or
+sampling feature; activity will point to a project but no
+sourceSampleRef nor samplingFeatureRef should be specified for the
+associated Sample(s);none - the sample activity failed to produce any
+physical sample;unknown - used where no information about the sampling
+activity exists (eg. for legacy data where only sample name or label and
+location (depth) exists).
+
+|purpose |Purpose for this activity. This is an uncontrolled string that
+describes the test or tests that are intended to be run on the sample(s)
+generated from this activity.
+
+|samplingDate |The date/time that encompasses the entire time over which
+sampling occurred.
+
+|associatedFile |Identifies external files associated with this feature.
+This allows for the feature to be further elaborated with information
+that cannot be represented by ASCII text, such as a photograph or other
+media, binary data, or a formatted report.
+
+| |
+
+|samplingEquipment |A property element that contains a generic or
+specialized Equipment object (or reference to one) that details the
+sampling equipment used
+
+|samplingMethod |A property that contains a Specification object
+detailing the method of sampling
+
+|coringPushPressure |For coring activities, the push pressure reported
+as a single value
+
+|coringPushPressureMin |For reporting coring push pressure as a range,
+this property holds the minimum pressure value.
+
+|coringPushPressureMax |For reporting coring push pressure as a range,
+this property holds the maximum pressure value.
+
+|samplerInsertionMethod |For sampling of soil or rock, the means by
+which the sampler is inserted into the ground. From a controlled list
+(eg. pushed, driven, etc.
+
+|mixingTime |For sampling activities that involve blending samples in
+aggregation (such as soil-cement mixtures), this property carries the
+time duration to mix the sample together.
+
+| |
+
+|sampleProduced |Identifies the samples, and the time and location(s) of
+samples (optional) that are produced by this sampling activity
+
+|solidCoreRecoveryLength |For rock cores, the sum of the lengths of
+solid, cylindrical, core pieces
+
+|lengthLongestPortion |For rock cores, the Length of the longest solid,
+cylindrical core piece of the sample
+
+|rockQualityDesignationLength |For rock cores, the sum of length of core
+pieces that are > 100 mm (4 inches) measured along the centerline
+
+|samplingEnvironment |Contains a component object that is a collection
+of environmental parameters recorded at a specific time instant during
+the sampling.
+
+|totalSampleRecoveryLength |For soil or rock cores, this property is the
+length of the total amount of sample recovered during the activity. If
+no sample is recovered, this value is 0.
+
+| |
+
+|otherSamplingActivityProperty |A property that contains a Parameter
+object whereby ancillary metadata about the sampling activity can be
+reported as name-value pairs
+
+| |
+
+| |
+
+|samplingLocation |Location of the sampling activity
+|===

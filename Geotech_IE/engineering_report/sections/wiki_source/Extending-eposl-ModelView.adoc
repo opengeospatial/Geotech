@@ -1,0 +1,37 @@
+[[Extending-eposl-ModelView]]
+==== ModelView according to the EPOS datamodel
+
+The ModelView approach is a creation by EPOS Thematic Core Service on
+Geological Information and Modelling aiming at providing descriptive
+information on 3D/4D models. It builds on GeoSciML Lite philosophy which
+is best thought of as a view of GeoSciML and O&M data that denormalizes
+the data and concatenates complex property values into single,
+human-readable, labels and returns single, representative, values from
+controlled vocabularies for properties multi-valued properties that can
+be used when generating thematic maps, or portrayals, of the data. The
+rationale targeted for ModelView is to have a complete corresponding
+UML model describing 3D/4D Models based on Observations and Measurements
+and the ModelView being a simplified View to support discovery of 3D/4D
+Models. ModelView triggered to move the original GeoSciML Lite
+philosophy from SF-0 to SF-1 to allow some element to appear multiple
+time.
+
+===== Definition
+
+From the https://data.geoscience.earth/def/eposl.xsd[EPOS dedicated
+schema]:
+
+____
+Simplified view of a Model. A model is defined as the result of
+geoscience data processing or interpretation. Proposing either a spatial
+distribution of geoscientific objects with properties of interest
+(feature) or attempt of retranscribing natural/man-made behavior
+through mathematical functions or algorithms (process).
+____
+
+===== Geotech concept that can use eposl:ModelView?
+
+eposl:ModelView is intended as a realization of the
+<<Geomodel,Geomodel>>
+concept and especially one of its specialization the
+<<GeotechSynthesisModel,GeotechSynthesisModel>>

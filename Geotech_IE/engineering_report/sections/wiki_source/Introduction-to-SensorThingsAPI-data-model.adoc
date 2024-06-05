@@ -1,0 +1,55 @@
+==== Introduction to OGC SensorThings API
+
+The OGC SensorThings API (STA) was originally designed to be an API for
+exchanging observational data in the IoT domain, but it quickly shown
+itself to be a full successor to the OGC Sensor Observation Service. The
+SensorThings API in short:
+
+* A standard for exchanging sensor data and
+metadata
+* Historic data & current data
+* RESTful + JSON Encoded, with a
+powerful querying mechanism (based on OASIS OData)
+* Supporting ISO MQTT
+messaging
+* Easy to use & understandable: Discoverable with just a web
+browser
+
+Here is a diagram showing the different classes from OGC SensorThings
+API Part 1: Sensing Version 1.1
+
+.SensorThings API Part 1
+image::https://github.com/opengeospatial/Geotech/assets/17067226/8a4741ba-1a9f-4a8b-8385-c85f9edc3877[]
+
+For those who are familiar with ISO 19156 (aka OGC OMS), one will find
+those data models have a lot in common.
+
+The main class to consider is the Observation that provides the result
+that was obtained at a specific date, location, following a particular
+procedure. The ObservedProperty, Sensor, Thing and FeatureOfInterest
+enable the contextualization of those parameters.
+
+The main difference with OMS relies in the fact that STA introduces the
+Datastream concept as a way to group observations that "come
+together".
+
+This is very common with repeated measurements like time series, or
+measurements made along a trajectory. The Datastream enables grouping
+those observations and avoids repeating parameters that remain unchanged
+like the Sensor or Observed Property.
+
+This concept is explained further in this video:
+https://www.youtube.com/watch?v=bYDSgs2fKLk
+
+Further documentation of the OGC SensorThings API:
+
+* The specification
+of version 1.1: https://docs.ogc.org/is/18-088/18-088.html
+* The GitHub
+page: https://github.com/opengeospatial/sensorthings
+* Tutorials and
+examples made for INSPIRE:
+https://datacoveeu.github.io/API4INSPIRE/sensorthingsapi/1_Home.html
+
+GeotechIE proposes to reuse and extend this data model to accommodate
+the provision of borehole data. See <<STA-Borehole-Model>>

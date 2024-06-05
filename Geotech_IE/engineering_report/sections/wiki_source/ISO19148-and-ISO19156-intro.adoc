@@ -1,0 +1,89 @@
+==== Introduction
+
+For the data modelling on the GeoTech IE, in addition to the basic OGC
+geospatial standards, the following two standards where of core
+interest, strongly guiding the final data model.
+
+===== ISO 19148
+
+Linear Referencing Systems enable the specification of positions along
+linear objects. The approach is based upon the Generalized Model for
+Linear Referencing[12] first standardized within ISO 19133:2005. This
+document extends that which was included in ISO 19133, both in
+functionality and explanation.
+
+ISO 19109 supports features representing discrete objects with
+attributes with values which apply to the entire feature. ISO 19123
+allows the attribute value to vary, depending upon the location within a
+feature, but does not support the assignment of attribute values to a
+single point or length along a linear feature. Linearly located events
+provide the mechanism for specifying attribution of linear objects when
+the attribute value varies along the length of a linear feature. A
+Linear Referencing System is used to specify where along the linear
+object each attribute value applies. The same mechanism can be used to
+specify where along a linear object another object is located, such as
+guardrail or a traffic accident.
+
+It is common practice to segment a linear object with linearly located
+events, based upon one or more of its attributes. The resultant linear
+segments are attributed with just the attributes used in the
+segmentation process, ensuring that the linear segments are homogeneous
+in value for these segmenting attributes.
+
+===== ISO 19156
+
+The Observations, Measurements, and Samples standard (OMS), jointly
+prepared and published by the Open Geospatial Consortium and ISO/TC 211
+as OGC Abstract Specification Topic 20 (OGC 20-082r4) and ISO
+19156:2023, defines a conceptual schema for observations, for features
+involved in the observation process, and for features involved in
+sampling when making observations. Models support the exchange of
+information describing observation acts and their results, both within
+and between different scientific and technical communities.
+
+Observations commonly involve sampling of an ultimate
+feature-of-interest. OMS defines a common set of sample types according
+to their spatial, material (for ex situ observations), or statistical
+nature. The Standard’s schema includes relationships between sample
+features (sub-sampling, derived samples). It also adds concepts that
+were deemed missing in the previous version and provides additional
+clarification to the provided concepts and their relationships while
+keeping the core data model mostly intact. In addition, a new
+fine-grained requirements class structure has been created, enabling
+implementations to unambiguously declare the parts of the standard they
+conform to.
+
+The abstract data models described in OMS provide common concepts and
+logical structures for exchanging observational data and metadata
+between various information systems as well as for harmonized handling
+of such information from various heterogeneous sources. Technical
+implementation standards and profiles, on the other hand, provide
+concrete solutions tailored for storing, exchanging and processing OMS
+information in particular technical environments and use cases.
+
+The work on revising existing OMS-related OGC Implementation Standards
+to fully comply with the OGC 20-082r4 requirements is in progress in
+OGC, including Sensor Things API and Timeseries Markup Language. Work is
+also underway for harmonization between the already closely related OMS
+and the W3C SSN/SOSA Standards. New OGC Implementation Standards are
+being pursued for OMS JSON encoding and OMS related dataset metadata led
+by the OGC OMS Standards Working Group.
+
+The OMS family of Standards contribute to the FAIR (Findable,
+Accessible, Interoperable, Reusable) principles for various kinds of
+measurable information, including environmental monitoring as well as
+remote and in-situ sensing by providing a common conceptual framework
+for discovering, collecting, and analyzing related information from
+various sources and data providers.
+
+===== Geotech concepts which might use ISO 19148 and ISO 19156
+
+Those data models and the extensions designed for them are proposed in
+order to realize all the concepts listed in <<Book-A-organization-and-components>>, including:
+
+* <<Observation>>
+* <<Sampling-and-Preparatio>>
+* <<Borehole>>
+* <<MaterialSample>>
+
+//end of section fix

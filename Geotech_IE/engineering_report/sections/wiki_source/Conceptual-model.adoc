@@ -1,0 +1,139 @@
+=== What is the conceptual model about?
+
+A conceptual schema or conceptual data model is a map of concepts and
+their relationships. This describes the semantics of a domain and
+represents a series of assertions about its nature. Specifically, it
+describes the things of significance to a domain (entity classes), about
+which it is inclined to collect information, and its characteristics
+(attributes) and the associations between pairs of those things of
+significance (relationships). This model’s perspective is independent of
+any underlying data format or application.
+
+The Conceptual Model proposes:
+* Definition and properties for relevant concepts identified by the geotechnical community, and
+* Mapping with existing standards
+
+=== Which standards and versions were considered in this conceptual model?
+
+==== ISO 19148
+
+Linear Referencing Systems enable the specification of positions along
+linear objects. The approach is based upon the Generalized Model for
+Linear Referencing[12] first standardized within ISO 19133:2005. This
+document extends that which was included in ISO 19133, both in
+functionality and explanation.
+
+ISO 19109 supports features representing discrete objects with
+attributes with values which apply to the entire feature. ISO 19123
+allows the attribute value to vary, depending upon the location within a
+feature, but does not support the assignment of attribute values to a
+single point or length along a linear feature. Linearly located events
+provide the mechanism for specifying attribution of linear objects when
+the attribute value varies along the length of a linear feature. A
+Linear Referencing System is used to specify where along the linear
+object each attribute value applies. The same mechanism can be used to
+specify where along a linear object another object is located, such as
+guardrail or a traffic accident.
+
+It is common practice to segment a linear object with linearly located
+events, based upon one or more of its attributes. The resultant linear
+segments are attributed with just the attributes used in the
+segmentation process, ensuring that the linear segments are homogeneous
+in value for these segmenting attributes.
+
+==== OGC Observations, Measurements, and Samples / ISO 19156
+
+This standard specifies an XML implementation for the OGC and ISO
+Observations and Measurements (O&M) conceptual model (OGC Observations
+and Measurements v2.0 also published as ISO 19156, as well as OGC Abstract Specification Topic 20: Observations, Measurements, and  Samples), including a
+schema for Sampling Features. This encoding is an essential dependency
+for the OGC Sensor Observation Service (SOS) Interface Standard. More
+specifically, this standard defines XML schemas for observations, and
+for features involved in sampling when making observations. These
+provide document models for the exchange of information describing
+observation acts and their results, both within and between different
+scientific and technical communities.
+
+More details here: https://www.ogc.org/standards/om
+
+==== OGC GeoSciML 4.1
+
+GeoSciML is a model of geological features commonly described and
+portrayed in geological maps, cross sections, geological reports, and
+databases. The model was developed by the IUGS CGI (Commission for the
+Management and Application of Geoscience Information) and version 4.1 is
+the first version officially submitted as an OGC standard. This
+specification describes a logical model and GML/XML encoding rules for
+the exchange of geological map data, geological time scales, boreholes,
+and metadata for laboratory analyses. It includes a Lite model, used for
+simple map-based applications; a basic model, aligned on INSPIRE, for
+basic data exchange; and an extended model to address more complex
+scenarios.
+
+The specification also provides patterns, profiles (most notably of
+Observations and Measurements - ISO19156), and best practices to deal
+with common geoscience use cases.
+
+More details here: http://geosciml.org/
+
+==== OGC GroundWaterML 2.2
+
+This standard describes a conceptual and logical model for the exchange
+of groundwater data, as well as a GML/XML encoding with examples.
+
+More details here: https://www.ogc.org/standards/gwml2
+
+==== OGC LandInfra
+
+The scope of the Land and Infrastructure Conceptual Model is land and
+civil engineering infrastructure facilities. Anticipated subject areas
+include facilities, projects, alignment, road, railway, survey, land
+features, land division, and "`wet`" infrastructure (storm drainage,
+wastewater, and water distribution systems). The initial release of this
+standard is targeted to support all of these except wet infrastructure.
+
+More details here: https://www.ogc.org/standard/infragml/
+
+==== bSI IFC Tunnel proposal
+
+IFC is a standardized, digital description of the built asset industry.
+IFC4.3 is an open, international standard
+(https://www.iso.org/standard/70303.html[ISO 16739-1:2018]) and promotes
+vendor-neutral, or agnostic, and usable capabilities across a wide range
+of hardware devices, software platforms, and interfaces for many
+different use cases. More about IFC, its uses and adoption may be found
+https://technical.buildingsmart.org/standards/ifc[here].
+
+While geotechnics was first addressed in IFC4.3, major changes are
+discussed in the context of the IFC Tunnel project. The mapping that is
+described in those pages is based on this discussed proposal and do not
+apply to IFC4.3.
+
+==== AGS 4.1
+
+AGS is a text file format used to transfer data reliably, between
+organizations in the site investigation industry, independent of
+software, hardware or operating system.
+
+In 1991, the AGS set up a method for transferring data between industry
+organizations. This is known to many simply as 'AGS Format' or 'AGS
+Data Format' and provides a standard way to transfer ground
+investigation, laboratory testing and monitoring data between the
+contributing parties of a project which involves geotechnical or
+geoenvironmental elements.
+
+More details here:
+https://www.ags.org.uk/data-format/ags4-data-format/ags-4-1/
+
+==== DIGGS 2.5.a
+
+DIGGS is an XML-based standard for the transfer of geotechnical data.
+This current version is limited to ground exploration data derived from
+boreholes, soundings, trenches and outcrops, including in-situ testing
+and monitoring, and laboratory test data. It is built from the AGS data
+dictionary, extending it for US practice, and leverages GML ad WITSML
+XML standards for describing spatial and geometric and unit of
+measurement symbology, respectively.
+
+More details here:
+https://www.geoinstitute.org/special-projects/diggs/schema-tools

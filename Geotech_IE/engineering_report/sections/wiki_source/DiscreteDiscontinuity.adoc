@@ -1,0 +1,97 @@
+[[discretediscontinuity]]
+==== DiscreteDiscontinuity
+
+Any interruption of the continuity in the rock material with its
+attendant mechanical, hydraulic and thermal properties.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|IFC
+|DiscreteDiscontinuity |Any interruption of the continuity in the rock
+material with its attendant mechanical, hydraulic and thermal
+properties.
+
+|OGC GeosciML |Joint |Fracture across which there is no displacement at
+the scale of interest.
+
+|DIGGS |DiscontinuityObservation |Descriptions of faults, fractures and
+joints and their spacing, with attendant mechanical and hydraulic
+properties.
+|===
+
+===== Properties
+
+[width="100%",cols="6%,94%",options="header",]
+|===
+|Property name |Definition
+|DiscontinuityType |pattern of bedding, folds, faults and
+discontinuities in rock masses, which subdivide the mass into individual
+domains or rock blocks (ISO14689)
+
+|DipDirection |The azimuth of the dip (dip direction) shall be measured
+in degrees in the range 0° to 360° counted clockwise from true north and
+expressed as a three-digit number, e.g., 240 or 015. (ISO14689)
+
+|DipAngle |The maximum declination (dip) of the mean plane of the
+discontinuity from the horizontal shall be measured with the clinometer
+in the range 0° to 90° and should be expressed in degrees as a two-digit
+number, e.g., 50. (ISO14689)
+
+|DiscontinuitySpacing |The term "`spacing`" refers to the mean or modal
+spacing of a set of discontinuities and is the perpendicular distance
+between adjacent discontinuities. The number of discontinuity sets, the
+differences in spacing and the angles between the sets shall be reported
+as these determine the block shape. The discontinuity spacing should be
+measured in millimeters and can be classified using the terms in Table
+8. (ISO14689)
+
+|DiscontinuityPersistence |The linear extent of discontinuities from
+their inception to their termination in solid rock mass or against other
+discontinuities or outside the exposure shall be reported. The size of
+the exposure shall also be recorded. If possible and appropriate,
+measurements should be made in two or preferably three orthogonal
+directions. (ISO14689)
+
+|DiscontinuityRoughness |The surface condition and the shape of
+discontinuities shall be described on the basis of three scales of
+observation, respectively, and using the terms given in Table 9 and
+illustrated in Figure 2: +
+a) small scale (several millimeters) — smooth or
+rough; +
+b) medium scale (several centimeters) — planar, stepped or
+undulating; +
+c) large scale (several metres) — straight, curved or wavy.
+(ISO14689)
+
+|DiscontinuityAperture |The perpendicular distance between the two
+surfaces of a discontinuity is referred to as the aperture. (ISO14689)
+
+|DiscontinuityInfilling |The infilling material between discontinuity
+surfaces shall be identified and described (e.g., soil,minerals such as
+calcite, quartz, epidote, chlorite, anhydrite, clay gouge, rock gouge or
+breccia). (ISO14689)
+
+|DiscontinuityWaterSeepage |Free moisture or water flow visible at
+individual spots or from discontinuities
+
+|Cohesion |Cohesive shear strength of a rock or soil that is independent
+of interparticle friction.
+
+|FrictionAngle |Derived from the Mohr-Coulomb failure criterion and used
+to describe the friction shear resistance of ground materials, together
+with the normal effective stress.
+|===
+
+===== FAQ
+
+====== How to deal with DiscontinuitySets in a GeotechnicalUnit?
+
+A description of the sets of discontinuities can be described as
+properties of a GeotechnicalUnit.
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/23

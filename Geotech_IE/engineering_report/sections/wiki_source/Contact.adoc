@@ -1,0 +1,88 @@
+[[contact]]
+==== Contact
+
+A contact is a general concept representing any kind of surface
+separating two geologic units, including primary boundaries such as
+depositional contacts, all kinds of unconformities, intrusive contacts,
+and gradational contacts, as well as faults that separate geologic
+units.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |Contact |A contact is a general concept representing any
+kind of surface separating two geologic units, including primary
+boundaries such as depositional contacts, all kinds of unconformities,
+intrusive contacts, and gradational contacts, as well as faults that
+separate geologic units.
+
+|IFC |Contact |Same as
+OGC GeoSciML
+|===
+
+===== Properties
+
+[width="100%",cols="4%,96%",options="header",]
+|===
+|PropertyName |Definition
+|identifier |Globally unique identifier:Primitive::CharacterString shall
+uniquely identifies a tuple within the dataset and be formatted as an
+absolute URI conformant to RFC 3986.
+
+|name |name reports the display name for the Contact.
+
+|description |description reports the description of the Contact,
+typically taken from an entry on a geological map legend.
+
+| |
+
+|contactType |contactType reports the type of Contact (as defined in
+GeoSciML) as a human readable label. To report an identifier from a
+controlled vocabulary, contactType_uri shall be used.
+
+|observationMethod |observationMethod reports a metadata snippet
+indicating how the spatial extent of the feature was determined.
+ObservationMethod is a convenience property that provides a quick and
+simple approach to observation metadata when data are reported using a
+feature view (as opposed to observation view).
+
+|positionalAccuracy |positionalAccuracy reports quantitative values
+defining the radius of an uncertainty buffer around a MappedFeature
+(e.g., a positionalAccuracy of 100 m for a line feature defines a buffer
+polygon of total width 200 m centred on the line).
+
+|source |source contains a text describing feature-specific details and
+citations to source materials, and if available providing URLs to
+reference material and publications describing the contact feature. This
+could be a short text synopsis of key information that would also be in
+the metadata record referenced by metadata_uri.
+
+|metadata_uri |metadata_uri reports a URI referring to a metadata record
+describing the provenance of data.
+
+|genericSymbolizer |genericSymbolizer contains an identifier for a
+symbol from standard (locally or community defined) symbolization scheme
+for portrayal.
+
+| |
+
+|Shape |The property shape:GM_Object contains a geometry defining the
+extent of the contact feature.
+
+| |
+
+|DipDirection |The geographic direction of a line created by the
+intersection of a plane and the horizontal plane. If non specific
+convention is used, this angular value is in the range 0 to 18 degrees.
+In this case, there is an ambiguity on the dip orientation. For example,
+a plane with an orientation of 90 degrees from the north could either
+have a dip direction to the North or to the South. Thus, to avoid this
+ambiguity, a strike value is generally completed with an indication of
+the dip orientation (Quadrant).
+|===
+
+===== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/8

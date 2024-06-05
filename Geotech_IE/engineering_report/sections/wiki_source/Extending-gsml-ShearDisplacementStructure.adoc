@@ -1,0 +1,22 @@
+[[Extending-gsml-ShearDisplacementStructure]]
+==== ShearDisplacementStructure according to GeoSciML
+
+From https://docs.ogc.org/is/16-008/16-008.html#93[GeoSciML v4.1]:
+
+____
+A *shear displacement structure* includes all brittle to ductile style
+structures along which displacement has occurred, from a simple, single
+'`planar`' brittle or ductile surface to a fault system comprised of
+tens of strands of both brittle and ductile nature. This structure may
+have some significant thickness (a deformation zone) and have an
+associated body of deformed rock that may be considered a deformation
+unit (which geologicUnitType is '`DeformationUnit`') which can be
+associated to the *ShearDisplacementStructure* using
+GeologicFeatureRelation from the GeoSciML Extension package (8.5.1.2).
+____
+
+===== Geotech concept that can use gsml:ShearDisplacementStructure
+
+gsml:ShearDisplacementStructure is identified to realize the geotech
+concept called
+<<Fault,Fault>>.

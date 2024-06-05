@@ -1,0 +1,33 @@
+==== INSPIRE
+
+The INSPIRE Directive aims to create a European Union Spatial Data
+Infrastructure (SDI) for the purposes of EU environmental policies and
+policies or activities which may have an impact on the environment. This
+European Spatial Data Infrastructure will enable the sharing of
+environmental spatial information among public sector organisations,
+facilitate public access to spatial information across Europe and assist
+in policy-making across boundaries.
+
+INSPIRE is based on the infrastructures for spatial information
+established and operated by the Member States of the European Union. The
+Directive addresses 34 spatial data themes needed for environmental
+applications.
+
+===== INSPIRE Theme III: Natural Risk Zone
+
+The approach taken to model Natural Risk Zones is generic in its
+treatment of each of hazard, exposure, vulnerability and risk, but five
+use cases have been created to demonstrate the fit of the model with
+specific examples for different types of hazard: - Floods (calculation
+of flood impact, reporting and flood hazard/risk mapping) - Risk
+Management Scenario (an example from a national perspective) -
+Landslides (hazard mapping, vulnerability assessment and risk
+assessment) - Forest fires (danger, vulnerability and risk mapping) -
+Earthquake insurance
+
+===== Existing concepts proposed for reuse and extend for geotechnics
+
+* <<Extending-NZ-HazardArea,NZ:HazardArea>>
+* <<Extending-NZ-RiskZone,NZ:RiskZone>>
+
+//section end fix

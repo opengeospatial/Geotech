@@ -1,0 +1,98 @@
+==== The distinction between feature properties and observations.
+
+===== Definitions
+
+A video introduction by Kathi Schleidt of the observation concept can be
+found here: https://www.youtube.com/watch?v=bYDSgs2fKLk
+
+It notably proposes an explanation of what is an observation vs a
+property of a feature. The picture below makes it clear.
+
+.Feature property and Observation
+image::https://github.com/opengeospatial/Geotech/assets/17067226/934bf40d-8098-42a3-b8e4-506bb47628af[]
+
+*Feature property*: one object called the feature (here the smily face) is
+identified and is associated to a property (here Expression = Happy)
+
+*Observation*: a dedicated object called the observation is set. It is
+more exactly an act which itself have some properties that enable to
+define the context and also the result of the observation act (here that
+the Smily Face looks to be of a yellow color according to Kathy’s
+experience).
+
+===== Feature properties vs observations
+
+Feature properties are a direct way to associate an information to an
+object. The association is "`absolute`" in the sense that it is always
+true, no matter when, who/what is involved in describing the object. For
+example, the name of a person, its date of birth.
+
+On the contrary, the observation concept offer the capacity to
+contextualize an information that is provided. For example, the time,
+the location, the method, the observer: that is to say conditions in
+which the information was obtained and may have an important impact on
+the validity of the result.
+
+For those reasons one can see that:
+
+* feature properties perfectly fit domain where the knowledge of the
+objects are well mastered. This is typically the case in *industry* that
+propose to build from hand or machine made well known components.
+* observation is very relevant in domain where the knowledge is
+incomplete, or when only a small part (either in terms of space or time)
+of an object is studied. This is typically the case in *science* where
+each information must be kept in its context before (possibly) deducting
+a more general law or rule.
+
+===== When to use one or the other in geotechnics
+
+Information obtained through a process of observation, measurement,
+interpretation or even calculus fit the concept of observation and shall
+be exposed that way.
+
+===== How to associate observations to features?
+
+A basic need for semanticized objects is to be able to associate them with
+information.
+
+*Approach 1: (Direct) Feature properties, as in GeoSciML Lite*
+
+.In this simplified version of GeoSciML, a direct association between the "`ObservedProperty`" and the "`Result`" is provided.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/14ac663d-e8a1-489a-b2b4-fc9c10991dae[]
+
+*Approach 2: Association of one ObservedProperty to a Measurement, as in GroundWaterML2*
+
+.Here the gwUnitThickness of the GL_GeologicUnit is intended to be provided as a Measurement, following ISO19156.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/4d71b35d-47cb-41e9-90cb-10f1e3381664[]
+
+To realize this association, the "`ObservedProperty`" shall be
+associated to the identifier of a Measurement Object. A clean way to do
+that is to have the measurement exposed through an link:OGC%20APIs[OGC
+API] and use the link to it.
+
+The picture below illustrates measurement with a link to a WFS service.
+
+.Extracted from https://www.youtube.com/watch?v=L1L2u3u35cY
+image::https://github.com/opengeospatial/Geotech/assets/17067226/a25ae2f7-f009-45ce-bb2b-ae0369c7ca74[]
+
+*Approach 3 : Association to an OGC API*
+
+A drawback of the second approach is that one needs to have all the
+ObservedProperties described in the feature and to associate the results
+one by one.
+
+A solution to avoid this constraint is to directly associate the feature
+to an "`Observation Oriented API`" that will list the available
+observations associated to the feature.
+
+The following request to an
+<<Introduction-to-SensorThingsAPI-data-model[OGC SensorThingsAPI]>>
+enable to list the "`DataStreams`", that is to say collection of
+observations associated to the Object of interest (here a borehole or
+BhTrajectoryThing):
+
+____
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/BhTrajectoryThings(11)/Datastreams
+____
+
+This is the preferred approach for this IE.

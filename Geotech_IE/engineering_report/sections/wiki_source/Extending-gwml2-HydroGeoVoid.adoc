@@ -1,0 +1,45 @@
+[[Extending-gwml2-HydroGeoVoid]]
+==== HydroGeoVoid according to GroundWaterML2
+
+From https://docs.ogc.org/is/19-013/19-013.html#toc40[GroundwaterML2]:
+
+____
+Voids represent the spaces inside (hosted by) a unit or its material.
+E.g., the pores in an aquifer, or in the sandstone of an aquifer. Voids
+can contain fluid bodies. Voids are differentiated from '`porosity`' in
+that porosity is the proportion of void volume to total volume, while
+voids are the spaces themselves. Voids are required in GWML2, for
+example, to capture the volume of fractures in an aquifer.
+____
+
+===== Geotech concept that can use gwml2:HydroGeoVoid
+
+gwml2:HydroGeoVoid is identified to realize the geotech concept called
+<<Void,Void>>.
+
+The name HydroGeoVoid makes it very hydrogeology oriented, yet the
+definition is generic enough for the geotech purpose.
+
+For man made voids (e.g., tunnels, gallery) the concept of Facility from
+LandInfra may also be used.
+
+Existing attributes:
+
+[width="100%",cols="12%,13%,75%",options="header",]
+|===
+|Attribute |Type and Multiplicity |Definition
+|gwVoidDescription |char |General description of the void
+
+|gwVoidHostMaterial |EarthMaterial [0..*] |The material that hosts the
+void, if specified. Note voids can be hosted by a unit (an aquifer) or
+its material (e.g., sandstone).
+
+|gwVoidMetadata |GW_Metadata |Metadata for the void.
+
+|gwVoidShape |Geometry |Shape and position of the void.
+
+|gwVoidType |PorosityType |Type of void e.g., fractured, intergranular,
+etc.
+
+|gwVoidVolume |Measurement |Volume of the void.
+|===

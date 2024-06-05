@@ -1,0 +1,17 @@
+=== About implementation
+
+Implementation is the state where concepts and ideas take a more
+concrete shape.
+
+In data modeling, this means tools and technical solutions are provided
+in order to realize the conceptual model. Therefore implementation then
+participate in the validation of the conceptual model and of course
+enable to truly provide data (here geotech) in an interoperable way.
+
+One must distinguish the capacity of exposing:
+
+* vocabularies, codelists, or
+* observations, measurements, and features description.
+
+The GeotechIE experimented with some OGC APIs to provide geotech data:
+<<OGC-APIs>>

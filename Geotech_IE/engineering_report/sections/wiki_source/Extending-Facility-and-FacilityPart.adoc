@@ -1,0 +1,36 @@
+[[Extending-Facility-and-FacilityPart]]
+==== Extending LandInfra Facility and FacilityPart
+
+In InfraGML, a Facility is defined as:
+
+____
+Buildings and civil engineering works and their associated siteworks.
+Civil engineering works, or infrastructure facilities, are construction
+works comprising a structure, such as a dam, bridge, road, railway,
+runway, utilities, pipeline, or sewerage system, or are the result of
+operations such as dredging, earthwork, and geotechnical processes.
+____
+
+In InfraGML, a FacilityPart is defined as:
+
+____
+Land and Infrastructure facility, such as a road or bridge. A facility
+has a life cycle, including planning, design, construction, maintenance,
+operation, and removal phases The design and construction phases are
+typically performed as part of a project. There may be multiple such
+projects during the life cycle of the facility to enable phased
+construction and incremental improvement.
+____
+
+===== Geotech concepts that can use InfraGML:Facility and FacilityPart?
+
+InfraGML:Facility is identified to realize the geotech concept called
+<<SurroundingConstruction>>
+
+InfraGML:FacilityPart is identified to realize the geotech concept
+called <<GeotechTypicalSection>>
+
+===== Additionnal properties and constraints
+
+See <<SurroundingConstruction>> and <<GeotechTypicalSection>> for properties to
+be added.

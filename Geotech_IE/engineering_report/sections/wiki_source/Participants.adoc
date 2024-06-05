@@ -1,0 +1,181 @@
+[[participants]]
+=== Participating standard communities
+
+This GeotechIE project is operated thanks to the collaboration of people
+from multiple communities.
+
+==== Open Geospatial Consortium
+
+The Open Geospatial Consortium (OGC) is an international industry consortium participating in a consensus
+process to develop publicly available interface standards. The
+geoscience standards, especially GeoSciML have been designed jointly
+with CGI-IUGS, giving them the status of reference standards for
+geology. Efforts from OGC have also been made to extend those standards
+to address the topic of hydrogeology. The result was the standard
+GroundwaterML2 that is an extension of GeoSciML. The geoscience
+standards also rely on the ISO19156 standard that is a cross domain
+model for Observations, Measurements and Sampling.
+
+Contributors from OGC include:
+
+* Mickaël Beaufils, GeoScienceDWG
+Chairman, GeotechIE Leader, BRGM
+* Scott Simmons, OGC Chief Standards Officer
+* Kathi Schleidt, OMS SWG co-chair, DataCove
+* Hylke van der Schaaf, SensorThingsAPI SWG co-chair, Fraunhofer IOSB
+
+==== buildingSMART International
+
+buildingSMART International (bSI) is an international organization committed to creating and
+developing open digital ways of working for the built asset industry.
+buildingSMART standards help asset owners and the entire supply chain
+work more efficiently and collaboratively through the entire project and
+asset lifecycle.The Industry Foundation Classes (IFC), ISO 16739, are
+the official standards for OpenBIM. Major evolutions have been made on
+them, especially with IFC v4.x, to extend their capacities: IFC 4.0
+introduces the extension of IFC from building to infrastructure. IFC 4.3
+is having another step forward in the direction of environmental
+modeling. It introduces the capacity of describing non-man-made objects
+and also georeferencing. Two major and necessary improvements to
+envisage the description of geotechnical objects or even earthworks. The
+IFC Common Schema is identified to offer a cross-infrastructure support
+to address those domains. Major evolutions in that direction are made
+through the IFC Tunnel project.
+
+Contributors from bSI include:
+
+* Jonas Weil, IFC Tunnel Geo-Subgroup Leader, IC Group
+* Rie Wada, Oyo Company
+
+==== AGS
+
+AGS is the Association of Geotechnical and Geoenvironmental Specialists,
+a UK based trade association established to improve the profile and
+quality of geotechnical and geoenvironmental engineering. In 1991, the
+AGS set up a method for transferring data between industry
+organizations. This is known to many simply as '`AGS format`' or '`AGS
+data format`' and provides a standard way to transfer ground
+investigation, laboratory testing and monitoring data between the
+contributing parties of a project which involves geotechnical or
+geoenvironmental elements. The AGS format has been improved and enhanced
+over the years and is now widely used in the UK. It has also been
+adopted and adapted for use in Hong Kong, Singapore, Australia, New
+Zealand and parts of the Middle East. More recently, AGS has developed
+and released AGSi, a new data format for the exchange of ground model
+and interpreted data in the ground domain. Work is also being carried
+out on a new format for piling data.
+
+Contributors from AGS include:
+
+* Neil Chadwick, AGS Data Management Working Group
+* Tony Daly, AGS Data Management Working Group
+
+==== DIGGS
+
+DIGGS (Data Interchange for Geotechnical and Geoenvironmental
+Specialists) is a special project of the Geo-Institute of the American
+Society of Civil Engineers, and the interchange standard has been
+adopted as the "`Provisional Standard Practice for Digital Interchange
+of Geotechnical Data`" by AASHTO, the association that represents
+highway and transportation departments across the USA and serves as a
+liaison between State departments of transportation and the Federal
+government. DIGGS builds off of the AGS data dictionary for exploratory
+data, and utilizes existing technologies and standards (eg. XML, GML,
+WITSML, OMS) in its schema design. Although initially focused on
+exploratory data collected in US practice, DIGGS supports 1D, 2D, and 3D
+sampling geometries, any language, and can reference any codes or
+language conventions, and thus is designed to be extensible and
+compatible with non-US practice. Beyond exploratory data obtained from
+boreholes, trenches and outcrops, DIGGS is being extended to exchange
+field survey geophysical data, construction data from grouting and pile
+load testing activities, performance monitoring instrumentation, and
+geo-environmental site monitoring.
+
+Contributors from DIGGS include:
+
+* Dan Ponti, DIGGS Steering Committee
+* Derrick Dasenbrock
+
+=== Supporting community
+
+==== ISSMGE TC222
+
+The International Society for Soil Mechanics and Geotechnical
+Engineering (ISSMGE) is the pre-eminent professional body representing
+the interests and activities of Engineers, Academics and Contractors all
+over the world that actively participate in geotechnical engineering.
+The aim of the International Society is the promotion of international
+co-operation amongst engineers and scientists for the advancement and
+dissemination of knowledge in the field of Geotechnics, and its
+engineering and environmental applications.
+
+Contributors from ISSMGE TC222 include:
+
+* Magnus Romoen, ISSMGE TC222 Chairman, NGI
+* Mats Kalstrom, NGI
+
+==== ITA WG22
+
+The International Tunnelling and Underground Space Association (ITA)
+aims are to encourage the use of the subsurface for the benefit of
+public, environment and sustainable development and to promote advances
+in planning, design, construction, maintenance and safety of tunnels and
+underground space, by bringing together information thereon and by
+studying questions related thereto.
+
+WG22 is the Working Group dedicated to information modeling in
+tunelling.
+
+Contributors from ITA WG22 include:
+
+* Florent Robert, ITA WG22 Animator, CETU
+
+==== CGI-IUGS
+
+The Commission for the Management and Application of Geoscience
+Information (CGI) is a working subcommittee of the International Union
+of Geological Sciences. Its mission is to enable the global exchange of
+knowledge about geoscience information and systems. CGI is the governing
+body responsible for the XML-based exchange languages Geoscience Markup
+Language (GeoSciML - in collaboration with the Open Geospatial
+Consortium) and EarthResource Markup Language (EarthResourceML). The CGI
+and its members also play a significant role in the OneGeology
+initiative.
+
+Contributors from ITA WG22 include:
+
+* Harvey Thorleifson, CGI-IUGS Chairman
+* Edd Lewis, BGS
+
+==== EGS UGEG
+
+The Urban Geology Expert Group (UGEG) from EuroGeoSurvey (EGS) delivers
+high quality scientific information and expertise to the EU’s urban
+decision-makers and European Institutions in the areas of sustainable
+urban development, urban resilience, future climate proofing of cities,
+SMART cities and safe construction.
+
+Contributors from EGS UGEG include:
+
+* Philip Wehrens, SwissTopo
+* Teemu Lindqvist, GTK
+
+==== MINnD
+
+The MINnD National Project in France is since its creation in 2014 is
+the French initiative to push openBIM extensions for infrastructure
+description. Majors contributions from MINnD have been brought to the
+development of IFC Bridge, IFC Road, IFC Rail. IFC Tunnel is largely
+influenced by the work made by the MINnD Tunnel (WG1-4) and MINnD
+Geotechnics (WG1-5) projects, that are themselves part of the wider
+MINnD Underground Infrastructure. MINnD Geotechnics emphasized the
+importance of building on and connecting existing standards.
+
+Contributors from MINnD include:
+
+* Isabelle Halfon, BRGM
+* Sylvie Bretelle, ANTEA
+* Elodie Vautherin, Fondasol
+* Pierre Garnier, WSP
+* Alexis Serieys, SETEC Terrasol
+* François Robida, MINnD

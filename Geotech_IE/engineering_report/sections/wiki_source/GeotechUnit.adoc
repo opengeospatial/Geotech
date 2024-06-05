@@ -1,0 +1,346 @@
+[[geotechunit]]
+==== GeotechnicalUnit
+
+A surface or a volume in which the mechanical behavior and other
+design-relevant characteristics are characterized using the same
+geotechnical parameters values. Several alternative classifications can
+be required in a project for different design tasks.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|IFC |GeotechUnit |A
+surface or a volume in which the mechanical behavior and other
+design-relevant characteristics are characterized using the same
+geotechnical parameters values. Several alternative classifications
+(=GeotechModels) can be required in a project for different design
+tasks.
+
+|OGC GeoSciML |GeotechUnit (as a GeologicUnit with Type =
+GeotechnicalUnit) |Same as IFC 4.4+
+
+|DIGGS |GeoUnitObservation |Descriptions of a soil or rock where the
+unit is primarily defined by the value(s) or a value range of one or
+more physical or engineering properties. The criteria for distinguishing
+such units may vary depending on the engineering application.
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include geotechnical units,
+identified as such using the elementType attribute.
+|===
+
+===== Properties
+
+The GeotechUnit concept distinguish SoilLikeMaterial and
+IntactRockMaterial. Each having its own characteristics. The tables
+below list relevant properties for those types of GeotechUnit. Some
+being interpreted, calculated or derived from measurements.
+
+====== Inherited properties from the GeologicUnit concept
+
+See
+<<GeologicUnit,GeologicUnit>>
+
+====== Relevant properties for soil like material
+
+[width="100%",cols="3%,97%",options="header",]
+|===
+|Property name |Definition
+|WaterContent |Ratio of the mass of water to the mass of solids
+
+|VoidRatio |Ratio of the volume of void to the volume of solid
+
+|WetBulkDensity |Ratio of the total mass to the unit total volume
+(material at its natural moisture content)
+
+|DryBulkDensity |Ratio of the mass of solid to the unit total volume
+(dry material)
+
+|Emodulus |The elastic modulus (E-modulus) is a measure of the ground
+stiffness, describing the extent to which a material resists deformation
+in response to an applied force. It is defined as the ratio of the
+stress along an axis to the strain along that axis in the range of
+elastic behavior. This property can be measured directly with different
+types of laboratory and in-situ test methods and is used in constitutive
+models for soil and rock.Many alternative and corresponding parameters
+describe the ground stiffness, including elastic and plastic behavior
+and depending on strain (non-linear behavior), loading/unloading
+conditions, dynamic/static conditions, drained/undrained conditions.
+Such specific parameters can be defined in IFC models with custom
+property sets depending on the exchange scenario (e.g., for specific test
+results or geomechanical properties of interpreted models and
+materials).
+
+|MenardLimitPressure |Limit pressure, resulting from interpretation of
+Menard’s pressuremeter test
+
+|CPTconeResistance |Cone penetration resistance measured during the CPT
+test
+
+|SPTBlowCount |Number of blows N required to drive the sampler for a
+test drive of 300 mm following the seating drive.
+
+|PlasticityIndex |The plasticity index Ip is the numerical difference
+between the liquid limit and plastic limit of a fine soil. IP = wL − wP
+
+|ConsistencyIndex |The consistency index (Ic) indicates the consistency
+(firmness) of a soil. It is the numerical difference between the liquid
+limit and the natural water content expressed as a percentage ratio of
+the plasticity index. Ic = (LL-W)/Ip
+
+|PeakCohesion |Cohesion is a shear strength parameter of soils. Its
+definition is derived from the Mohr-Coulomb failure criterion and it is
+used to describe the shear resistance of soils that is independent from
+the normal effective stress. The peak value correspond to the maximum
+shear measured during the test.
+
+|ResidualCohesion |Cohesion is a shear strength parameter of soils. Its
+definition is derived from the Mohr-Coulomb failure criterion and it is
+used to describe the shear resistance of soils that is independent from
+the normal effective stress. The residual value correspond to the shear
+strength measured at large strain values during the test.
+
+|PeakFrictionAngle |Soil effective stress friction angle is a shear
+strength parameter of soils. Its definition is derived from the
+Mohr-Coulomb failure criterion and it is used to describe the friction
+shear resistance of soils with the normal effective stress. The peak
+value correspond to the maximum shear strength measured during the test.
+
+|ResidualFrictionAngle |Soil effective stress friction angle is a shear
+strength parameter of soils. Its definition is derived from the
+Mohr-Coulomb failure criterion and it is used to describe the friction
+shear resistance of soils with the normal effective stress. The residual
+value correspond to the shear strength measured at large strain values
+during the test.
+
+|UndrainedShearStrength |Shear strength of a soil under undrained
+condition or constant volume conditions. It is relevant for conditions
+where the rate of loading is very much greater than the rate at which
+pore water pressure - generated due to the action of shearing of the
+soil - dissipates. Its calculation depends on the laboratory test
+performed.
+
+|PoissonRatio |Ratio between radial/horizontal strain and axial strain
+of a (geo)material when compressed.
+
+|Emodulus |The elastic modulus (E-modulus) is a measure of the ground
+stiffness, describing the extent to which a material resists deformation
+in response to an applied force. It is defined as the ratio of the
+stress along an axis to the strain along that axis in the range of
+elastic behavior. This property can be measured directly with different
+types of laboratory and in-situ test methods and is used in constitutive
+models for soil and rock.Many alternative and corresponding parameters
+describe the ground stiffness, including elastic and plastic behavior
+and depending on strain (non-linear behavior), loading/unloading
+conditions, dynamic/static conditions, drained/undrained conditions.
+Such specific parameters can be defined in IFC models with custom
+property sets depending on the exchange scenario (e.g., for specific test
+results or geomechanical properties of interpreted models and
+materials).
+
+|CompressionIndex |Compression index is determined with the oedometer
+tests, and used to compute settlements.
+
+|SwellingIndex |Swelling index is determined with the oedometer test,
+and used to compute swelling.
+
+|OCR |Ration between preconsolidation pressure and overburden pressure.
+
+|K0 |The coefficient of lateral earth pressure, K, is defined as the
+ratio of the horizontal effective stress, σ’h, to the vertical effective
+stress, σ’v. For a level ground deposit with zero lateral strain in the
+soil, the "`at-rest`" coefficient of lateral earth pressure, K0 is
+obtained.
+
+|RelativeDensity |Relative density or density index is the ratio of the
+difference between the void ratios of a cohesionless soil in its loosest
+state and existing natural state to the difference between its void
+ratio in the loosest and densest states. (emax - e) /(emax-emin).
+|===
+
+====== Relevant properties for intact rock
+
+[width="100%",cols="2%,98%",options="header",]
+|===
+|Property name |Definition
+|UCS |The unconfined compressive strength (UCS) is the maximum axial
+compressive stress that a right-cylindrical sample of material can
+withstand under unconfined conditions
+
+|Emodulus |The elastic modulus (E-modulus) is a measure of the ground
+stiffness, describing the extent to which a material resists deformation
+in response to an applied force. It is defined as the ratio of the
+stress along an axis to the strain along that axis in the range of
+elastic behavior. This property can be measured directly with different
+types of laboratory and in-situ test methods and is used in constitutive
+models for soil and rock.Many alternative and corresponding parameters
+describe the ground stiffness, including elastic and plastic behavior
+and depending on strain (non-linear behavior), loading/unloading
+conditions, dynamic/static conditions, drained/undrained conditions.
+Such specific parameters can be defined in IFC models with custom
+property sets depending on the exchange scenario (e.g., for specific test
+results or geomechanical properties of interpreted models and
+materials).
+
+|PoissonRatio |Ratio between radial/horizontal strain and axial strain
+of a (geo)material when compressed.
+
+|TensileStrength |Cylindrical rock specimen, extended along two
+diametrically opposed generatrices. This test piece is placed between
+two plates so that the two generators are in contact with the two
+plates. An increasing force is applied until the test piece breaks
+
+|MineralComposition |Description of the mineral composition according to
+ISO standard 14689:2017
+
+|VoidRatio |Ratio of the volume of void to the volume of solid
+
+|Weathering |Description of the physical and chemical changes produced
+by atmospheric agents in rocks or other deposits at or near the earth’s
+surface. These changes result in disintegration and de composition of
+the material.
+|===
+
+====== Discontinuities in rock
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Property name |Definition
+|RQD |Quotient of the cumulative length of cores with a length greater
+than 10 cm, by the total length of the core pass with a length greater
+than or equal to 1m
+
+|DiscontinuityType |pattern of bedding, folds, faults and
+discontinuities in rock masses, which subdivide the mass into individual
+domains or rock blocks (ISO14689)
+
+|DiscontinuityStrikeDirection |The geographic direction of a line
+created by the intersection of a plane and the horizontal plane. If non
+specific convention is used, this angular value is in the range 0 to 18
+degrees. In this case, there is an ambiguity on the dip orientation. For
+example, a plane with an orientation of 90 degrees from the north could
+either have a dip direction to the North or to the South. Thus, to avoid
+this ambiguity, a strike value is generally completed with an indication
+of the dip orientation (Quadrant).
+
+|DiscontinuityDipAngle |The dip is the steepest angle of descent of a
+géological plane to a horizontal plane. It’s value its in the range 0 to
+90 degrees.
+
+|DiscontinuitySpacing |The term "`spacing`" refers to the mean or modal
+spacing of a set of discontinuities and is the perpendicular distance
+between adjacent discontinuities. The number of discontinuity sets, the
+differences in spacing and the angles between the sets shall be reported
+as these determine the block shape. The discontinuity spacing should be
+measured in millimeters and can be classified using the terms in Table
+8. (ISO14689)
+
+|DiscontinuityPersistence |The linear extent of discontinuities from
+their inception to their termination in solid rock mass or against other
+discontinuities or outside the exposure shall be reported. The size of
+the exposure shall also be recorded. If possible and appropriate,
+measurements should be made in two or preferably three orthogonal
+directions. (ISO14689)
+
+|DiscontinuityAperture |The perpendicular distance between the two
+surfaces of a discontinuity is referred to as the aperture. (ISO14689)
+
+|DiscontinuityInfilling |The infilling material between discontinuity
+surfaces shall be identified and described (e.g., soil,minerals such as
+calcite, quartz, epidote, chlorite, anhydrite, clay gouge, rock gouge or
+breccia). (ISO14689)
+
+|DiscontinuityRoughness |The surface condition and the shape of
+discontinuities shall be described on the basis of three scales of
+observation, respectively, and using the terms given in Table 9 and
+illustrated in Figure 2: a) small scale (several millimeters) — smooth
+or rough; b) medium scale (several centimeters) — planar, stepped or
+undulating; c) large scale (several metres) — straight, curved or wavy.
+(ISO14689)
+
+|DiscontinuityWaterPresence |Descriptive of estimated waterinflow in
+excavation, to be used to define Jw(Barton), or RMR groudnwater inflow
+rating.
+
+|Cohesion |Cohesive shear strength of a rock or soil that is independent
+of interparticle friction.
+
+|FrictionAngle |Derived from the Mohr-Coulomb failure criterion and used
+to describe the friction shear resistance of ground materials, together
+with the normal effective stress.
+|===
+
+====== Properties for rock mass
+
+[width="100%",cols="2%,98%",options="header",]
+|===
+|HoekBrownMi |material constant of intact rock
+|RQD |Quotient of the cumulative length of cores with a length greater
+than 10 cm, by the total length of the core pass with a length greater
+than or equal to 1m
+
+|RMR |The rock mass rating (RMR) is a geomechanical classification
+system for rocks, developed by Z. T. Bieniawski
+
+|QValue |The rock mass quality (Q) is a very sensitive index and its
+value varies from 0.001 to 1000. Use of the Q-system is specifically
+recommended for tunnels and caverns with an arched roof.
+
+|GSI |The Geological Strength Index (GSI): A characterization tool for
+assessing engineering properties for rock masses.
+
+|Emodulus |The elastic modulus (E-modulus) is a measure of the ground
+stiffness, describing the extent to which a material resists deformation
+in response to an applied force. It is defined as the ratio of the
+stress along an axis to the strain along that axis in the range of
+elastic behavior. This property can be measured directly with different
+types of laboratory and in-situ test methods and is used in constitutive
+models for soil and rock.Many alternative and corresponding parameters
+describe the ground stiffness, including elastic and plastic behavior
+and depending on strain (non-linear behavior), loading/unloading
+conditions, dynamic/static conditions, drained/undrained conditions.
+Such specific parameters can be defined in IFC models with custom
+property sets depending on the exchange scenario (e.g., for specific test
+results or geomechanical properties of interpreted models and
+materials).
+
+|Cohesion |Cohesive shear strength of a rock or soil that is independent
+of interparticle friction.
+
+|FrictionAngle |Derived from the Mohr-Coulomb failure criterion and used
+to describe the friction shear resistance of ground materials, together
+with the normal effective stress.
+
+|K0 |Lateral Earth Pressure Coefficient
+|===
+
+====== Extra properties
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Property name |Definition
+|PwaveVelocity |Value of S wave (Shear wave (S)) measured through the
+unit.
+
+|SwaveVelocity |Value of P wave (pressure or primary elastic body wave
+(P)) measured through the unit.
+
+|Resistivity |Electrical resistivity of a rock or soil (Ohm-m).
+
+|GroundwaterTemperature |Temperature measured or assumed in the
+groundwater
+
+|WetBulkDensity |Ratio of the total mass to the unit total volume
+(material at its natural moisture content)
+
+|DryBulkDensity |Ratio of the mass of solid to the unit total volume
+(dry material)
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/22

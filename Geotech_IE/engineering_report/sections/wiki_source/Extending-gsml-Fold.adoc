@@ -1,0 +1,24 @@
+[[Extending-gsml-Fold]]
+==== Fold according to GeoSciML
+
+From https://docs.ogc.org/is/16-008/16-008.html#87[GeoSciML v4.1]:
+
+____
+A fold is formed by one or more systematically curved layers, surfaces,
+or lines in a rock body. A fold denotes a structure formed by the
+deformation of a geologic structure, such as a contact which the
+original undeformed geometry is presumed, to form a structure that may
+be described by the translation of an abstract line (the fold axis)
+parallel to itself along some curvilinear path (the fold profile). Folds
+have a hinge zone (zone of maximum curvature along the surface) and
+limbs (parts of the deformed surface not in the hinge zone). Folds are
+described by an axial surface, hinge line, profile geometry, the solid
+angle between the limbs, and the relationships between adjacent folded
+surfaces if the folded structure is a Layering fabric.
+____
+
+===== Geotech concept that can use gsml:Fold
+
+gsml:Fold is identified to realize the geotech concept called
+<<Fold,Fold>>.
+

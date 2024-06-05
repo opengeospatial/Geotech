@@ -1,0 +1,79 @@
+[[bringing-iso-together]]
+==== Motivation
+
+As described in the <<ISO19148-and-ISO19156-intro,Brief introduction to ISO 19148 and ISO 19156>>,
+
+____
+ISO 19148 was designed in order to express locations along a linear
+object,
+____
+
+and
+
+____
+ISO 19156 was designed in order to describe observations, measurements
+and samples.
+____
+
+The motivation to connect ISO 19148 and ISO 19156 is to have the
+capacity to describe observations, measurements and samples that are
+linear referenced. In geotechnics, one major use case for that is
+borehole data.
+
+===== Methodology
+
+In order to explain the approach toward integrating the concepts from
+Linear Referencing (ISO 19148) with parallel concepts from the Sampling
+part of Observations, Measurements and Samples (ISO 19156), start
+with an example provided with the Linear Referencing standard. When
+specifying a feature located along a linear feature, 19148 utilizes the
+FeatureEvent Class. This Event references the following.
+
+* the linear feature under consideration, association role: linearElement
+* information where along
+this linear feature (distance relative to the origin of the linear
+feature) the linearly referenced feature is located (this can be a point
+or interval; dataTypes AtLocation and FromToLocation provided for this
+information). Association role: location
+* the linearly referenced
+feature, located along the linear feature. Association role:
+locatedFeature.
+
+In the example provided with 19148, a wildlife fence is
+located at a specific position along a road (from meter 0 to meter 5),
+leading to the following UML:
+
+.Feature event example
+image::https://github.com/opengeospatial/Geotech/assets/11915304/f8801e18-aa42-4b8f-a607-1db76a48287c[]
+
+In a first step, the same structure was used, but the classes from the
+example were replaced by examples relating to boreholes and sampling a
+segment of this borehole. In addition, where relevant, Interfaces from
+the OMS model were added, in order to show the alignment between the
+interfaces from Linear Referencing with those from OMS. Class
+replacements were as follows:
+
+* FT Road: BH_Trajectory
+* FT WildlifeFence: BH_Segment
+
+This brings us to the following UML:
+
+.Linear Sampling
+image::https://github.com/opengeospatial/Geotech/assets/11915304/5edd49a6-9ce5-4047-a066-7fb7cf63d49e[]
+
+In this diagram, the parallel between the linear referencing
+FeatureEvent and the OMS Sampling become apparent, as well as the fact
+that the linear referencing locatedFeature corresponds with the OMS
+Sample. In addition, the location information is related to the OMS
+SamplingProcedure.
+
+However, when dealing with boreholes, it is common to provide
+information on the borehole collar, to indicate the start of the
+borehole (as well as to provide additional information on the borehole).
+The linear referencing model foresees the Referent Interface to provide
+the origin of the linear feature. Integrating a BH_Collar featureType
+into the model above leads us to the following final level of the
+conceptual linear borehole model:
+
+.Linear Sampling Reference
+image::https://github.com/opengeospatial/Geotech/assets/11915304/0496e94e-63d5-4886-83f1-e44775e05d21[]

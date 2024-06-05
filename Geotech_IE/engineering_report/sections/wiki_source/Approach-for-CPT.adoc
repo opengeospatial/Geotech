@@ -1,0 +1,329 @@
+[[Approach-for-CPT]]
+==== Approach for CPT
+
+Cone Penetration Testing (CPT) is a technique used to evaluate
+subsurface stratigraphy and material properties. An instrumented probe
+is advanced into the soil by direct-push techniques from a reaction
+system, which is often a heavy vehicle but may be an independent frame
+with soil reaction anchors. Measurements from probe sensors are recorded
+on the probe or transmitted in real-time to an up-hole data collection
+and processing system at frequent intervals. Unlike many other in-situ
+geotechnical investigation techniques, the system does not use rotary
+drilling. CPT is frequently used both independently and as a companion
+to borehole drilling. Cone penetration testing is used worldwide but is
+generally less common than rotary drilling and related testing (such as
+SPT) due to the ubiquity of drill rigs and the ability of drills to
+penetrate nearly all geomaterials for site characterization. CPT rigs
+may be mounted on skids, wheeled or tracked vehicles, or reaction frames
+which can be moved into place manually or using light vehicles and small
+equipment. Vehicles and frames may use earth anchors to provide reaction
+for the probe push system. CPT systems can also be deployed in marine
+environments using specialty systems. +
+Most modern CPT probes are configured with sensors to measure the force
+acting on the cone tip, force acting on a nearby friction sleeve, pore
+water pressure, and probe vertical tilt (used primarily to evaluate the
+probe position and inclination for terminating a push if verticality is
+not well maintained).
+
+The technique has several advantages.
+
+* Probe sensors are generally robust and easy to check for proper
+calibration; measurements are often highly repeatable and less operator
+dependent than other techniques.
+* Data is collected electronically at frequent time/depth intervals
+creating a near-continuous record.
+* The technique is relatively fast with a standard advance rate of
+20mm/sec.
+* Probes are available in several shapes and sizes for targeted
+applications.
+* The technique is well suited for both land and marine applications.
+* Many systems are automated to varying degrees.
+* Probes may be configured with a variety of additional sensors:
+** Multi axial or multiple location geophones (seismic wave speed;
+pressure and shear wave measurement)
+** Video cameras
+** Electrical conductivity or resistivity
+** Fuel fluorescence
+** Gamma radiation detectors
+** Magnetometers
+** Multiple friction sleeves
+* Relative safety.
+** Rigs are often enclosed with protection from weather, traffic, dust,
+and other conditions.
+** There are no rotating parts in the operational area greatly
+minimizing operator hazards
+* Reaction force may come from dead-weight or a variety of anchoring
+systems
+* Rigs exist in a wide range of sizes and configurations
+* The operation results in relatively little disturbed ground and spoil
+and is well suited to environmentally sensitive sites.
+
+CPT systems record near-continuous readings of measured sensor output.
+These readings are then processed using calibration conversions to
+engineering units, usually in real time during the advance of the probe
+for operator observation and reaction. Some probes have an onboard
+memory system and the probes are pushed and retrieved without real- time
+information [limiting issues related to wires and wireless commination].
+Proprietary output files usually contain a variety of metadata,
+calibration information, and probe measurements. Additional supporting
+files may be created if standard testing is paused to conduct specialty
+time-domain tests at specified depths, such as pore water pressure
+dissipation tests or shear wave velocity tests. Recorded measurements
+are usually post-processed to develop a variety of engineering
+parameters based on calculations, theoretical, or empirical
+relationships.
+
+Basic measurement output from modern electronic CPT systems includes:
+
+* Time
+* Depth [measured by an up-hole sensor]
+* Tip stress
+* Sleeve friction
+* Pore-water pressure*
+* X-Y Inclination [measured by a pair of accelerometers]
+
+Other measured real-time values could include the measured down pressure
+of the drive system from pressure transducers included in the hydraulic
+system. A common calculated real-time value is the Friction Ratio. The
+pore pressure is typically measured immediately behind the tip element
+at the cone shoulder (the u2 position). Some specialty cones have the
+pore pressure element at the cone nose tip (the u1 position) or behind
+the friction sleeve (the u3 position), though these are far less common
+in non-research [production] applications. The location of the pressure
+sensor element is usually included in the test metadata. The CPT test
+measurements are usually post-processed and information about the site
+location (coordinates and elevation) is often added into the file along
+with other site information, such as the sounding number, time, weather,
+rig idendification, etc. Complete depth-based post-processed output
+frequently includes corrected measurements and calculated parameter
+values:
+
+* Corrected Tip stress
+* Friction Ratio
+* Resistivity/Conductivity
+* Seismic arrival times (P, S1, S2 waves at intervals)
+* Correlated parameters (by one or more methods)
+** Soil Behavior Type (SBT)
+** Soil Material Index (Ic)
+** Effective Friction Ratio (phi prime)
+** Undrained Shear Strength (su)
+** Unit weight
+** Preconsolidation Stress (sigma prime sub p)
+** Yield Stress Ratio (YSR)
+** Lateral Stress Coefficient (Ko)
+** Constrained Modulus (D’)
+** Drained Young’s Modulus (E’)
+** Bulk Modulus (K’)
+** Subgrade Reaction Modulus (ks)
+** Resilient Modulus (ks)
+** Small Strain Shear Modulus (Gmax)
+** Coefficient of Permeability (k)
+** Coefficient of Consolidation (Cv)
+
+Some specialty tests are performed at intervals during a regular CPT
+advance. Pore water pressure dissipation tests may include the time and
+a series of pore pressure measurements taken at a specific depth. These
+time-domain tests are typically conducted at selected depths (rather
+than at regular intervals) and may take a few minutes to several hours
+to complete. The test data is typically recoded in a separate CPT data
+file, at each depth where a test is conducted, with a different data
+structure, associated with the main data file by test ID.
+
+Similarly, seismic tests may include the time and geophone response at a
+specific depth. Other specialty measurements (or data streams) may be
+recorded with the basic measurements with additional sensors on the
+probe, such as electrical conductivity or magnetometers. Similar to pore
+water pressure dissipation, the test data is typically recoded in a
+separate CPT data file at each depth where a test is conducted, with a
+different data structure, associated with the main data file by test ID.
+
+A video feed from a camera mounted within the probe may be recorded as a
+separate data stream. Video cones are outfitted with depth encoders to
+include the depth on the video recording (which may be recorded
+separately as an analog or digital format companion file). Typically CPT
+logs contain the basic test data and dissipation and seismic data is
+processed separately and the calculated "`results`" (such as
+permeability (k) or pressure or shear wave velocity) are indicated on
+the log.
+
+CPT operators often also have the capability to advance a soil sampler
+using the same reaction, advance system, and rods in an adjacent
+sounding. Samples are obtained and companion information from samples,
+such as photographs, moisture assessments, stratigraphic notes, soil
+identification and classification may accompany the digital record.
+
+In addition to the advantages described for data acquisition in the
+field, the relative robustness of the data is useful for correlations
+and assessments of site variability. CPT data is often used to
+characterize site stratigraphy [with a high degree of confidence], model
+liquefaction potential, or to model the design performance of both deep
+and shallow foundation systems. Often, CPT measurements are correlated
+to traditional Mohr-Coulomb (phi-c) engineering design parameters, but
+some modern design techniques use direct-design from original measured
+CPT engineering values (without the correlation step). There are dozens
+of direct CPT design methods, making the exchange and interoperability
+of CPT data especially valuable for use when importing values into
+design software.
+
+.CPT rods being added as a probe is advanced at a project site. Photo courtesy of Minnesota Department of Transportation.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/4113d0e4-9872-47a3-ab21-a1b3d2d0b70d[]
+
+.Operator controlling the push rate as a CPT probe is advanced and data is automatically recorded by a data acquisition system. Photo courtesy of Minnesota Department of Transportation.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/608fde04-630a-4d24-a3e4-7de09d65e4b0[]
+
+.A medium-sized truck-mounted CPT direct-push rig characterizing soils near an existing culvert. The truck is leveled on a set of jacks and the cone is pushed from a location near the center of gravity of the carrier. Photo courtesy of Minnesota Department of Transportation.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/3776ad84-649a-4d81-8eb3-6790bdc32da9[]
+
+.A typical CPT output plot showing Sleeve Stress, Tip Stress, Friction Ratio, Pore Pressure and a calculated Soil Behavior Type (SBT). Figure courtesy of Minnesota Department of Transportation.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/ffea4ac4-a7a6-4d7c-8e7d-4fd4be5f2962[]
+
+The applicable US Standard is ASTM D5778-20, Standard Test Method for
+Electronic Friction Cone and Piezocone Penetration Testing of Soils
+
+===== Exposing CPT with the FROST Geotech Plugin
+
+A typical CPT sounding includes the measurement of several soil
+properties at numerous closely spaced points as the CPT probe is
+advanced into the subsurface. To demonstrate how CPT measurements and
+and related metadata are stored and organized within the FROST server,
+we offer the following example of a simple CPT sounding where three
+propertis are measured:
+
+*GENERAL TEST INFORMATION*
+
+[arabic]
+. Test procedure: ASTM D3441-16, Standard Test Method for Mechanical
+Cone Penetration Testing of Soils
+. Sounding info: C-10, 15.03 ft sounding depth, top of sounding located
+at lan/lon 39.475026/-81.795909, elevation 252.61824 meters (WGS84).
+. Cone Serial Number: 128.074
+. Tip area: 15 cm2
+. Distance between tip and sleeve transducers: 15 cm
+. Probe Penetration Rate: 1 cm/s
+. Net Area Ratio Correction: 0.8
+
+*OBSERVATIONS MADE DURING THE TEST*
+
+Below is a sampling of the data generated. There are 263 sounding points
+total
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Depth (ft) |Tip Resistance (tsf) |Sleeve Friction (tsf) |u2 Pore
+Pressure (tsf)
+|0.153 |16.1 |0 |0.06
+
+|0.211 |26.2 |0 |0.06
+
+|0.292 |41.8 |0.35 |0.07
+
+|.. |… |… |…
+
+|3.357 |32.2 |1.2 |-0.1
+
+|*3.41* |*32* |*1.19* |*-0.1*
+
+|3.461 |31.9 |1.19 |-0.09
+
+|3.516 |31.6 |1.16 |-0.09
+
+|… |… |… |…
+
+|14.765 |84.1 |0.47 |0.22
+
+|14.824 |84.6 |0 |0.23
+
+|15.034 |78.1 |0 |0.23
+|===
+
+===== Instance Diagram
+
+Object instances and the associations required to properly expose the
+example test data with the FROST Geotech Plug-in are shown in the
+following object diagram. This shows data for only sounding point at
+depth of 3.41 ft:
+
+.CPT
+image::https://github.com/opengeospatial/Geotech/assets/17067226/922859b3-607b-4bcf-8464-a5f42b160e40[link="https://umltool.ogc.org/index.php?m=7&o=09276BA8-5200-498c-8568-97E76DB25460"]
+
+The following summarizes the various entities in the diagram:
+
+====== Sensor
+
+The Sensor object serves as the observing procedure in STA. One object
+instance is needed for this example (top center of diagram), and in this
+example holds the information about the test procedure, test parameters,
+equipment used and other metadata about the test, The general test data
+above (except for item 2) are all stored in the properties object of
+this Sensor instance. One Sensor instance is needed for all CPT tests
+conducted in one or more soundings provided that the same procedure,
+test parameters and test equipment is used for all tests.
+
+====== ObservedProperty
+
+The ObservedProperty object instances identify the properties that are
+observed by the CPT test. These are: - tip_resistance - sleeve_friction
+- pore_water_pressure_u2
+
+As with Sensor, the ObservedProperty instances can be reused for
+multiple tests.
+
+====== DataStream
+
+All of the object instances in the diagram are linked to the Sensor and
+ObservedProperty instances via Datastream instances (below the
+ObservedProperty objects on the diagram), which serve to associate
+observation results obtained from a feature of interest to its observed
+property, observing procedure, and the sounding’s trajectory.
+
+Three Datastream instances are needed, one for each ObservedProperty
+instance.
+
+====== BhCollarThing, BhTrajectoryThing and Location
+
+The DataStreams all link to the souinding via its BhTrajectoryThing
+object instance. BhTrajectoryThing (left edge of diagram) represents the
+sounding’s geometry and contains the sounding length and information for
+linear referencing. The trajectory’s geometry is given in the associated
+Location instance. BhTrajectoryThing is associated with a BhCollarThing
+instance, which represents the sounding as a whole. All general metadata
+about the sounding is contained in the BhCollarThing object instance;
+it’s geometry is represented by an associated point Location object
+instance.
+
+More detail about properties of BhCollarThing and BhTrajectoryThing can
+be found in the <<Approach-for-Borehole-logs,Borehole log discussion>>.
+
+====== BhSampling and BhFeatureOfInterest
+
+Sampling in the context of a CPT test or any in-situ test is the act of
+observing properties a a point or segment of the BhTrajectoryThing. The
+single BhSampling object instance (below and to the right of the
+BhTrajectoryThing in the diagram) holds the depth information of this
+sounding point (atPosition=3.41) and links to BhTrajectoryThing in order
+to affix the linear referenced sampling positions to the trajectory
+geometry.
+
+BhSampling produces a BhFeatureOfInterest object, which represents the
+sampling location within the sounding (to the right of the BhSampling
+object instance in the diagram).
+
+===== Observation
+
+The remaining entities on the diagram are Observation instances that
+provide the results for their associated observed properties. Each
+Observation instance links to the BhFeatureOfInterest (sampling
+location) and to the Datastream instance associated with the appropriate
+ObservedProperty. As the results of each observed property are
+independently measured by sensors on the CPT probe, they are independent
+and therefore there are no related observations.
+
+To add data from more sounding points, this requires adding a new
+BH_Sampling and BH_FoI in addition to the three new Observations for
+each sounding point. In the diagram below, we have added an additional
+sounding point (the next one in the depth series). These additions are
+shown in grey to distinguish them from the objects already displayed in
+the simpler diagram above.
+
+.CPT Observation
+image::https://github.com/opengeospatial/Geotech/assets/11915304/517cb8ff-755a-4430-970c-696f0f7b06fa[link="https://umltool.ogc.org/index.php?m=7&o=FCB89BE3-48F7-42ee-97C9-E185205960B4"]

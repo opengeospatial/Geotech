@@ -1,0 +1,51 @@
+[[fluidbody]]
+==== FluidBody
+
+These are distinct bodies of fluid (liquid or gas) that fill the voids
+in hydrogeological units. Fluid bodies are made of biologic (e.g.,
+organisms), chemical (e.g., solutes), or material constituents (e.g.,
+sediment). While it is expected that the major constituent of a fluid
+body will be water, the conceptual model allows for other types of major
+constituents such as petroleum. Minor constituents are not necessarily
+fluids, but can be gases, liquids, or solids (including organisms), and
+are included in the fluid body in various forms of mixture, such as
+solution, suspension, emulsion, and precipitates. Fluid bodies can also
+have other fluid bodies as parts, such as plumes or gas bubbles.
+Surfaces can be identified on a fluid body, such as a water table,
+piezometric or potentiometric surface, and some such surfaces can
+contain divides, which are lines projected to the fluid surface denoting
+divergence in the direction of flow systems within the fluid.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GWML2 |FluidBody |These are distinct bodies of fluid (liquid or
+gas) that fill the voids in hydrogeological units. Fluid bodies are made
+of biologic (e.g., organisms), chemical (e.g., solutes), or material
+constituents (e.g., sediment). While it is expected that the major
+constituent of a fluid body will be water, the conceptual model allows
+for other types of major constituents such as petroleum. Minor
+constituents are not necessarily fluids, but can be gases, liquids, or
+solids (including organisms), and are included in the fluid body in
+various forms of mixture, such as solution, suspension, emulsion, and
+precipitates. Fluid bodies can also have other fluid bodies as parts,
+such as plumes or gas bubbles. Surfaces can be identified on a fluid
+body, such as a water table, piezometric or potentiometric surface, and
+some such surfaces can contain divides, which are lines projected to the
+fluid surface denoting divergence in the direction of flow systems
+within the fluid.
+
+|IFC] |FluidBody |Same as OGC GWML2
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include fluid bodies, identified
+as such using the elementType attribute.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/15

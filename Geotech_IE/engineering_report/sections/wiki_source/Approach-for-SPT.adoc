@@ -1,0 +1,350 @@
+[[Approach-for-SPT]]
+==== Approach for SPT
+
+The Standard Penetration Test (SPT) is a very widely used in-situ
+geotechnical test often applied in combination with other tests during
+the advance of a borehole by various rotary drilling techniques. The
+boreholes may also be advanced by sonic or direct push techniques, but
+these are far less common. The test is typically conducted at discrete
+intervals following separate drilling operations.
+
+The test is valued for its ability to retrieve a sample and a
+simultaneous measurement of soil strength, as well as its relatively low
+cost, simple test protocol, wide-availability, and compact data set
+which can be easily manually recorded and transmitted. The sampler is
+relatively robust and can be used in nearly any geo-environment: soft to
+hard soils, cemented soils, regional geomaterials, urban fill, and soft
+rock.
+
+The test is commonly used to evaluate the strength of soils through
+correlations to the angle of internal friction of granular materials and
+soil relative density. Over the decades of use of SPT, researchers have
+also amassed correlations to most every commonly used engineering
+parameter, with variable reliability, precision, and accuracy. Caution
+is advised when making interpretations about strength and other
+behaviors in environments where the test is not well suited, as
+described in governing standard test methods and other manuals of
+practice. While the SPT can collect samples in most materials it is not
+well suited to determining material strength properties of complex
+geotechnical materials such as peats, clays, and relatively large
+aggregates (as compared to the sampler size).
+
+The SPT test is typically conducted across an interval of 18-inches [450
+mm], creating a measurement associated with that sample length.
+Extremely soft or extremely hard materials may influence the test
+interval and measurement reporting. While back-to-back (continuous) SPT
+sampling is possible, the test is commonly conducted at intervals
+specified by the owner or agency. Often 2.5 ft., 5 ft., or 10 ft.
+intervals (or SI equivalent) during the advance of a borehole and is
+typically conducted at increasingly wider intervals as borings advance
+deeper owing to the need to alternate the drilling bit or tools with the
+sampler by pulling the complete string of drilling rods in and out of
+the hole.
+
+The SPT test is considered a "`disturbed sample`" test as the sampler
+has a comparatively narrow aperture to collect the sample and thick
+outer wall. The basic mechanics of the test involve driving the soil
+sampler, at the base of the drill string, through the ground by a series
+of dynamic hammer drops applied to the top of the drill rods. The number
+of blows taken to drive the rods in measured depth intervals is
+recorded.
+
+A variety of hammers and hammer systems can be used. Mechanical trip
+hammers, donut hammers, winch hammers, and safety hammers are in use
+worldwide. The test method prescribes a weight of 140 lbs [63.5 kg] and
+a drop height of 30 inches [750 mm]. Some hammer systems, such as rope
+and cathead hammers are operatory dependent and energy can vary widely.
+For improved performance and consistency, hammer systems should be
+calibrated to determine the energy transfer ratio (ETR), with the energy
+reported on boring logs for use in design [this is optional in the US
+standard].
+
+For a typical test, a boring is advanced to the desired test depth (or
+elevation). The drilling tooling is pulled from the hole and the drill
+bit replaced with the SPT sampler. The sampler is lowered back into the
+borehole and the test begins. The top of the drill rod is marked off in
+three (3) 6-inch [750 mm] increments. The test consists of recording the
+number of blows to advance the sampler in each of three (3) consecutive
+6-inch [150 mm] intervals. The sample tube is driven the first 6-inches
+and the number of blows needed to penetrate that interval is recorded.
+The procedure similarly repeats for the second 6-inch [150 mm] and third
+6-inch [150 mm] intervals. After the sampler has advanced to a depth of
+18-inches [450 mm] the test concludes. The three penetration "`blow`"
+numbers are recorded. A calculated value, the sum of the number of blows
+associated with the second 6-inch [150 mm] and third 6-inch [150 mm]
+intervals is reported as the "`standard penetration resistance`",
+"`N-value`" or "`SPT blow count`"
+
+Notably, there are a number of "`special cases`" where the N-value may
+be unusual. If the sampler is driven less than the full extent the
+number of blows for each full increment or partial increment is
+recorded. The number of blows in a given increment are counted until a
+test termination condition is reached:
+
+* The sampler penetrates 6 inches (150 mm);
+* The sampler is driven 50 blows in any of the 3 increments;
+* The sampler is driven a total of 100 blows; or
+* The sampler does not advance after 10 consecutive blows.
+
+Additionally, if the sampler advances under the weight of the sampler
+and rods (or the sampler, rods, and hammer assembly) conditions of
+"`weight of rods`" or "`weight of hammer`" are noted rather than a
+"`N-value.`"
+
+An additional component of the test is the "`Sample Recovery`" which is
+a visual observation and manual measurement of the sample recovered in
+the SPT sampler once the sampler is brought to the ground surface for
+recovery of the obtained sample within the SPT sampler.
+
+A variety of metadata is required by the US and other standards.
+Applicable standards also specify the minimum precision associated with
+the reported values among other aspects of the testing procedures and
+equipment. Basic measurement output from a SPT test includes:
+
+Basic measurement output from a SPT test includes:
+
+* Depth of each test
+location along the extent of the borehole [measured by the operator
+based on the amount of drilling tooling in the ground and the ground
+elevation],
+* The increment blow values of the 1st, 2nd, and 3rd
+increments, in addition to any special notations associated, such as the
+distance penetrated if less than 6-inches [150 mm]
+* Notations if any of
+the termination criteria are reached other than penetration or if the
+sampler advances under the weight of rods or hammer
+* The % recovery of
+each sample within the SPT sampler
+* Other driller notations such as
+equipment and tooling, method of keeping the borehole open, depth of the
+water surface, size of casing, hammer systems used, etc.
+
+In addition, the calculated N-value is the primary output from the test:
+
+* The "`standard penetration resistance`", "`N-value`" is calculated as
+the sum of the number of blows associated with the second 6-inch [150
+mm] and third 6-inch [150 mm] intervals.
+* If the sampler is driven less than 18-inches [450 mm], the number of
+blows per each complete 6-inch [150 mm] increment and each partial
+increment is recorded. In this circumstance there is not an N-value
+associated with that depth.
+
+The N-value is often reported along with a calculated value, N60, where
+the measured N-value is adjusted to a 60% drill rod energy transfer
+ratio. Depending on owner and agency test procedures, SPT measurements
+can further be corrected prior to their use in engineering calculations
+based on a variety of variables. Corrections may be applied based on:
+
+* Rod type (A rod vs. N rod)
+* Use of liners within the SPT sampler
+* Short rod lengths
+* Boring diameter
+* Other factors
+
+The SPT measurements (N-value or other partial penetration and blow
+measurements) are often recorded in the field on a boring log in a
+discrete column of data. This information is then supplemented with
+other field or lab data which may include the drilling operations, soil
+type by observation or identification or classification system
+evaluation techniques, and frequently moisture content evaluated from a
+portion of the sample recovered in the soil sampler. SPT measurements
+are commonly reported and associated on a boring log with other
+depth-based data at the same location:
+
+* Soil moisture contents
+* % sample recovery
+* A text-based soil identification or classification value derived from
+the sample
+* Symbology associated with a soil identification or classification
+* A drilling operation (casing, plug drilling, etc.)
+
+A challenge for this common test is that while the basic data is often
+relatively simple and concise, there are a large number of supporting
+informational elements either associated with the site, the borehole, or
+the test. Many of these details are required by the test standard in the
+report for a proper and complete understanding of the measurement data.
+
+Driller and lab technician comments can be important to interpreting
+otherwise unusual values, when compared with other in-situ tests or
+laboratory tests on collected samples conducted in association with the
+SPT testing. As such, the numeric measurements associated with the SPT
+test are frequently associated with supplemental text-based notes and
+comments, which may not be consistent among organizations, drilling
+staff, or even an individual driller.
+
+.A SPT drill rig on a project site; a work table with a SPT sampler is in the foreground. Photo courtesy of Minnesota Department of Transportation
+image::https://github.com/opengeospatial/Geotech/assets/17067226/ddc7442a-85a5-482c-b356-9c3eaa5236d0[.]
+
+.A SPT sampler rests on a work table, ready to be attached to the drill rods when the drill tooling is removed at the desired sample depth. Photo courtesy of Minnesota Department of Transportation.
+image::https://github.com/opengeospatial/Geotech/assets/17067226/4726edfd-34ba-43bc-a504-2170a6401f43[]
+
+The applicable US Standard is ASTM D1586/D1586M-18e1 Standard Test
+Method for Standard Penetration Test (SPT) and Split-Barrel Sampling of
+Soils.
+
+===== Exposing SPT with the FROST Geotech Plugin
+
+To demonstrate how the final results, interim test information and
+related metadata are stored and organized within the FROST server, we
+offer the following example SPT test for a single test interval.
+Relevant data are:
+
+*GENERAL TEST INFORMATION*
+
+[arabic]
+. Test procedure used: ASTM D1586/D1586M-18e1 Standard Test Method for
+Standard Penetration Test (SPT) and Split-Barrel Sampling of Soils
+. Location: Test run from 1.5 to 3 ft depth in borehole B-001-0-20
+. Borehole is is 41 ft deep and its collar is located at lat/lon
+39.47466/-81.796858, elevation 249.50928 meters (WGS84)
+. Hammer used: CME Automatic
+. Hammer Efficiency: 84%
+
+*OBSERVATIONS MADE DURING THE TEST*
+
+[cols=",,",options="header",]
+|===
+|Drive Set Number |Blow Count |Penetration (ftUS)
+|1 |9 |0.5
+|2 |8 |0.5
+|3 |9 |0.5
+|===
+
+*FINAL REPORTED RESULTS* * *N-Value: 17* * *N1-60: 24*
+
+_Note: This example focuses only on the in-situ test procedure and its
+results; it does not provide any information regarding the recording of
+any material samples that may have been recovered as a result of the
+test. Use of the FROST plug-in for recording material sample information
+is discussed in
+<<Approach-for-Atterberg-Limits,Approach for Atterberg limits>>_
+
+===== Instance Diagram
+
+Object instances and the associations required to properly expose the
+example test data with the FROST Geotech Plug-in are shown in the
+following object diagram:
+
+.SPT Example
+image::https://github.com/opengeospatial/Geotech/assets/11915304/c08a1388-b710-42e4-b039-f18b6e01fe07[link="https://umltool.ogc.org/index.php?m=7&o=2BF8B0EC-8F8F-435d-820E-561D6921C4EF"]
+
+The following summarizes the various entities in the diagram:
+
+====== Sensor
+
+The Sensor object serves as the observing procedure in STA. One object
+instance is needed for this example (top center of diagram), and in this
+example holds the information about the test procedure, test parameters,
+equipment used and other metadata about the test. In this example, the
+hammer information and hammer efficiency data would be held in the
+properties object of the Sensor. One Sensor instance is needed for all
+SPT tests conducted in one or more boreholes provided that the same
+procedure, test parameters and test equipment is used for all tests.
+
+====== ObservedProperty
+
+The ObservedProperty object instances identify the properties that are
+observed by the SPT test. There are 5 ObservedProperty instances (top of
+diagram, below Sensor):
+
+*two properties observed that constitute the final reported summary results of the test:*
+
+[arabic]
+. n_value (standard penetration resistance)
+
+[arabic, start=2]
+. n1_60 (standard penetration resistance corrected for hammer energy and
+overburden conditions
+
+*three properties observed as the test is being run*
+
+[arabic, start=3]
+. driveSetIndex (a counter for each set of hammer blows to drive the rod
+150 cm)
+
+[arabic, start=4]
+. blowCount (number of blows during the drive set (increment)
+
+[arabic, start=5]
+. penetration (the distance the sampler travels during the drive set.
+
+As with Sensor, the ObservedProperty instances can be reused for
+multiple tests.
+
+====== DataStream
+
+All of the object instances in the diagram are linked to the Sensor and
+ObservedProperty instances via Datastream instances (below the
+ObservedProperty objects on the diagram), which serve to associate
+observation results obtained from a feature of interest to its observed
+property, observing procedure, and the borehole.
+
+Five Datastream instances are needed, one for each ObservedProperty
+instance.
+
+====== BhCollarThing, BhTrajectoryThing and Location
+
+The DataStreams all link to the borehole via its BhTrajectoryThing
+object instance. BhTrajectoryThing (left edge of diagram) represents the
+borehole’s geometry and contains the borehole length and information for
+linear referencing. The trajectory’s geometry is given in the associated
+Location instance. BhTrajectoryThing is associated with a BhCollarThing
+instance, which represents the borehole as a whole. All general metadata
+about the borehole is contained in the BhCollarThing object instance;
+it’s geometry is represented by a point Location object instance.
+
+More detail about properties of BhCollarThing and BhTrajectoryThing can
+be found in the <<Approach-for-Borehole-logs,Borehole log discussion>>.
+
+====== BhSampling and BhFeatureOfInterest
+
+Sampling in the context of an SPT test or any in-situ test is the act of
+observing properties in a segment of the hole. The single BhSampling
+object instance (below and to the right of the BhTrajectoryThing in the
+diagram) holds the depth information of the test run (fromPosition=1.5,
+toPosition=3) and links to BhTrajectoryThing in order to affix the
+linear referenced sampling positions to the trajectory geometry.
+
+BhSampling produces a BhFeatureOfInterest object, which represents the
+sampling location within the borehole (below the BhSampling object
+instance in the diagram).
+
+====== Observation
+
+The remaining entities on the diagram are Observation instances that
+provide the results for their associated observed properties. Each
+Observation instance links to the BhFeatureOfInterest (sampling
+location) and to the Datastream instance associated with the appropriate
+ObservedProperty.
+
+This SPT test consists of 11 individual observations. Two of them
+(results for n_value and n1_60) are reported summary results that derive
+from the driveSet (blowCount and penetration) results that are observed
+directly during the test. The links shown in the diagram that relate
+observations to each other provide the means for distinguishing between
+the driveSet and summary/derived results.
+
+Each driveSet increment is a set of three observation results. These
+results are useless independently - for example, the blowCount in a
+driveSet has no meaning without the associated penetration result for
+that drivesetIndex, and vice versa. To model the driveSet, the
+driveSetIntex result is linked to its associated blowCount and
+penetration results, and the blowCount result is linked to its
+associated penetration result. These three observations, as a set,
+contribute to the determination of the final n_value result, and to
+model that association, the driveSetIndex observations are linked to the
+n-value observation. In this way, one can traverse from the n_value
+observation to access those blow count and penetration observations that
+contributed to the n_value result.
+
+Finally, the n1_60 observation instance is linked to the n_value
+observation instance to demonstrate that the n1_60 result relies on
+n_value.
+
+To provide the most flexibility for querying, Datastream object
+instances associated with the Observations are linked in the same manner
+as their associated Observations, as seen in the diagram.
+
+The current STA model does not provide for one-way links where an
+association role can be assigned. Such capability would be useful in
+modeling evem more complex geotechnical test results.

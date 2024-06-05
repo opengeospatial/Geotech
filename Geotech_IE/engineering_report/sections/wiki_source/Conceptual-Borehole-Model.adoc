@@ -1,0 +1,77 @@
+==== Conceptual Borehole Model
+
+The core conceptual model for boreholes consists of the following
+featureTypes.
+
+* BH_Collar: Information on the location of the borehole
+collar, together with relevant attributes.
+* BH_Trajectory: The
+trajectory of the borehole. Encoding of the Geometry TBD, as unclear if
+we use a 3D Linestring or local polar coordinates.
+* BH_SamplingFeatureEvent: An act applying a SamplingProcedure to create
+or transform one or more Sample(s). Information on how and where the
+Sample of the borehole under investigation (Point or Segment) has been
+sampled from this borehole.
+* BH FoI (Sample) Types: An object that is
+representative of a concept, real-world object or phenomenon.
+* BH_Hole: A featureType representing the entire Hole of the borehole.
+* BH_HolePoint: A featureType representing a point along a borehole Hole,
+as indicated by the attribute atPosition.
+* BH_HoleSegment: A
+featureType representing a segment of a borehole Hole, as indicated by
+the attributes fromPosition and toPosition.
+* BH_Core: A featureType
+representing the entire Core of the borehole.
+* BH_CorePoint: A
+featureType representing a point along a borehole Core, as indicated by
+the attribute atPosition.
+* BH_CoreSegment: A featureType representing a segment of a borehole
+Core, as indicated by the attributes fromPosition and toPosition.
+
+_Note 1: Position values in the BH_FoIs are relative to the
+BH_Trajectory_
+
+_Note 2: Point and Segment FoIs are sampled from the BH_Trajectory, not
+the entire Hole or Core. This modeling decision was reached due to
+technical constraints posed by STA. In order to maintain the link
+between Point and Segment FoIs and their entire Hole or Core feature,
+the sampledFeature association will be used._
+
+In addition, the diagram below still shows the dataTypes providing the
+EventLocation, namely AtLocation and FromToLocation. However, the
+relevant attributes have already been shifted to the BH_Point and
+BH_Segment featureTypes respectively, valid due to 1:1 associations
+between these types.
+
+.Borehole Sampling
+image::https://github.com/opengeospatial/Geotech/assets/11915304/ff8f114d-eb97-4e52-b040-71bcbdec89bd[]
+
+===== Conceptual Borehole Model with Interfaces
+
+In addition, we provide the same image including the relevant interfaces
+from the Linear Referencing and OMS Standards.
+
+.Borehole Sampling Interfaces
+image::https://github.com/opengeospatial/Geotech/assets/11915304/01cb8929-3b38-464d-aed5-a7360cec306e[]
+
+===== Conceptual Borehole Model with all Sampling Classes
+
+In order to provide detailed information on how the Samples have been
+created, as well as any additional processing steps performed on these
+samples, the additional featureTypes from the OMS Sampling model have
+also been added. The following classes have been added to the diagram
+below.
+
+* BH_Sampler: a device or entity (including humans) that is used
+by, or implements, a SamplingProcedure to create or transform one or
+more Sample(s).
+* BH_SamplingProcedure: description of steps used to
+create or transform a Sample.
+* BH_PreparationStep: an individual step
+pertaining to a PreparationProcedure.
+* BH_PreparationProcedure:
+description of preparation steps performed on a Sample that is being
+observed.
+
+.Borehole Sampling Complete
+image::https://github.com/opengeospatial/Geotech/assets/11915304/966da38a-6822-485e-96ef-614cd8612f11[]

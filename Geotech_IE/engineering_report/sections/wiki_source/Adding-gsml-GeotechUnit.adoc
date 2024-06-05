@@ -1,0 +1,33 @@
+[[Adding-gsml-GeotechUnit]]
+==== Adding GeotechUnit
+
+The proposal is to have gsml:GeotechUnit defined as a specialization of
+gsml:GeologicUnit.
+
+In GeoSciML, the concept of Geologic Unit is defined as "`a package of
+earth material`" (see: <<GeologicUnit>>). To offer
+some variations of the Geologic Unit concept, CGI introduced Geologic
+Unit types.
+
+The proposal is then to add a Geologic Unit type entitled GeotechUnit
+which would follow this definition:
+
+____
+A geologic unit defined by its geotechnical properties
+____
+
+===== Geotech concept that can use gsml:GeotechUnit
+
+gsml:GeotechUnit is identified to realize the geotech concept called
+<<GeotechUnit,GeotechUnit>>.
+
+===== How representations / geometries should be handled for gsml:GeotechUnit?
+
+As gsml:GeotechUnit is proposed as a specialization of gsml:GeologicUnit
+which it itself a specialization of a GeologicFeature it inherits its
+capacity to be associated to (multiple) gsml:MappedFeature which are
+intended to each one to be possible representation of the concept.
+
+===== Geotechnical properties
+
+A GeotechUnit being a GeologicUnit, it inherits its properties.

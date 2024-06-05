@@ -1,0 +1,52 @@
+[[hazardarea]]
+==== HazardArea
+
+Discrete spatial objects representing a natural hazard.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC / INSPIRE Theme III: Natural Risk Zones |Hazard Area |Discrete
+spatial objects representing a natural hazard.
+
+|IFC |HazardArea |Same as
+OGC INSPIRE Natural Risk Zone
+|===
+
+===== Properties
+
+[width="100%",cols="9%,91%",options="header",]
+|===
+|PropertyName |Definition
+|HazardType |A generic classification and a specific classification of
+the type of hazard.
+
+|LikelihoodOfOccurence |Likelihood is a general concept relating to the
+chance of an event occurring.
+
+|LevelOfIntensity |An expression of the magnitude or the intensity of a
+phenomenon.
+
+|validityPeriod |Future finite time frame where the hazard applies
+
+|DeterminationMethod |Different ways to delineate the perimeter of a
+hazard
+|===
+
+===== Existing codelist for HazardType
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|INSPIRE |Codelist
+|https://inspire.ec.europa.eu/codelist/NaturalHazardCategoryValue |A
+generic classification of types of natural hazards.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/43

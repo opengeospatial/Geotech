@@ -1,0 +1,31 @@
+[[Reusing-LandInfra-Alignment]]
+==== Reusing LandInfra Alignment
+
+The Alignment concept was developed in common between OGC and bSI in the
+LandInfra Domain Working Group.
+
+It is part of the https://portal.ogc.org/files/?artifact_id=75117[OGC
+InfraGML 1.0: Part 0 – LandInfra Core – Encoding Standard]
+
+Also a Logical model called InfraGML was developped on top of this
+Conceptual Model. This work is known as
+https://docs.ogc.org/is/16-103r2/16-103r2.html[OGC InfraGML 1.0: Part 3
+- Alignments - Encoding Standard].
+
+An Alignment is defined as a:
+
+____
+PositioningElement which provides a Linear Referencing System for
+locating PhysicalElements. An Alignment shall be continuous,
+non-branching, and non-overlapping. If it is a Project Alignment, it is
+for a single alternative, as specified by its owning ProjectPart.
+____
+
+===== Geotech concept that can use LandInfra:Alignment
+
+LandInfra:Alignment is identified to realize the geotech concept called
+<<alignment,Alignment>>.
+
+===== Geotechnical properties
+
+No additionnal geotechnical properties identified.

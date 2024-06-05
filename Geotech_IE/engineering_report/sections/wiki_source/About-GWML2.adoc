@@ -1,0 +1,18 @@
+==== Introduction to GroundWaterML2
+
+From the https://www.ogc.org/standard/gwml2/[dedicated page on the OGC
+Website]:
+
+`+This standard describes a conceptual and logical model for the exchange of groundwater data, as well as a GML/XML encoding with examples.+`
+
+The latest version of the specifications of that OGC standard can be
+found here: https://docs.ogc.org/is/19-013/19-013.html
+
+===== Existing concepts proposed for reuse and extension for geotechnics
+
+* <<Extending-gwml2-HydogeoUnit,HydroGeoUnit>>
+* <<Extending-gwml2-FluidBody,FluidBody>>
+* <<Extending-gwml2-FluidBodySurface,FluidBodysurface>>
+* <<Extending-gwml2-HydroGeoVoid,HydroGeoVoid>>
+
+//section end fix

@@ -1,0 +1,120 @@
+[[fold]]
+==== Fold
+
+A fold is formed by one or more systematically curved layers, surfaces,
+or lines in a rock body. A fold denotes a structure formed by the
+deformation of a geologic structure, such as a contact which the
+original undeformed geometry is presumed, to form a structure that may
+be described by the translation of an abstract line (the fold axis)
+parallel to itself along some curvilinear path (the fold profile). Folds
+have a hinge zone (zone of maximum curvature along the surface) and
+limbs (parts of the deformed surface not in the hinge zone). Folds are
+described by an axial surface, hinge line, profile geometry, the solid
+angle between the limbs, and the relationships between adjacent folded
+surfaces if the folded structure is a Layering fabric.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |Fold |A fold is formed by one or more systematically
+curved layers, surfaces, or lines in a rock body. A fold denotes a
+structure formed by the deformation of a geologic structure, such as a
+contact which the original undeformed geometry is presumed, to form a
+structure that may be described by the translation of an abstract line
+(the fold axis) parallel to itself along some curvilinear path (the fold
+profile). Folds have a hinge zone (zone of maximum curvature along the
+surface) and limbs (parts of the deformed surface not in the hinge
+zone). Folds are described by an axial surface, hinge line, profile
+geometry, the solid angle between the limbs, and the relationships
+between adjacent folded surfaces if the folded structure is a Layering
+fabric.
+
+|IFC |Fold |Same as OGC
+GeoSciML
+|===
+
+===== Properties
+
+[width="100%",cols="5%,95%",options="header",]
+|===
+|PropertyName |Definition
+|profileType |FoldProfileType contains a term from a controlled
+vocabulary specifying the concave/convex geometry of fold relative to
+earth surface, and relationship to younging direction in folded strata
+if known. (e.g., antiform, synform, neutral, anticline, syncline,
+monocline, ptygmatic).
+
+|amplitude |The amplitude property reports the length from line segment
+connecting inflection points on adjacent fold limbs to the intervening
+fold hinge.
+
+|axialSurfaceOrientation |The property axialSurfaceOrientation is used
+to characterize the geometry of a fold. The axial surface of a
+particular fold may be located based on observations of the folded
+geologic structure, but in general it has no direct physical
+manifestations. As a geologic surface, it has geometric properties,
+including orientation, which may be specified by observations at one or
+more locations, or generalized using terminology (upright, inclined,
+reclined, recumbent, overturned). Dip and Dip Direction are one approach
+to specifying the value.
+
+|geneticModel |The property geneticModel contains a term from a
+controlled vocabulary describing the specification of genetic model for
+fold, e.g., flexural slip, parallel.
+
+|hingeLineCurvature |The hingeLineCurvature property contains a term
+from a controlled vocabulary that describes the variation in orientation
+of fold hinge along trend of fold, distinguishing sheath from
+cylindrical folds (e.g., sheath, dome, basin, cylindrical.).
+
+|hingeLineOrientation |The property hingeLineOrientation reports the
+specification of the hinge line orientation for fold.
+GSML_LinearOrientation allows for a term value specification or a
+numeric specification of either or both the trend and plunge of hinge
+line. Hinge plunge term examples: sub-vertical, steeply plunging,
+sub-horizontal, reclined and vertical for special cases in which hinge
+plunge is close to axial surface dip. 0..* cardinality allows for both a
+numeric specification and a term specification.
+
+|hingeShape |The property hingeShape reports a term from a controlled
+vocabulary describing the hinge shape, e.g., Rounded vs. angular hinge
+zones. This property has to do with the proportion of the wavelength
+that is considered part of hinge.
+
+|interLimbAngle |The property interLimbAngle contains a term from a
+controlled vocabulary describing the interlimb angle using a tightness
+term (e.g., gentle (120-180°), open (70-120°), close (30-70°), tight
+(10-30°), isoclinal (0-10°)).
+
+|limbShape |The limbShape property contains a term from a controlled
+vocabulary describing the shape of the limb (e.g., straight vs curved
+limbs, kink, chevron, sinusoidal, box).
+
+|span |The span property reports a value describing the linear distance
+between inflection points in a single fold.
+
+|symmetry |The symmetry property contains a term from a controlled
+vocabulary describing the concordance or discordance of bisecting
+surface and axial surface, or the ratio of length of limbs. The folded
+surface may have asymmetry defined by limb length ratio if inflection
+points are defined. The definition based on bisecting surface/axial
+surface angle depends on having multiple surfaces defined such that the
+axial surface may be identified (symmetric, asymmetric).
+
+|DipDirection |The geographic direction of a line created by the
+intersection of a plane and the horizontal plane. If non specific
+convention is used, this angular value is in the range 0 to 18 degrees.
+In this case, there is an ambiguity on the dip orientation. For example,
+a plane with an orientation of 90 degrees from the north could either
+have a dip direction to the North or to the South. Thus, to avoid this
+ambiguity, a strike value is generally completed with an indication of
+the dip orientation (Quadrant).
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/9

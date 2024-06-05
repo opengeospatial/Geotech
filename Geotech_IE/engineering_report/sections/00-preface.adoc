@@ -11,11 +11,11 @@ after the abstract
 == Abstract
 
 // Insert abstract content
-Abstract content.
+This Engineering Report (ER) describes the outcomes of the Open Geospatial Consortium (OGC) Geotech Interoperability Experiment (IE). The objective of this IE was to develop a common conceptual model for describing geotechnical engineering data that bridges existing specifications for encoding those data and which could be integrated across OGC and buildingSMART International Standards,
 
+This ER is directly imported from the project wiki found here: https://github.com/opengeospatial/Geotech/wiki.
 
-[.preface]
-== Summary
+// [.preface]
+// == Summary
 
 // Insert summary content including subsections as needed
-Summary content.

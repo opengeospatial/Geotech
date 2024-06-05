@@ -1,0 +1,37 @@
+==== Borehole Interoperability Experiment
+
+Following the birth of the OGC GeoScience DWG in September 2017, an
+Interoperability Experiment about Borehole data was launched.
+
+Starting in March 2018, during the Orleans OGC TC, the GeoScience DWG
+work on how connect several existing borehole definitions.
+
+More details about this initiative can be found on the
+https://github.com/opengeospatial/boreholeie[Borehole IE Github].
+
+===== Engineering report
+
+This document describes a conceptual model, logical model, and GML/XML
+encoding schema for the exchange of borehole related data and especially
+all the elements that are positioned along a borehole trajectory. In
+addition, this document provides GML/XML encoding instances documents
+for guidance
+
+Link to the OGC engineering report: https://hal.science/hal-03943388/
+
+===== Sampling Boreholes
+
+Before one can provide data for various tests to be performed on
+boreholes, one must determine what spatial features must be defined to
+serve as features-of-interest for these tests. We sStart by
+differentiating between the Hole (the absence) and the Core in their
+entirety. Both the Hole and the Core can then be subdivided, either as
+Points or as Segments. Dedicated featureTypes have been created for all
+six of these variants, as illustrated in the diagram below.
+
+.SF_BoreholeClasses
+image::https://github.com/opengeospatial/Geotech/assets/11915304/3789abf9-9d3a-4504-9d8c-a36c781e6706[]
+
+As linear referencing is a key function for the provision of borehole
+observation, it was then proposed to connect ISO19148 (linear
+referencing) and ISO 19156 (observations, measurements and samples).

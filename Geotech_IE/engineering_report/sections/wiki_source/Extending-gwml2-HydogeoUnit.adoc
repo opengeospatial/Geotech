@@ -1,0 +1,16 @@
+[[Extending-gwml2-HydogeoUnit]]
+==== HydroGeoUnit according to GroundWaterML2
+
+From https://docs.ogc.org/is/19-013/19-013.html#toc35[GroundwaterML2]:
+
+____
+Any soil or rock unit or zone that by virtue of its hydraulic properties
+has a distinct influence on the storage or movement of groundwater
+(after https://docs.ogc.org/is/19-013/19-013.html#ANS1980[ANS&#44;
+1980]).
+____
+
+===== Geotech concept that can use gwml2:HydroGeoUnit
+
+gwml2:HydroGeotUnit is identified to realize the geotech concept called
+<<HydroGeoUnit,HydrogeoUnit>>.

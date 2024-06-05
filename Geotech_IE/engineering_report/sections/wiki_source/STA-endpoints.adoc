@@ -1,0 +1,10 @@
+[[STA-endpoints]]
+==== STA endpoints
+
+===== Fraunhofer Endpoint
+
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/
+
+===== BRGM Endpoint
+
+https://frost4geotech.brgm-rec.fr/FROST-Server/v1.1/

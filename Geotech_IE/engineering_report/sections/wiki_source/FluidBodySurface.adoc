@@ -1,0 +1,29 @@
+[[fluidbodysurface]]
+==== FluidBodySurface
+
+A surface on a fluid body within a local or regional area,
+e.g., piezometric, potentiometric, water table, salt wedge, etc.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GWML2 |FluidBodySurface |A surface on a fluid body within a local
+or regional area, e.g. piezometric, potentiometric, water table, salt
+wedge, etc.
+
+|IFC
+|PiezometricWaterLevel |Same as OGC GWML2
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include a fluid body surface,
+e.g. piezometric surface, identified as such using the elementType
+attribute.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/16

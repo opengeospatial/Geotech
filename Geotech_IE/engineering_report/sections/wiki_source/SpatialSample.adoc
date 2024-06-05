@@ -1,0 +1,33 @@
+== What is a SpatialSample?
+
+A physical object or feature on which some observations and/or
+measurements can be done.
+
+== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC OMS |SpatialSample |A physical object or feature on which some
+observations and/or measurements can be done
+
+|IFC | |
+
+|AGS | |
+
+|DIGGS |SamplingFeature |A physical object or location through which we
+observe or measure properties of an investigation target or perform some
+type of activity.
+|===
+
+== Specializations
+
+* Borehole
+* TrialPit
+* MaterialSample
+
+== Properties
+
+== Discussion related issue
+
+https://github.com/opengeospatial/Geotech/issues/12

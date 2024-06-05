@@ -1,0 +1,56 @@
+
+[[geotech-concepts]]
+== Geotechnical concepts
+
+//=== conceptual model
+
+include::wiki_source/Conceptual-model.adoc[]
+
+//=== ABC
+
+include::wiki_source/Geotechnics-is-simple-as-ABC.adoc[]
+
+//=== Book A
+
+include::wiki_source/Book-A-organization-and-components.adoc[]
+
+//==== Hole in the ground
+
+include::wiki_source/Borehole.adoc[]
+include::wiki_source/TrialPit.adoc[]
+
+//==== Observation and its results
+
+include::wiki_source/Observation.adoc[]
+include::wiki_source/ObservingProcedure.adoc[]
+include::wiki_source/ObservableProperties.adoc[]
+
+//==== Sampling and preparation
+
+include::wiki_source/MaterialSample.adoc[]
+include::wiki_source/Sampling-and-Preparation.adoc[]
+
+//=== Book B
+
+include::wiki_source/Book-B-organization-and-components.adoc[]
+include::wiki_source/Geomodel.adoc[]
+include::wiki_source/GeologicUnit.adoc[]
+include::wiki_source/Fault.adoc[]
+include::wiki_source/Contact.adoc[]
+include::wiki_source/Fold.adoc[]
+include::wiki_source/HydroGeoUnit.adoc[]
+include::wiki_source/FluidBody.adoc[]
+include::wiki_source/FluidBodySurface.adoc[]
+include::wiki_source/GeotechUnit.adoc[]
+include::wiki_source/DiscreteDiscontinuity.adoc[]
+include::wiki_source/Void.adoc[]
+include::wiki_source/HazardArea.adoc[]
+include::wiki_source/SurroundingConstruction.adoc[]
+
+//=== Book C
+
+include::wiki_source/Book-C-organization-and-components.adoc[]
+include::wiki_source/GeotechSynthesisModel.adoc[]
+include::wiki_source/Alignment.adoc[]
+include::wiki_source/GeotechTypicalSection.adoc[]
+include::wiki_source/RiskZone.adoc[]

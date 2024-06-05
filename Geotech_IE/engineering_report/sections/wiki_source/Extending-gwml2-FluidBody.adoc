@@ -1,0 +1,16 @@
+[[Extending-gwml2-FluidBody]]
+==== FluidBody according to GroundWaterML2
+
+From https://docs.ogc.org/is/19-013/19-013.html#toc31[GroundwaterML2]:
+
+____
+A distinct body of some fluid (liquid, gas) that fills the voids of a
+container such as an aquifer, system of aquifers, water well, etc. In
+hydrogeology this body is usually constituted by groundwater, but the
+model allows for other types of fillers e.g., petroleum.
+____
+
+===== Geotech concept that can use gwml2:FluidBody
+
+gwml2:FluidBody is identified to realize the geotech concept called
+<<FluidBody,FluidBody>>.

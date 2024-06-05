@@ -1,0 +1,174 @@
+[[Borehole]]
+==== Borehole
+
+A Borehole is the generalized term for any narrow shaft drilled in the
+ground, either vertically, horizontally, inclined, or deviated.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |Borehole |A Borehole is the generalized term for any
+narrow shaft drilled in the ground, either vertically, horizontally, or
+inclined.
+
+|IFC
+|https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/schema/ifcsharedinfrastructureelements/lexical/ifcborehole.htm[IFCBorehole]
+|A Borehole is the generalized term for any narrow shaft drilled in the
+ground, either vertically, horizontally, or inclined.
+
+|AGS |LOCA |AGS LOCA includes exploratory holes of any type,
+e.g., borehole, trial pits, CPT
+
+|DIGGS |Borehole |A sampling feature feature that is a deep, narrow
+excavation made by drilling and/or extraction of earth material.
+Boreholes are constructed typically for the purpose of investigating
+subsurface geologic or geotechnical conditions, exploring for water or
+oil, for installation of wells or other downhole monitoring
+installations.
+
+|DIGGS |Sounding |A sampling feature that is created by a measurement or
+construction activity through insertion of a probe or tool into the
+ground.
+|===
+
+===== Properties
+
+A proposed list of borehole properties is as follows.
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Name |Definition
+|id |Identifier
+
+|name |A human-readable display name for the borehole.
+
+|description |A human-readable description for the borehole.
+
+|metadata |A URI referring to a metadata record describing the
+provenance of data.
+
+|remarks |Any general remarks about the borehole.
+
+|boreholePurpose |The purpose for which the borehole was drilled.
+
+|boreholeUse |The current use of the borehole which could differ from the
+purpose for which the borehole was initially drilled.
+
+|status |The current status of the borehole.( eg. planned, completed,
+destroyed)
+
+|source |Details and citations to source materials for the borehole and,
+if available, providing URLs to reference material and publications
+describing the borehole. This could be a short text synopsis of key
+information that would also be in the metadata record referenced by
+metadata_uri.
+
+|associatedFile |Identifies external files associated with this
+borehole. This allows for the feature to be further elaborated with
+information that cannot be represented by ASCII text, such as a
+photograph or other media, binary data, or a formatted report.
+
+|whenDestroyed |The time period during which the hole was destroyed or
+forever abandoned. This date must occur after all related observations,
+measurements or activities had been performed in the borehole, and
+should reflect the time after which no observations or activities are
+possible in the hole.
+
+|drillingMethod |The method(s) used to construct the hole.
+
+|drillingEquipment |The equipment used to construct the hole.
+
+|operator |The organization or agency responsible for commissioning of
+the borehole (as opposed to the agency which drilled the borehole).
+
+|driller |The organization responsible for drilling the borehole (as
+opposed to commissioning the borehole).
+
+|drillStartDate |The datetime of the start of drilling formatted
+according to ISO8601 (e.g., 2012-03-17T00:00:00).
+
+|drillEndDate |The date of the end of drilling formatted according to
+ISO8601 (e.g., 2012-03-28T00:00:00).
+
+|BoreholeLengthPlanned |The planned length of a borehole e.g., in a site
+investigation program.
+
+|BoreholeLengthDrilled |The total length of a borehole as drilled and
+logged. Length may have different sources (e.g., driller’s measurement,
+logger’s measurement, survey measurement).
+
+|startPoint |The position relative to the ground surface that marks the
+origin for measuring distance along a borehole’s trajectory.
+
+|collarGeometry |2D or 3D point geometry that represents the location of
+the borehole at the ground surface in geographic space.
+
+|srsName |The URI of a spatial reference system. If collarGeometry is a
+2D point, this is the horizontal SRS. If collarGeometry is a 3D point,
+this must be a either a 3D SRS, a known compound SRS, or the EPSG code
+of the horizontal component of a compound SRS.
+
+|elevation_srsName |The URI of a spatial reference system of the
+elevation of the collarGeometry. (e.g., mean sea level). Mandatory if
+collarGeometry and srsName is the EPSG code of the horizontal component
+of a compound SRS. elevation_srsName shall be a one dimensional vertical
+SRS (i.e., EPSG code in the range 5600-5799).
+
+|positionalAccuracy |An estimate of the accuracy of the location of the
+collarGeometry. Ideally, this would be a quantitative estimate of
+accuracy (e.g., 20 metres).
+
+|locality |Non-coordinate location information for a borehole.
+
+|localCoordinates |A geometry object that holds the values of local
+coordinates for the borehole collar location. This object is used to
+carry information about the location of a feature in its original local
+reference system if not originally recorded in a well-known SRS.
+
+|azimuth |For a straight but inclined borehole, the azimuth of the
+borehole’s trajectory as a plane angle measurement, where 0 is true
+north, incrementing clockwise.
+
+|inclination |For a straight but inclined borehole, the inclination of
+the borehole’s trajectory as a plane angle measurement, where 0 is
+vertical and 90 is horizontal.
+
+|trajectoryType |Describes the general character of the borehole’s
+trajectory. (vertical, inclined, deviated)
+
+|trajectoryGeometry |A geometry that represents and locates the borehole
+shape. It is represented as a lineString in 3D space and is of the same
+SRS as collarGeometry. A borehole can have multiple centerlines to
+represent sidetracks or to serve as a linear referencing element for
+observations within the borehole that may be located relative to
+different datums (eg. ground surface vs rig table).
+
+|linearReferencing |Defines the linear spatial reference system for the
+borehole. This LSRS can then be used to define the location of
+observations within the borehole as a 1D position along the borehole’s
+trajectory, rather than in geographic coordinates.
+
+|boreholeType |Type of borehole. (core drilling, destructive drilling,
+trial pit, sounding)
+|===
+
+===== FAQ
+
+====== What about Borehole core?
+
+A borehole core is considered as a MaterialSample.
+
+See <<MaterialSample>> for its description.
+
+===== What about Borehole Logs and Observations?
+
+All observations, measurements and test descriptions from a Borehole are
+considered as Observations.
+
+See <<Observation>> for their description.
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/10

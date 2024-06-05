@@ -1,0 +1,45 @@
+[[void]]
+==== Void
+
+Voids are the spaces inside a unit (e.g., aquifer) or its material
+(e.g., the sandstone material of an aquifer), and might contain fluid
+bodies. Voids are differentiated from porosity, in that porosity is a
+ratio of void volume to total volume of unit plus voids, while voids are
+the spaces themselves. It is important to conceptually differentiate
+voids from units and their containers, in order to represent, for
+example, the volume of fractures, caves, or pores in a particular unit
+or its portion.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GWML2 |HydroGeoVoid |Voids are the spaces inside a unit (e.g.,
+aquifer) or its material (e.g., the sandstone material of an aquifer),
+and might contain fluid bodies. Voids are differentiated from porosity,
+in that porosity is a ratio of void volume to total volume of unit plus
+voids, while voids are the spaces themselves. It is important to
+conceptually differentiate voids from units and their containers, in
+order to represent, for example, the volume of fractures, caves, or
+pores in a particular unit or its portion.
+
+|IFC 4.4+ |Void |Same as OGC GWML2
+|===
+
+===== Specializations (Types of Voids)
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|BRGM |Registry |https://data.geoscience.fr/ncl/CaviTy |This register
+lists all the types of cavities. By cavity is meant an empty space in a
+rocky environment, of millimeter size (microcavities) to multidecametric
+(cave), filled with a gas or liquid phase.
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/24

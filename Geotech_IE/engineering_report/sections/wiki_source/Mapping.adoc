@@ -1,0 +1,207 @@
+[[mapping]]
+==== AGS & DIGGS mapping to STA
+
+This chapter provides a road map for how to map AGS and DIGGS data to
+the OGC SensorThingsAPI data model.
+
+===== Overview of the AGS format / data organization
+
+The AGS format is a data transfer format for ground data that is
+routinely used in the United Kingdom. It has also been adopted and
+adapted for use in some other countries including Hong Kong and
+Australia.
+
+AGS was created and is maintained by the
+https://www.ags.org.uk/[Association of Geotechnical and Geoenvironmental
+Specialists], a UK based industry organization. Documentation can be
+found https://www.ags.org.uk/data-format/ags4-data-format/[here].
+
+The scope of the AGS data transfer format is limited to factual ground
+investigation data (typically '`Book A`' data, adopting the terminology
+used in this Wiki). However, interpretative/design data and ground
+models are covered by
+https://ags-data-format-wg.gitlab.io/AGSi_Documentation/[AGSi], a
+separate relatively new transfer format created by AGS.
+
+The AGS data transfer format adopts a CSV-like format for output. The
+data structure does not adopt an object model approach as such, but is
+broadly comparable comprising Groups (–> objects / database tables) and
+Headings ( –> attributes / table fields) and utilizing parent-child
+relationships between groups. The AGS '`data dictionary`' is very
+comprehensive, covering almost all field and laboratory test data that
+may be published in a factual ground investigation report. There are
+about 150 Groups and over 2000 Headings.
+
+AGSi (for ground models and interpretative/design data) is object model
+based and the output is JSON. AGSi adopts a concise but very flexible
+data model. It does not include schema for complex geometry, instead
+allowing users to adopt existing standards for model geometry.
+
+===== Overview of the DIGGS format / data organization
+
+DIGGS is an XML-based schema and associated dictionaries for the storage
+and transfer of the properties of real-world objects and activities, amd
+their associations, that occur within the geotechnical and
+geoenvironmental domains. DIGGS is designed as a GML application schema
+insofar as all objects within the DIGGS namespace derive from GML
+abstract types and encoding follows GML’s object-property convention.
+Additionally, it incorporates GML 3.3 objects to support linear
+referencing for linear sampling features like boreholes, and vector
+linear referencing for 2D and 3D objects. DIGGS also relies on another
+XML vocabulary, WITSML, developed for the oil industry, for measure
+types and units symbology which allows for schema validation of unit
+symbols for measure type properties.
+
+DIGGS has been adopted as the "`Provisional Standard Practice for
+Digital Interchange of Geotechnical Data`" by AASHTO. It builds off of
+the AGS data dictionary for its test procedure objects, but is capable
+of handling more complex sampling feature geometries, testing and
+sampling protocols, and construction activities.
+
+.Generalized DIGGS data model showing the major object classes. These classes are of abstract type and they serve as the head of substitution groups that allow for specialized concrete features.
+image::https://github.com/opengeospatial/Geotech/assets/26747679/91d6d1de-e483-4e42-a57b-74ef3f488439[]
+
+The DIGGS data model consists of a set of object classes that share some
+similarity, conceptually, with OMS objects. Most relevant to interfacing
+with OGC’s Geotech efforts are:
+
+*SamplingFeature* - A physical object or location through which we
+observe or measure properties of an investigation target, or perform
+some type of activity. It serves to define the dimensionality, extent,
+and local spatial reference system for zones where observations or
+activities take place. DIGGS has developed a number of concrete sampling
+feature types, including Borehole, Sounding, TrenchWall.
+
+*SamplingActivity* - The action taken to obtain or produce a material
+sample, even if the activity does not produce a sample (eg. a core run
+that produces no recovery). This activity typically occurs at a location
+on a sampling feature, or could occur elsewhere (eg. a laboratory) in
+the case of test or blank samples, or can produce aggregate samples
+where the location of the samples produced have no meaning. All material
+samples must refer to a SamplingActivity.
+
+*Sample* - A material sample, solid, fluid, or gas that is obtained as a
+result of a sampling activity, for the purpose of observation and/or
+testing.
+
+*Measurement* - An observation where the result derives principally from
+the use of testing equipment and/or sensors. Results are typically
+objective with high precision results as long as procedures are followed
+and equipment is operating appropriately. Results are usually numeric
+values, although category assignments can be calculated from numeric
+results.
+
+*Observation* - An observation where the result derives from direct
+human interaction, judgment or analysis. These results are typically
+subjective; and often category based. Typical observation results are
+descriptive, interpretive, or involve generalization or modeling.
+
+DIGGS’ distinction between observations and measurements has resulted in
+these two object classes to be structurally quite different. DIGGS
+measurements are structured such that measurement components (results,
+observed properties, features of interest) map in a fairly
+straightforward way to the OGC SensorThings API data model extension for
+Geotechnics. Mapping DIGGS observation results to the OGC SensorThings
+API data model poses more of a challenge although quite feasible.
+
+===== Mapping information
+
+Mapping from the various AGS and DIGGS formats to a proposed harmonized GeoTech
+Model can be illustrated by the following mapping to STA.
+
+====== Mapping from AGS data
+
+AGS data can be mapped to the STA data model by adopting
+the following general rules:
+
+For field observations/in situ tests:
+
+* Nature of observation/test, e.g., SPT = Sensor: name = AGS Group, e.g., ISPT
+* LOCA_ID = BHCollarThing: name
+* Depth (e.g., to test):
+** BHSampling: from/to, and
+** BHFeatureOf Interest
+* fields providing metadata about the test or observation = Sensor:
+properties comprising a JSON object that uses the AGS Headings as keys
+* other data, i.e., results = Observation:
+** result from the DataStream that has as ObservedProperty: name = AGS
+Heading, e.g., ISPT_NVAL
+
+Geology information (GEOL, DETL) and borehole field observations
+(e.g., PTIM, CHIS) also adopt this general approach.
+
+Note that BHSampling is used for both insitu and lab test, despite in
+situ tests not using sampling as such.
+
+For a lab test, the mapping is similar to the above but with the
+following differences: - BHSampling along with BHSampler and
+BHSamplingProcedure are be used for the sample (SAMP data) -
+BHFeatureofInterest used for the specimen (defined in lab test results
+in AGS) but note that it is not currently possible to map the specific
+from/to depths of the specimen reported by AGS data.
+
+Where there is a set of '`child`' readings within a '`parent`' result,
+e.g., compaction test points (CMPT) within a compaction test (CMPG) then
+the results for each point are provided as sets of RelatedObservations
+where the first Observation would logically be the test/point number.
+
+The approach described here is in keeping with the intent of
+SensorThings. However, there is a difficulty in practice as a judgement
+has to be made about whether a field represents test metadata or a test
+result. Sometimes this is obvious, but quite often it is not and this
+introduces the risk of an inconsistent in approach between users. This
+could be addressed by the publication of an official mapping, but it
+would be an onerous tasks to cover the entire AGS data dictionary as no
+such thing exists at present. Applications would also need to be able to
+deal with this programmatically.
+
+An alternative approach would be to map all metadata as results,
+i.e., everything is treated as an Observation. This would make
+implementation easier, for both loading and querying data. However, it
+is not true to the intent of the SensorThings model.
+
+====== Mapping from DIGGS data
+
+Sample XML instances with proposed mapping of elements to the
+SensorThings API objects are provided
+https://docs.google.com/spreadsheets/d/1x1lnBp-8UFnumxD-j6IvqgZ_4gD1Nu-DJcVN0vFxz4M/edit#gid=1851137299[here]
+for DIGGS Test objects (a type of DIGGS measurement) for CPT, SPT and
+Atterberg limits tests. Although some effort has gone in to mapping a
+limited portion of DIGGS’ ObservationSystems for category-based data to
+STA (specifically for Lithology observations), considerably more effort
+is needed. These observations ,as well as mapping to additional test
+types such as compaction tests, and triaxial tests will continue to be
+developed.
+
+As can be seen from the mapping examples, the DIGGS Test object, which
+handles all in-situ and laboratory based measurements that are not
+time-domain measurements (those are handled in a similarly structured
+Monitor object) are comprised of three main components 1. Measurement
+metadata with time of test and roles 2. Outcome, which further is
+subdivided into: Location and ResultSet objects. The Location object
+carries the feature of interest’s location information while the
+ResultSet holds the observed properties and observation results. 3. A
+procedure property that can hold any number of Procedure objects that
+describe how the test was performed but also contain metadata and interim
+observations that are procedure-specific.
+
+In general, for the Test object:
+
+* Test metadata properties will map to Sensor, unless the same information is provided in the procedure object;
+* Location information will map to BhSampling and BhFeatureOfInterest;
+* ResultSet properties map to Observed Property and Datastream (for units of measure);
+* ResultSet datavalues property maps to Observation; and
+* Procedure object maps to Sensor, except for included interim
+observations, where those elements will map to ObservedProperty and
+Observations.
+
+As for other DIGGS objects:
+
+* DiGGS linear sampling features such as
+boreholes and soundings map to properties in BhCollarThing,
+BhTrajectoryThing and the associated Location object;
+* DIGGS SamplingActivity maps to BhSampling and BhSamplingProcedure;
+* DIGGS Sample maps to BhFeatureOfInterest; and
+* DIGGS Specimen objects map to BhFeatureOfInterest.
+
+//end of file fix

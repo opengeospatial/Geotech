@@ -1,0 +1,44 @@
+[[Extending-gsml-Joint]]
+==== Joint
+
+The gsml:Joint concept is not mentioned in the
+https://docs.ogc.org/is/16-008/16-008.html[GeosciML v4.1 specifications]
+but is clearly identified in the
+https://geosciml.org/doc/geosciml/4.1/documentation/html/[UML model] as
+part of the Geologic Structure Details.
+
+.Geologic Structure (including Joint)
+image::https://github.com/opengeospatial/Geotech/assets/17067226/9d97f708-b57f-4468-9683-6679390c34fe[]
+
+A gsml:Joint is defined as a:
+
+____
+Fracture across which there is no displacement at the scale of interest.
+____
+
+gsml:Joint is as a specialization of a gsml:Fracture defined which is
+defined as:
+
+____
+Fractures are cracks in the earth surface. If there is no displacement
+it is a joint. If there is displacement and you are in the brittle zone
+it is a fault. In the ductile zone, a fracture with displacement with
+fracture is called a shear.
+____
+
+===== Geotech concept that can use gsml:Joint
+
+gsml:Joint is identified to realize the geotech concept called
+<<DiscreteDiscontinuity,DiscreteDiscontinuity>>.
+
+===== How representations / geometries should be handled for gsml:Joint?
+
+As gsml:DiscreteDiscontinuity is proposed as a specialization of
+gsml:GeologicStructure which it itself a specialization of a
+GeologicFeature it inherits its capacity to be *associated to
+(multiple) gsml:MappedFeature* where each one are intended to be
+possible representation of the concept
+
+===== Geotechnical properties
+
+A GeotechUnit being a GeologicUnit, it inherits of its properties.

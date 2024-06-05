@@ -1,0 +1,105 @@
+[[geometry-considerations]]
+==== Geometries in OGC
+
+This page is about how geometries are currently handled by OGC
+standards. OGC Standards consider two- and three-dimensional (2D and 3D)
+geometries. All OGC feature (vector) geometries ultimately are based on
+the OGC Abstract Specification Topic 1 - Spatial Schema (published as
+https://docs.ogc.org/as/17-087r13/17-087r13.html[ISO 19107:2019]).
+
+===== Simple Features (2D)
+
+OGC’s oldest and most-implemented Standard,
+https://www.ogc.org/standard/sfa/[Simple Features], describes how to
+define and encode 2D feature geometries. Simple Features representation
+is used in all other OGC and similar Standards for feature geometry,
+including the list below. Simple Features is also the native geometry
+for geospatial-enabled commercial and open source database systems.
+
+===== GML (2D and 3D)
+
+As written https://www.ogc.org/standard/gml/[here], the Geography Markup
+Language (GML) from OGC is
+
+____
+an XML grammar for expressing geographical features. GML serves as a
+modeling language for geographic systems as well as an open interchange
+format for geographic transactions on the Internet. GML is also an ISO
+standard
+(http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=32554[ISO
+19136:2007]).
+____
+
+===== GeoJSON (2D)
+
+Contrary to some belief, GeoJSON is not authored by OGC but by the
+https://fr.wikipedia.org/wiki/Internet_Engineering_Task_Force[IETF]. One
+current limitation of GeoJSON is the fact that it is only handling one
+coordinate reference system (CRS): EPSG:4326. Yet the big interest of
+the internet for JSON based format makes it worth considering.
+
+===== OGC Features and Geometries JSON (2D and 3D)
+
+The work-in-progress OGC Features and Geometries JSON is designed to be
+the successor of GeoJSON. It is designed such that it can be used in a
+way that is fully backwards-compatible with GeoJSON. It does this by
+leaving all fields and structures defined by GeoJSON in place, and only
+defining new functionality in new fields that do not conflict with
+existing properties.
+
+OGC Features and Geometries JSON will:
+
+* include the ability to use Coordinate Reference Systems (CRSs) other
+than WGS84
+* follow the
+https://portal.opengeospatial.org/files/?artifact_id=76024[OGC Axis
+Order Policy],
+* allow the use of non-Euclidean metrics, in particular ellipsoidal
+metrics,
+* support solids and multi-solids as geometry types, and
+* provide guidance on how to represent feature properties, e.g.,
+including temporal properties.
+
+The development of FG-JSON happens on:
+https://github.com/opengeospatial/ogc-feat-geo-json
+
+===== Geo3DML (3D)
+
+In
+https://www.sciencedirect.com/science/article/abs/pii/S0098300417302716[Geo3DML:
+A standard-based exchange format for 3D geological models], the China
+Geological Survey studied the topic of 3D space geomodels. They proposed
+extensions of OGC standards are proposed, especially for geometries.
+
+===== Voxels (3D)
+
+Voxels (or volumetric cells) are a 3D gridded representation of a
+volume, with attributed values. Voxels can be expressed directly as
+modeled cubes in Standards such as
+https://www.ogc.org/standard/citygml/[CityGML] or as datacubes
+represented by
+https://portal.ogc.org/files/?artifact_id=19820[coverages] or in formats
+such as https://www.ogc.org/standard/HDF5/[HDF5] or
+https://portal.ogc.org/files/100727[Zarr], amongst others.
+
+===== The concept of gsml:MappedFeature in GeoSciML
+
+The fact that models of the earth and their features can be represented
+in different way is something well understood and managed in GeoSciML
+thanks to the concept of MappedFeature that is defined
+https://docs.ogc.org/is/16-008/16-008.html#41[this way]:
+
+____
+A MappedFeature is part of a geological interpretation. It provides a
+link between a notional feature (description package) and one spatial
+representation of it, or part of it (exposures, surface traces and
+intercepts, etc.). The mapped features are the elements that compose a
+map, a cross-section, a borehole log, or any other representation. The
+mappingFrame identifies the domain being mapped by the geometries. For
+typical geological maps, the mapping frame is the surface of the earth
+(the 2.5D interface between the surface of the bedrock and whatever sits
+on it; atmosphere or overburden material for bedrock maps). It can also
+be abstract frames, such as the arbitrary plane that forms a mine level
+or a cross-section, the 3D volume enclosing an ore body or the line that
+approximate the path of a borehole.
+____

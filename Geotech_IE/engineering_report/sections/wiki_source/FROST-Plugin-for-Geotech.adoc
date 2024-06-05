@@ -1,0 +1,207 @@
+[[FROST-Plugin-for-Geotech]]
+=== FROST Plugin for geotech
+==== A short intro to the OGC SensorThingsAPI data model
+
+For those who are not (yet) familiar with the data model from the OGC
+SensorThings API, please visit:
+link:Introduction-to-SensorThingsAPI-data-model[Introduction to
+SensorThingsAPI data model].
+
+==== Extending STA for Geotech
+
+Thanks to the DataStream concept, that is part of the core STA data
+model, STA is very suited for use cases where repeated observations and
+measurements are made. The support for time series is native and is the
+essence of STA. When it comes to address measurements along a
+trajectory, STA functions similarly to a time series, except the
+variable is space and not time.
+
+In practice, measurements along a trajectory within a borehole are a
+kind of time series because the results are obtained one after the other
+as the hole is advanced. The difference is that the time parameter is
+not important whereas the location parameter is the important domain for
+the measurement.
+
+===== Extended data model
+
+To improve the support for boreholes, the core SensorThings data model
+has been extended. The conceptual background of this extension is
+explained in <<STA-Borehole-Model,STA Borehole Model>>. This data model extension has been implemented as a
+FROST-Server plugin, together with a security extension that allows
+fine-grained access control to borehole data:
+
+.Core STA data model in blue, with the GeoTech data model extension in green and the security extension in yellow
+image::https://raw.githubusercontent.com/hylkevds/FROST-Server.Plugin.GeoTech/main/Datamodel-SensorThingsApi-GeoTech.drawio.png[]
+
+===== Map geotech data to the STA data model
+
+*Test (geotechnical in-situ)*
+
+Act (Sensor) carried out as part of a (Project)
+
+Associated with a borehole (BhCollarThing) that follows a trajectory
+(BhTrajectoryThing)
+
+*Observation / observation group*
+
+Obtained during a test (Sensor)
+
+One or more parameter value(s) (ObservedProperty) measured at a given
+location (FeatureOfInterest)
+
+These given locations are defined by sampling (BhSampling) along the
+trajectory (BhTrajectoryThing)
+
+===== Geotech data considered
+
+This implementation is for delivering observations & measurements (aka
+Book A data. See: <<Book-A-organization-and-components>> for more details).
+
+The study mainly focused on in-situ tests, including:
+
+* Cone Penetration Test (CPT),
+* Standard Penetration Test (SPT),
+* Menard Pressuremeter Test.
+
+It also addresses laboratory tests, including discussions about:
+
+* Atterberg limits test.
+
+===== Download FROST GeoTech plugin
+
+The FROST GeoTech plugin, with installation help, can be found at the
+https://github.com/hylkevds/FROST-Server.Plugin.GeoTech/[FROST GeoTech
+Plugin] GitHub page. The plugin can be used as a docker image. An
+https://github.com/hylkevds/FROST-Server.Plugin.GeoTech/blob/main/scripts/docker-compose.yaml[example
+DockerCompse file] is provided with the plugin. To try it out without
+installing anything, a demo service is available at:
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/ (use
+username/password read/read for read-only access)
+
+===== Entity creation order
+
+Since some entities in the data model require other entities, like the
+Datastream requiring a Thing, there is a certain order in which these
+entities should be created. The general order is:
+
+. FeatureType (re-used often)
+. ObservedProperty (re-used often)
+. BhCollarThing + Location
+. BhTrajectoryThing + Location
+. BhSampler + BhSamplingProcedure (if present)
+. BhSampling
+. BhFeatureOfInterest
+. BhPreparationProcedure (if present)
+. BhPreparationStep (if present)
+. Sensor
+. Datastream
+. Observation
+
+There are some things to take into account when populating the data
+model.
+
+* The FeatureTypes and ObservedProperties are re-used often, and
+should only be created once per server.
+* Things and FeaturesOfInterest
+are not directly created in the GeoTech data model extension. These
+entities are automatically populated from the BhCollarThing,
+BhTrajectoryThing and BhFeatureOfInterest.
+* A Datastream is linked to
+either a BhCollarThing or a BhTrajectoryThing, but not to both.
+* When creating an Observation, the id of the BhFeatureOfInterest should be
+given as FeatureOfInterest, otherwise FROST will try to generate a
+FeatureOfInterest, and fail. For example:
+`+{     "phenomenonTime": "2017-12-31T23:00:00.000Z/2018-01-01T00:00:00.000Z",     "result": 12.6,     "Datastream": {         "@iot.id": 42     },     "FeatureOfInterest": {         "@iot.id": 99     }   }+`
+
+A https://github.com/hylkevds/FROST-Server.Plugin.GeoTech/blob/main/scripts/BatchUploadTemplate.json[demonstration
+Batch Request] is available that creates examples of all entity types,
+with their relations, in the correct order.
+
+===== Security Extension
+
+The security extension that is part of the FROST GeoTech Plugin adds
+powerful project-management related access control features. The
+extension adds four extra EntityTypes to the data model:
+
+* User
+* Role
+* Project
+* UserProjectRole
+
+The `+User+` entities represent users of the system. When combined with
+the BasicAuth authentication plugin (the Default in the docker image)
+users must be explicitly created with a username and a password. When
+combined with the KeyCloak plugin, User entities are automatically
+created, and don’t have a password field. The password field can not be
+read by anyone, not even global admins.
+
+The `+Project+` entities represent a unit of management that ties Users
+in one or more Roles to Entities. Projects are directly linked to
+Sensors and Things. All other entities in the data model are indirectly
+linked to Projects through a Thing. For instance, Observations belong to
+the Project of the Thing of their Datastream (Project -> Thing ->
+Datastream -> Observation) and BhFeaturesOfInterest are linked to a
+Project through the Sampling (Project -> BhTrajectoryThing -> BhSampling
+-> BhFeatureOfInterest). ObservedProperties are shared among all
+Projects and can only be created or modified by a global server admin.
+Finally, Projects can be either public or private through the property
+`+public+`. If the `+public+` property of a Project is true, then all
+users of the system can read entities associated to the Project. If the
+`+public+` property is false, then only Users that have the `+read+`
+right on that Project, or have global `+read+` rights, can read
+Observations associated with that Project.
+
+The `+Role+` entities represent rights that a User can have. Roles can
+be directly linked to a User, or indirectly through a UserProjectRole
+Entity for a given Project. Roles that are directly connected to a User
+apply to the entire service. Roles that are linked to a user for a
+Project only apply to Entites of that Project. For instance, a User that
+has the global Role `+update+` can modify all Entities in the service. A
+user that has the `+update+` role for a given Project can only modify
+those Entities that are related to that specific Project.
+
+A UserProjectRole entity gives a User a certain Role within a certain
+Project.
+
+A normal user can only read the `+User+` Entity that belongs to their
+user account. Users that have a project role of `+admin+` can read all
+User entities, since a project admin must be able to add Users to their
+Project. The password of a user (when BasicAuth is used) can only be
+changed by the User themselves, or by a global admin.
+
+The rights for the different user types:
+
+[width="100%",cols="16%,12%,12%,12%,12%,12%,12%,12%",options="header",]
+|===
+|  |Admin (admin, c,r,u,d) |Geotech Expert (r,c,u,d) |Public (for open
+projects) |Public (for private projects) |Project manager (a,c,r,u,d)
+|Project contributor (r,c,u,d) |Project member (read)
+|Project |CRUD |R |R |  |R |R |R
+
+|User |CRUD |R (self) |  |  |R (all) |R (self) |R (self)
+
+|Role |CRUD |R (self) |  |  |R (all) |R (self) |R (self)
+
+|UserProjectRole |CRUD |R (self) |  |  |CRUD (project) |R (self) |R
+(self)
+
+|ObsProp |CRUD |CRUD |R |R |R |R |R
+
+|Sensor |CRUD |CRUD |R |  |CRUD |R |R
+
+|Thing & Location |CRUD |CRUD |R |  |CRUD |R |R
+
+|FOI, Sampling, Preparation |CRUD |CRUD |R |  |CRUD |CRUD |R
+
+|DataStream |CRUD |CRUD |R |  |CRUD |CRUD |R
+
+|Observation |CRUD |CRUD |R |  |CRUD |CRUD |R
+|===
+
+* The admin user type has global Admin, Create, Read, Update and Delete
+rights.
+* The Geotech Expert user type has global Create, Read, Update and
+Delete rights, and can thus create Observed Properties and access all
+data in the server, but not manage users.
+* The Project user types do not have any global roles, only
+project-related roles.

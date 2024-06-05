@@ -1,0 +1,139 @@
+[[Hydrogeounit]]
+==== HydrogeoUnit
+
+____
+These are distinct volumes of earth material that serve as containers
+for subsurface fluids. The boundaries of a unit are typically
+discriminated from those of another unit using properties related to the
+potential or actual ability to contain or move water. The properties can
+be geological or hydraulic, and typically include influences from the
+surrounding hydrological environment. More specifically, the conceptual
+model delineates two types of hydrogeological units, with slightly
+different orientations: aquifer-related units have boundaries delimited
+by the hydrogeological properties of the rock body, while groundwater
+basins have boundaries delimited by distinct flow regimes.
+Aquifer-related units are subdivided into aquifer systems, which are
+collections of aquifers, confining beds, and other aquifer systems.
+Confining beds are units that impede water flow to surrounding units,
+and supersede notions such as aquitards, aquicludes, and aquifuges,
+which are not included herein, as it is difficult to differentiate these
+in practice.
+____
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GWML2 |HydrogeoUnit |Any soil or rock unit or zone that by virtue
+of its hydraulic properties has a distinct influence on the storage or
+movement of groundwater.
+
+|IFC |HydrogeoUnit |Same
+as OGC GWML2
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include hydrogeological units,
+identified as such using the elementType attribute.
+|===
+
+===== Properties
+
+====== Inherited properties from the GeologicUnit concept
+
+See <<GeologicUnit>>
+
+====== Specific properties
+
+[width="100%",cols="12%,88%",options="header",]
+|===
+|PropertyName |Definition
+|Identifier |Globally unique identifier shall uniquely identifies a
+tuple within the dataset and be formatted as an absolute URI conformant
+to RFC 3986.
+
+|Name |name contains a display name for the HydroGeoUnit.
+
+| |
+
+|gwUnitDescription |Description of the unit.
+
+|gwUnitMetadata |Metadata for the unit.
+
+|gwUnitName |Name of the unit (common local name or formal name).
+
+| |
+
+|gwUnitThickness |Typical thickness of the unit.
+
+| |
+
+|gwUnitMedia |Type of material or, by proximity, type of voids (e.g.,
+granular, fracture, karstic, or mixed).
+
+|gwUnitRecharge |Volumetric flow rate of water that enters an
+hydrogeologic unit, at potentially multiple locations.
+
+|gwUnitDischarge |Volumetric flow rate of water that goes out of an
+hydrogeologic unit, at potentially multiple locations.
+
+|gwUnitWaterBudget |Sum of water input and output of a hydrogeologic
+unit, at a particular point in time, with a description of inflows and
+outflows.
+
+|gwUnitVulnerability |The susceptibility of the aquifer to specific
+threats such as various physical events (earthquakes), human processes
+(depletion), etc.
+
+| |
+
+|gwUnitShape |The geometry of the unit.
+
+| |
+
+|LinkToAnObservationAPI |
+
+| |
+
+|PermeabilityHoz |value of horizontal permeability
+
+|Permeabilityvert |value of vertical permeability
+
+|Transmissivity |Parameter governing the flow of water flowing per unit
+width of the saturated zone of a continuous aquifer (measured in a
+direction orthogonal to that of flow), and per unit of hydraulic
+gradient
+
+|Storage coefficient |Ratio of the volume of water released or stored
+per unit area of an aquifer, to the corresponding charge in hydraulic
+head, without reference to time
+
+|Specific storage |Volume of water released or stored per unit area of
+an aquifer, to the corresponding charge in hydraulic head, without
+reference to time
+
+|EffectivePorosity |Ratio of the volume of gravitational water that a
+medium porous may contain in a state of saturation then release under
+the effect of complete drainage (laboratory drainage on a sample), to
+its total volume
+
+| |
+
+|IntrinsicPermeabilityDirection |direction of intrinsic permeability
+
+|IntrinsicPermeabilityValue |value of intrinsic permeability
+
+|HydraulicFlowVelocity |Fictitious macroscopic speed of a water flow in
+uniform movement through a saturated aquifer medium (speed vector of
+Darcy’s law) deduced from the flow rate referred to the total section of
+the aquifer crossed by the flow
+
+|InitialWaterSaturation |In situ state, initial water saturation level
+(before construction)
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/13

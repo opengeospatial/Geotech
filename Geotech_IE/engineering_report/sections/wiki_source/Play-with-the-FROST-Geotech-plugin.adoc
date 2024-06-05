@@ -1,0 +1,131 @@
+[[play-with-FROST]]
+==== Play with the FROST Geotech plugin
+
+The SensorThings API has very powerful query features that keep easy
+things easy, but still allow very complex requests. A good starting
+explanation on how to query the SensorThings API can be found at the
+https://fraunhoferiosb.github.io/FROST-Server/sensorthingsapi/3_GettingData.html[Getting
+Data] section on the FROST-Documentation website.
+
+This page is about relevant queries you may do with the FROST Geotech
+plugin
+
+===== Simple queries
+
+====== Lists
+
+The simplest queries are those that fetch a list of all entities of a
+type. For instance, getting a list of all the geotechTests (Mapped to
+Sensor in STA): 
+
+....
+https://[FrostGeotechServerAddress]/v1.1/Sensors
+....
+
+Or to get all borehole collars:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/BhCollarThings
+....
+
+====== Single Entities
+
+To get a single entity from a list, add `+(<id>)+` to the URL of the
+list. To get the geoTechTest (Sensor) with id `+1+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/Sensors(1)
+....
+
+Or to get the borehole collar with id `+42+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/BhCollarThings(42)
+....
+
+====== Related Lists
+
+To get a list of entities related to a certain entity, one can navigate
+along relations. for instance, to get all Datastreams for Sensor
+(geoTechTest) with id `+1+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/Sensors(1)/Datastreams
+....
+
+Or to get the Trajectories related to borehole collar `+1+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/BhCollarThings(1)/BhTrajectoryThings
+....
+
+Or to get the Datastreams related to a Trajectory `+1+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/BhTrajectoryThings(1)/Datastreams
+....
+
+And from there, to get the Observations related to a Datastream `+1+`:
+
+....
+https://[FrostGeotechServerAddress]/v1.1/Datastreams(1)/Observations
+....
+
+====== Filtering Lists
+
+All lists can be filtered using the filter parameter.
+To get a list of all the geotechTests that are of type CPT (sensorType `https://data.geoscience.fr/ncl/Proc/86`):
+....
+https://[FrostGeotechServerAddress]/v1.1/Sensors?]filter=sensortype eq
+'`https://data.geoscience.fr/ncl/Proc/86`'
+
+....
+
+
+===== More complex queries
+
+Get the results of the available DataStreams associated to my Geotechtest organised this way : (Depth, Result for property 1, Result for property 2, ...)
+....
+
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/BhTrajectoryThings(9)?
+$select=name& $expand=BhSamplings( $orderBy=atPosition;
+$select=atPosition,time; $expand=BhSamples( $top=1; $select=name;
+$expand=Observations( $top=3; $select=result,phenomenonTime;
+$expand=Datastream( $select=unitOfMeasurement; $expand=ObservedProperty(
+$select=name ) ) ) ) )
+
+....
+
+Get this same result in csv
+....
+
+_Currently not possible unfortunately, but plans to add this functionality are in place._
+
+....
+
+Get the CPT tests in this perimeter that match this lithology (Rock)
+
+Given that BhTrajectoryThings(9) is the trajectory with the CPT test:
+....
+
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/BhTrajectoryThings(9)/BhSamplings?
+$filter=BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/BhSamples/Observations/result
+eq '`Rock`' and atPosition gt
+BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/fromPosition
+and atPosition lt
+BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/toPosition
+
+....
+
+Get the results of those same CPT tests
+....
+
+https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-GeoTech/v1.1/BhTrajectoryThings(9)/BhSamplings?
+$filter=BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/BhSamples/Observations/result
+eq '`Rock`' and atPosition gt
+BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/fromPosition
+and atPosition lt
+BhTrajectoryThing/BhCollarThing/RelatedBhCollarThings/BhTrajectoryThings/BhSamplings/toPosition&
+latexmath:[expand=BhSamples(]expand=Observations) ```
+....
+

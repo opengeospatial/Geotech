@@ -1,0 +1,34 @@
+[[GeotechSynthesisMode]]
+==== GeotechSynthesisModel
+
+Link between the design and modeled geology and geotechnical
+conditions: summarized interpretation with regard to building,
+construction method,… in relation to a section of the alignment or
+building structure. Typical definition of "`baseline conditions`" as
+usually included in a geotech.
+
+===== Realization
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC EPOS |ModelView |Same as IFC
+
+|IFC
+|GeotechSynthesisModel |Link between the design and modeled geology and
+geotechnical conditions: summarized interpretation with regard to
+building, construction method, in relation to a section of the
+alignment or building structure. Typical definition of "baseline
+conditions" as usually included in a geotech. longitudinal section
+
+|AGSi |agsiModel |A digital geometric (1D, 2D or 3D) representation of
+the ground. There are potentially many different types of model covering
+different categories (conceptual, observational, analytical) and domains
+(geological, geotechnical, hydrogeological, geoenvironmental, etc.).
+|===
+
+===== FAQ
+
+====== Github issue
+
+https://github.com/opengeospatial/Geotech/issues/26

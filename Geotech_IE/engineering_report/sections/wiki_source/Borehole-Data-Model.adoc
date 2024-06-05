@@ -1,0 +1,58 @@
+== OGC GeoTech IE Borehole Data Model
+
+Here we provide information on the Data Model created for the OGC
+GeoTech IE. This model is based on the core standards Observations,
+Measurement and Samples (ISO 19156) and Linear Referencing (ISO 19148).
+In addition, this model has been transformed from a conceptual model to
+an implementation model based on OGC SensorThings API.
+
+Within the this IE, the focus will be on the following types of tests: -
+Cone penetration test (CPT) - Standard penetration test (SPT) -
+PressioTest
+
+In addition, the following constraints apply: - For 1 borehole: CPT test
+or SPT tests or Pressio test - In case of CPT : only 1 CPT per borehole,
+- In case of SPT : n SPT per borehole (at different depths), - In case
+of Pressio : n Pressio per borehole (at different depths).
+
+Before we can provide data for these tests, we must determine what
+spatial features must be defined to serve as features-of-interest for
+these tests. The following diagram provides an overview of all spatial
+features to be potentially defined on a borehole. For more information
+on these individual features-of-interest types, and the sampling model
+describing them, see the page on
+https://github.com/opengeospatial/Geotech/wiki/Sampling-Boreholes[Sampling
+Boreholes].
+
+.Borehole Sampling Features
+image::https://github.com/opengeospatial/Geotech/assets/11915304/09673de5-93fc-4ec5-994f-069044b20f31[]
+
+== Data Model Definition
+
+Before work could commence on the creation of a conceptual model for
+boreholes, the requirements from Linear Referencing (ISO 19148) needed
+to be investigated, and potential alignment with sampling concepts from
+OMS identified and aligned:
+<<bringing-iso-together,Alignment of OMS (ISO 19156) and Linear Referencing (ISO 19148)>>
+
+Based on the alignment of OMS with Linear Referencing, a conceptual
+model was created for boreholes.
+<<Conceptual-Borehole-Model,Conceptual Borehole Model>>
+
+Finally, for provision via OGC SensorThings API (STA), a physical model
+has been created, extending the core STA classes as required.
+<<STA-Borehole-Model,STA Borehole Model>>
+
+== Data Model Examples
+
+In order to apply theory to practice, examples can be essential. In this
+section, we will soon provide examples aligned with the STA Borehole
+Model.
+
+== Viewing the Data Model on the OGC Cloud
+
+Access the OGC UML Cloud at: https://umltool.ogc.org/
+
+Select the Model "`Combined IEs 2023 Model (Read-Only)`"
+
+Navigate to: OGC IEs -> GeoTech IE

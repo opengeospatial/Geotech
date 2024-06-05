@@ -1,0 +1,27 @@
+==== Introduction to EPOS
+
+EPOS, the *European Plate Observing System*, is a multidisciplinary,
+distributed research infrastructure that facilitates the integrated use
+of data, data products, and facilities from the solid Earth science
+community in Europe.
+
+For a better overview of EPOS, please have a look to this paper:
+https://www.nature.com/articles/s41597-023-02697-9
+
+===== EPOS TCS GIM
+
+Within the EPOS initiative, the Thematic Core Service (TCS) *Geological
+Information and Modeling* develops and consolidates the information and
+data infrastructures produced by the international community, primarily
+the http://www.eurogeosurveys.org/[European Geological Surveys]. Shared
+reference datasets on geological maps, boreholes (vertical shafts
+constructed for water, oil, or gas extraction), 3D geological models,
+and mineral resources are accessible to the community through the EPOS
+multidisciplinary platform provided from the
+https://www.europe-geology.eu/[European Geological Data Infrastructure].
+
+===== Existing concepts proposed for reuse and extension for geotechnics
+
+* <<Extending-eposl-ModelView,eposl:ModelView>>
+
+//section end fix

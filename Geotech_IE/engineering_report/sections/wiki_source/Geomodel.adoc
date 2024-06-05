@@ -1,0 +1,31 @@
+[[Geomodel]]
+==== GeoModel
+
+A Geomodel is a simplified view of a model. A model is defined as the result of
+geoscience data processing or interpretation. Proposing either a spatial
+distribution of geoscientific objects with properties of interest
+(feature) or attempt of retranscribing natural/man-made behavior
+through mathematical functions or algorithms (process).
+
+===== Realization
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC EPOS |ModelView |Simplified view of a Model. A model is defined as
+the result of geoscience data processing or interpretation. Proposing
+either a spatial distribution of geoscientific objects with properties
+of interest (feature) or attempt of retranscribing natural/man-made
+behavior through mathematical functions or algorithms (process).
+
+|IFC | |
+
+|AGSi |agsiModel |A digital geometric (1D, 2D or 3D) representation of
+the ground. There are potentially many different types of model covering
+different categories (conceptual, observational, analytical) and domains
+(geological, geotechnical, hydrogeological, geoenvironmental, etc.).
+|===
+
+===== Github issue
+
+https://github.com/opengeospatial/Geotech/issues/26

@@ -1,0 +1,19 @@
+[[Extending-NZ-HazardArea]]
+==== Hazard Area according to INSPIRE:NZ
+
+From the
+https://knowledge-base.inspire.ec.europa.eu/publications/inspire-data-specification-natural-risk-zones-technical-guidelines_en[INSPIRE
+Data Specification on Natural Risk Zones – Technical Guidelines]
+
+____
+Discrete spatial objects representing a natural hazard.
+____
+
+===== Geotech concept that can use this concept
+
+HazardArea is identified to realize the geotech concept called
+<<HazardArea>>.
+
+===== Proposed adjustments for geotech
+
+See <<HazardArea>> for properties to be added.

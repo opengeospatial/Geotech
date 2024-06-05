@@ -1,0 +1,108 @@
+[[Observation]]
+==== Observation
+
+An observation is an act associated with a discrete time instant or
+period through which a number, term or other symbol is assigned to a
+characteristic. This act involves application of a specified procedure,
+such as a sensor, instrument, algorithm or process chain. The procedure
+may be applied in-situ, remotely, or ex-situ with respect to the
+sampling location. The result of an observation is an estimate of the
+value of a property of some feature; an observation is a
+property-value-provider for a feature-of-interest. Use of a common model
+allows observation data using different procedures to be combined
+unambiguously.
+
+In conventional measurement theory the term "`measurement`" is used.
+However, a distinction between measurement and category-observation has
+been adopted in more recent work so the term "`observation`" is used
+here for the general concept. "`Measurement`" may be reserved for cases
+where the result is a numerical quantity.
+
+The observation itself is also a feature, since it has properties and
+identity. Observation details are important for data discovery and for
+data quality estimation. The observation could be considered to carry
+"`property-level`" instance metadata, which complements the
+dataset-level and feature-level metadata commonly provided via catalogue
+services (e.g., ISO 19115 or other community agreed one).
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC OMS |Observation |An observation is an act associated with a
+discrete time instant or period through which a number, term or other
+symbol is assigned to a characteristic. This act involves application of
+a specified procedure, such as a sensor, instrument, algorithm or
+process chain. The procedure may be applied in-situ, remotely, or
+ex-situ with respect to the sampling location. The result of an
+observation is an estimate of the value of a property of some feature;
+an observation is a property-value-provider for a feature-of-interest.
+Use of a common model allows observation data using different procedures
+to be combined unambiguously.
+
+|IFC
+|GeoscienceObservation |Detailed collected information, including
+measured parameters, descriptions etc. related to geoscientific
+observations that can be assigned to physical or spatial elements using
+IfcRelAssignsToProduct.
+
+|AGS | |No specific concept as such as all data is treated similarly in
+AGS data, whether it be location data, hole/test/other metadata or
+results (i.e. observations in this context)
+
+|DIGGS |Observation |An interval or region defined at a sampling feature
+that contains qualitative observations or interpretations.
+
+|DIGGS |Measurement |An act or event whose results are quantitative
+estimates of the values of properties of the target of an investigation.
+DIGGS currently has three specialized measurement objects, 1) a Test,
+which is a measurement made over a spatial domain, such as laboratory
+tests on samples collected in the field, or in-situ tests where
+measurements are made directly on site, 2) monitoring activities, which
+are measurements made over a temporal domain, such as water level
+measurements or inclinometer readings, and 3) a Material Test, which is
+for measurements made on material samples that are manufactured such
+that the result pertains only to the sample and not to any associated
+location.
+|===
+
+===== FAQ
+
+====== Observations and / or measurements?
+
+Several distinctions can be made between Observations and Measurements.
+A common one being that Observations provide qualitative results whereas
+Measurements provide quantitative results.
+
+The proposed conceptual model does not make this distinction. Yet soft
+typing can be applied if this distinction is considered necessary.
+
+The DIGGS standard proposes an explicit distinction between Observations
+and Measurements.
+
+====== How to deal with multiple Observations / measurements?
+
+It is very common for a procedures or test (especially for measurements)
+to provide a result composed of multiple values. This includes time
+series, z-series.
+
+The proposed conceptual model offers a fine granularity which aims at
+being able to get any value separately. Each single observation or
+measurement (e.g., at a specific time of a timeseries and/or at a specific
+location of a z-series) is then contextualized and associated to its
+procedure and other metadata.
+
+====== I don’t want to retrieve single observations / measurements but have them grouped
+
+Grouping of observations and measurements having some similarities is a
+basic function that Observation APIs shall be able to manage.
+
+Common grouping criteria include: ObservingProcedure, ObservedProperty,
+Time, Location and/or FeatureOfInterest.
+
+OGC APIs like SensorThingAPI offer such capacity.
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/19

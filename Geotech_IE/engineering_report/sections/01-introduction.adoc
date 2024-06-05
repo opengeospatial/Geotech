@@ -3,4 +3,5 @@
 
 // Insert introduction content adding subsections as needed
 
-Introduction content.
+include::wiki_source/Home.adoc[]
+include::wiki_source/Participants.adoc[]

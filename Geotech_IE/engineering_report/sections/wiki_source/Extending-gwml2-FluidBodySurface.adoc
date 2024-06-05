@@ -1,0 +1,53 @@
+[[Extending-gwml2-FluidBodySurface]]
+==== FluidBodySurface according to GroundWaterML2
+
+From https://docs.ogc.org/is/19-013/19-013.html#toc40[GroundwaterML2]:
+
+____
+A surface on a fluid body within a local or regional area, e.g.,
+piezometric, potentiometric, water table, salt wedge, etc.
+____
+
+===== Geotech concept that can use gwml2:FluidBodySurface
+
+gwml2:FluidBodySurface is identified to realize the geotech concept
+called
+<<FluidBodySurface,FluidBodySurface>>.
+
+===== Proposed adjustments for geotech
+
+Existing attributes:
+
+[width="100%",cols="15%,16%,69%",options="header",]
+|===
+|Attribute |Type and Multiplicity |Definition
+|gwSurfaceShape |Surface |Geometry / position of the surface.
+
+|gwSurfaceType |SurfaceType |Type of fluid body surface, e.g.,
+piezometric, potentiometric, water table, salt wedge, etc.
+
+|gwSurfaceMetadata |ObservationMetadata |Date, time, method, etc., of
+the observation or calculation of the surface.
+|===
+
+Existing relations:
+
+[width="100%",cols="8%,13%,13%,66%",options="header",]
+|===
+|Relation |Source |Target |Description
+|Association |Entity: GW_Divide |Entity: GW_FluidBodySurface |Relates a
+fluid body surface to a line on e.g., a water table or piezometric
+surface, on either side of which the groundwater flow diverges.
+
+| | | |
+
+| |Role: gwSurfaceDivide |Role: gwDivideSurface |
+
+|Association |Entity: GW_FluidBodySurface |Entity: GW_FluidBody |Relates
+a fluid body to a surface hosted by the body, e.g., the top of the water
+table.
+
+| | | |
+
+| |Role: gwBodySurface |Role: gwSurfaceBody |
+|===

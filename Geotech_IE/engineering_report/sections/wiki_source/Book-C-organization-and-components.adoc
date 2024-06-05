@@ -1,0 +1,45 @@
+=== Book C Principles
+
+Book C starts with a detailed description of the feedback (in civil
+engineering terms) from prior structures built near or adjacent to
+similar terrain.
+
+Book C then goes on to summarize the decisive elements – among all those
+set out in Books B – that have dictated the foundational design choices.
+
+Book C also details the recommended execution methods for each part of
+the structure '`Book C`' should also include details of the overall
+strategy suggested by the project manager for all matters relating to
+excavated materials A specific chapter should be devoted to neighboring
+structures Lastly, Book C should present a broad overview of the
+monitoring methods.
+
+Book C end with the Risk register resulting from the intersection
+between the uncertainties listed in Book B and the envisaged
+construction methods.
+
+==== Application
+
+The book C is (linear) infrastructure focused. It provides a summary of
+the expected conditions and possible risks that may occur during the
+project construction.
+
+The information that are provided are deeply linked to the targeted
+infrastructure and its design. Changes on those aspects may considerably
+alter the validity of the results that are provided.
+
+Remembering AFTES guidelines are tunnel focused, slight adaptation were
+adopted to make the proposal also applicable to other kind of
+infrastructure.
+
+==== Concepts list
+
+The core of Book C is the GeotechSynthesisModel
+
+That is is mainly composed of:
+
+* Alignment
+* GeotechTypicalSection
+* RiskZone
+
+//end of file fix

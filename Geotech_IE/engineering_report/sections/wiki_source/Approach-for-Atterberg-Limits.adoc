@@ -1,0 +1,381 @@
+[[Approach-for-Atterberg-Limits]]
+==== Approach for Atterberg Limits
+
+The collection of "`Atterberg Limit`" tests establish the moisture
+contents at which a fine-grained clay and silt soil sample transitions
+between behavior as a solid, semi-solid, plastic, and liquid material.
+Atterberg created a series of test procedures and definitions to provide
+reproducible results among soil samples. One of the principal uses of
+the system is to differentiate silty soils from clayey soils. The values
+obtained using the prescribed procedures can also be used to help
+characterize shrink-swell [expansive] soils, which are particularly
+problematic.
+
+These values are important and common index tests in geotechnical
+engineering and are used to classify soils and compare the behaviors of
+different soils and relate soil plasticity behaviors to other
+performance qualities such as strength, stiffness, and permeability
+through empirical correlations. The tests are especially common for
+shallow foundations, roadway embankment construction, and pavement
+support. The tests are somewhat less common for deep foundation design
+and slope stability.
+
+The tests are conducted on specimens taken from disturbed or undisturbed
+field samples and are usually conducted in a laboratory environment at a
+time following field sample acquisition, shipping, and subsequent lab
+extrusion or opening. The samples are remolded as part of the testing
+procedures; original intact samples are not required.
+
+There are three (3) limits, each with a distinct corresponding
+laboratory test to establish the moisture content associated with a
+specific defined observed behavior of the sample. The tests are:
+
+* *The Liquid Limit (LL)*
+* *The Plastic Limit (PL)*
+* *The Shrinkage Limit (SL)* *
+
+The Shrinkage Limit test is less common and is not typically conducted
+or used in common soil identification and classification systems.
+
+A calculated value, the Plasticity Index (PI), is included in the
+reporting of the Liquid Limit and Plastic Limit. The PI is the Liquid
+Limit minus the Plastic Limit, PI = (LL – PL). Values of all parameters
+are reported in whole numbers.
+
+Importantly, the commonly termed "`Atterberg Limits`" (generally
+including the LL, PL, and PI values) are used in several formal soil
+classification systems to determine classifications associated with
+plastic and non-plastic clayey and silty soils.
+
+* A plasticity chart is available for the Unified Soil Classification
+System (USCS) which uses a soil’s Plasticity Index (PI) and the Liquid
+Limit (LL) to determine its classification.
+* The PI and LL are also used in the American AASHTO classification
+system used for highway construction. This system rates soils for their
+suitability for highway construction. Transportation and other agencies
+may have their own specifications with identification and classification
+systems.
+
+The Liquid Limit (LL) is the water content at which the behavior of a
+clayey soil changes from the plastic state to the liquid state.
+Depending on the mineral composition, particle size, and nature of the
+pore fluid, the transition from plastic to liquid behavior occurs over a
+range of water contents. The definition of the liquid limit for
+geotechnical purposes is based on a standard test procedure developed by
+Arthur Casagrande. His standardized methods for determining the liquid,
+plastic, and shrinkage limits are used today.
+
+Casagrande standardized Atterberg’s original liquid limit test by
+developing a hand cranked (or motor driven) specialty apparatus with a
+brass cup and resilient base. A rotating cam mechanism creates a
+reproducible drop height of 10 mm. A mass of soil is placed into the
+brass Casagrande cup portion of the device. A groove created using a
+standardized tool through the center of the specimen. The cup is
+repeatedly dropped at a standard rate of 2 revolutions per second.
+During the process the soil groove closes gradually at the base, as a
+result of the impacts. The number of blows necessary for the groove to
+close 1/2 -inch [13 mm] at 25 blows of the apparatus is desired.
+
+The US Standard has both a single point and multipoint method to
+determine the Liquid Limit. Using the multipoint method, the test is
+progressively conducted at several moisture contents, and the moisture
+content which requires 25 blows to close the groove is interpolated from
+the test results. The single point test method also allows the use of a
+single test, where 20 to 30 blows are required to close the groove. A
+factor, k, provided in the standard, is applied to obtain the liquid
+limit from the moisture content. Two specimens are required for the
+single point test, with the Liquid Limit (LL) reported as the average
+value of the tests, reported to the nearest whole number.
+
+The Plastic Limit (PL) is determined by hand rolling a small mass of a
+soil sample, creating a roughly cylindrical "`thread`" of soil on a flat
+ground glass plate. Plastic behavior is exhibited if the soil thread
+retains its shape when rolled progressively thinner to a diameter of
+1/8-inch [3.2 mm]. At this diameter the rolling is discontinued, and the
+same sample is remolded into a larger thread and the test procedure
+repeated, rolling the newly remolded thread to progressively smaller
+diameters. As the moisture content lessens due to evaporation and loss
+of moisture along the technician’s hands and the glass plate, the thread
+will begin to break apart at larger diameters. At the point the thread
+can no longer be rolled into 1/8-inch [3.2 mm] thread, after having
+previously been rolled to that diameter, the test is considered
+concluded The sample is collected and placed in a container with other
+tested samples until two specimen containers of at least 6 grams of
+material are obtained and the moisture content can be evaluated. The
+water content of the soil is measured using approved test methods. A
+soil sample is reported as non-plastic (NP) if a thread cannot be rolled
+out down to 1/8-inch [3.2 mm] at any moisture condition.
+
+The Shrinkage Limit (SL) is the water content where additional loss of
+specimen moisture will not result in additional soil volume reduction.
+Determination of the shrinkage limit is a more involved, and far less
+common process than the other two limits. Information on test procedures
+is in the associated standards.
+
+Final reported [calculated] properties are typically:
+
+* Liquid Limit (LL),
+* Plastic Limit (PL),
+* Plasticity Index (PI), and in much less frequent cases,
+* Shrinkage Limit (SL)
+
+Values are in whole numbers, unless the test result is that the soils
+are non-plastic, in which case rather than the numeric values a
+classification of "`NP`" is assigned.
+
+Reporting of the final test values*, following application of the
+defined test procedures, is generally straightforward. Calculated result
+values are expressed as whole numbers. Unlike the SPT test, values for
+Plastic Limit (PL), Liquid Limit (LL) and the calculated Plasticity
+Index (PI) are generally well-behaved numeric data without non-numeric
+possibilities, other than the potential outcome of a non-plastic (NP)
+soil. If either the liquid limit (LL) or plastic limit (LL) could not be
+determined, or if the plastic limit is equal to or greater than the
+liquid limit, the soil is designated non-plastic (NP).
+
+It is common to have these test results reported in conjunction with
+other test results from a single extracted soil sample (such as moisture
+content, direct shear, and unconfined compression) and a soil
+description- often obtained from grain size analysis and Atterberg
+Limits testing. Different specimens (subsets of the sample) are prepared
+for each type of testing.
+
+*Typically, only final calculated values are reported and transmitted in
+log formats. Original measured values, calculations, and interim testing
+information is usually preserved in the original test records but not
+included as part of geotechnical design memoranda (although it could
+appear in comprehensive report appendices). The information may be
+included in geotechnical data reports which may contain complete field
+and laboratory testing data.
+
+The applicable US Standard is ASTM D4318-17e1 Standard Test Methods for
+Liquid Limit, Plastic Limit, and Plasticity Index of Soils The
+applicable US Standard is ASTM D4943-18 Standard Test Method for
+Shrinkage Factors of Cohesive Soils by the Water Submersion Method
+
+===== Exposing Atterberg limits with the FROST Geotech Plugin
+
+To demonstrate how the final results, interim test information and
+related metadata are stored and organized within the FROST server, we
+offer the following example Atterberg limits test for a single sample.
+Relevant data are:
+
+*GENERAL TEST INFORMATION*
+
+[arabic]
+. Test procedure used: ASTM D4318-17, Method A (multipoint method)
+. Name of sample tested: 1
+. Sample location: Collected from a depth of 1.5 to 3 ft from borehole
+B-001-0-20
+. Borehole is is 41 ft deep and its collar is located at lat/lon
+39.47466/-81.796858, elevation 249.50928 meters (WGS84)
+. Device used to collect sample: Geoprobe Interlocking Split-spoon
+sampler
+. Length of sample recovered from the hole: 1.08 ft (72% recovery).
+. Specimen preparation method : Wet Preparation Method described in Sec.
+10.1, ASTM Standard D4318-17
+. Weight of specimen prior to testing: 65 grams, wet weight.
+
+*CASAGRANDE TEST RESULTS FOR DETERMINING LIQUID LIMIT*
+
+[cols=",,",options="header",]
+|===
+|Increment Number |Blow Count |Water content (%)
+|1 |16 |35.2
+|2 |22 |28.6
+|3 |27 |23.1
+|4 |32 |17.4
+|===
+
+*PLASTIC LIMIT WATER CONTENT MEASUREMENTS*
+
+[cols=",",options="header",]
+|===
+|Increment/Container Number |Water content (%)
+|1 |11.9
+|2 |11.7
+|3 |11.4
+|===
+
+_Note: A third trial was run because of concerns that the second
+container was not properly sealed before measurement_
+
+*FINAL REPORTED RESULTS*
+
+* *Liquid limit: 25*
+* *Plastic limit: 12*
+* *Plasticity Index: 13*
+
+===== Instance Diagram
+
+Object instances and the associations required to properly expose the
+example test data with the FROST Geotech Plug-in are shown in the
+following instance diagram:
+
+.Atterberg Object Diagram
+image::https://github.com/opengeospatial/Geotech/assets/11915304/a4cfd634-b74a-49aa-ab79-bc40c93ebdb4[link="https://umltool.ogc.org/index.php?m=7&o=C1470BA2-326E-47ec-8230-08FDB1EF2E32"]
+
+The following summarizes the various entities in the diagram:
+
+===== Sensor
+
+The Sensor object serves as the observing procedure in STA. One object
+instance is needed for this example (top center of diagram), and in this
+example holds the information about the test procedure used. One Sensor
+instance is needed for Atterberg limits tests and the test procedure is
+specified in its sensorType property and fully referenced in its
+metadata property. As constructed, this Sensor instance can be reused
+for multiple Atterberg tests.
+
+===== ObservedProperty
+
+The ObservedProperty object instances identify the properties that are
+observed by the Atterberg limits test. There are eight ObservedProperty
+instances (top of diagram, below Sensor):
+
+*3 properties observed that constitute the final reported results of the test:*
+
+[arabic]
+. liquid_limit
+
+[arabic, start=2]
+. plastic_limit
+
+[arabic, start=3]
+. plasticity_index
+
+*3 properties observed for the Casagrande (liquid limit) measurements:*
+
+[arabic, start=4]
+. manualCasagrandeTrialNumber (the Increment Number column in the above
+table)
+
+[arabic, start=5]
+. blowCount
+
+[arabic, start=6]
+. waterContent
+
+*2 properties observed for the plastic limit measurements:*
+
+[arabic, start=7]
+. manualPlasticLimitTrialNumber (the Increment/Container Number column
+in the above table)
+
+[arabic, start=8]
+. plWaterContent
+
+_Note: The plWaterContent observed property is not necessary (and
+probably should not be used) as it is identical to waterContent, but is
+included in this example to better distinguish the water contents
+determined for liquid limit from those for plastic limit_
+
+As with Sensor, the ObservedProperty instances can be reused for
+multiple tests.
+
+===== DataStream
+
+All of the object instances in the diagram are linked to the Sensor and
+ObservedProperty instances via Datastream instances (below the
+ObservedProperty objects on the diagram), which serve to associate
+observation results obtained from a feature of interest to its observed
+property, observing procedure, and the borehole.
+
+Eight Datastream instances are needed, one for each ObservedProperty
+instance.
+
+_Note: if the plWaterContent ObservedProperty were not used, there would
+still need to be 8 Datastream instances. Two DataStreams would link to
+the waterContent ObservedProperty instance. One of these DataStreams
+would link to the liquid limit water content Observation instances, the
+other to the plastic limit water content Observation instances._
+
+===== BhCollarThing, BhTrajectoryThing and Location
+
+The DataStreams all link to the borehole via its BhTrajectoryThing
+object instance. BhTrajectoryThing (left edge of diagram) represents the
+borehole’s geometry and contains the borehole length and information for
+linear referencing. The trajectory’s geometry is given in the associated
+Location instance. BhTrajectoryThing is associated with a BhCollarThing
+instance , which represents the borehole as a whole. All general
+metadata about the borehole is contained in the BhCollarThing object
+instance; it’s geometry is represented by a point Location object
+instance.
+
+More detail about properties of BhCollarThing and BhTrajectoryThing can
+be found in the
+<<Approach-for-Borehole-logs,Borehole log discussion>>.
+
+===== BhSampling and BhFeatureOfInterest
+
+The act of collecting a sample from the borehole for testing is
+represented by the single BhSampling object instance (below and to the
+right of the BhTrajectoryThing in the diagram). BhSampling holds the
+sample depths (fromPosition=1.5, toPosition=3) and links to
+BhTrajectoryThing in order to affix the linear referenced sample
+positions to the trajectory geometry. In addition, BhSampling also links
+to a BhSampler object instance which identifies the type of sampler used
+in the sampling act (eg. the Geoprobe split-spoon sampler).
+
+BhSampling produces a BhFeatureOfInterest object, which represents
+Sample 1 that is collected from the borehole (below and to the right of
+the BhSampling instance object). This object holds the sample length and
+recovery percentage of the sample. That this BhFeatureOfInterest is a
+physical material sample from the borehole is given by the associated
+BhFeatureType Core and Segment instances.
+
+As part of the Atterberg limits test procedure, a 65 gram specimen of
+Sample 1 is prepared using the "`Wet method`". This is represented by an
+additional BhFeatureOfInterest object instance linked to Specimen, Core
+and Segment feature types. The linked BhPreparationStep object instance
+holds the specimen weight, and the further linked BhPreparationProcedure
+object carries the procedure method used to obtain the specimen.
+
+===== Observation
+
+The remaining entities on the diagram are Observation instances that
+provide the results for their associated observed properties. Each
+Observation instance links to the prepared specimen that was tested and
+to the Datastream instance associated with the appropriate
+ObservedProperty.
+
+This Atterberg limits test consists of 18 individual observations but
+only three of them (results for liquid limit, plastic limit and
+plasticity index) are the primary reportable results. The other
+observations are interim observations, made as part of the test
+procedure, that result in the determination of the primary results. The
+links shown in the diagram relating observations to each other provide
+the means for distinguishing among the various types of observations.
+
+Starting with the Observation instances associated with the Casagrande
+liquid limit measurements, each test increment is a set of three
+observation results. These results are useless independently - for
+example, the blow count in a Casagrande trial has no meaning without the
+associated water content observation, and vice versa. To model the
+observation set, the increment result is linked to its associated blow
+count and water content results, and the blow count result is linked to
+its associated water content result. These three observations, as a set
+contribute to the determination of the final liquid limit result, and to
+model that association, the increment observations are linked to the
+liquid limit observation. In this way, one can traverse from the liquid
+limit observation to access only those blow count and water content
+observations that contributed to the liquid limit result.
+
+A similar link structure is also made for the interim water content
+observations that contribute to the plastic limit result.
+
+Finally, the plasticity index observation instance is linked to both the
+liquid limit and plastic limit observation instances to demonstrate that
+plasticity index relies on those values for its results.
+
+Note that the liquid limit and plastic limit observation instances are
+correctly not linked to show that those results are derived
+independently from each other.
+
+To provide the most flexibility for querying, Datastream object
+instances associated with the Observations are linked in the same manner
+as their associated Observations as seen in the diagram.
+
+The current STA model does not provide for one-way links where an
+association role can be assigned. Such capability would be useful in
+modeling even more complex geotechnical test results.

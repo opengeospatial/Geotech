@@ -1,0 +1,166 @@
+[[fault]]
+==== Fault
+
+A fault includes all brittle to ductile style structures along which
+displacement has occurred, from a simple, single '`planar`' brittle or
+ductile surface to a fault system comprised of tens of strands of both
+brittle and ductile nature. This structure may have some significant
+thickness (a deformation zone) and have an associated body of deformed
+rock that may be considered a deformation unit (which geologicUnitType
+is '`DeformationUnit`') which can be associated to the
+ShearDisplacementStructure using GeologicFeatureRelation from the
+GeoSciML Extension package
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|OGC GeoSciML |ShearDisplacementStructure |A shear displacement
+structure includes all brittle to ductile style structures along which
+displacement has occurred, from a simple, single '`planar`' brittle or
+ductile surface to a fault system comprised of tens of strands of both
+brittle and ductile nature. This structure may have some significant
+thickness (a deformation zone) and have an associated body of deformed
+rock that may be considered a deformation unit (which geologicUnitType
+is '`DeformationUnit`') which can be associated to the
+ShearDisplacementStructure using GeologicFeatureRelation from the
+GeoSciML Extension package.
+
+|IFC |Fault |Same as OGC
+
+|AGSi |agsiModelElement |In AGSi a model is collection of elements
+(agsiModelElement object) and this may include elements representing
+geological structure such as faults, identified as such using the
+elementType attribute.
+|===
+
+===== Properties
+
+[width="100%",cols="5%,95%",options="header",]
+|===
+|PropertyName |Definition
+|identifier |Globally unique identifier:Primitive::CharacterString shall
+uniquely identifies a tuple within the dataset and be formatted as an
+absolute URI conformant to RFC 3986.
+
+|name |name contains a display name for the ShearDisplacementStructure.
+
+|description |description contains a human readable text description of
+the ShearDisplacementStructure, typically taken from an entry on a
+geological map legend.
+
+| |
+
+|faultType |faultType contains a human readable description of the type
+of ShearDisplacementStructure (as defined in GeoSciML). To report an
+identifier from a controlled vocabulary, faultType_uri shall be used.
+
+|movementType |movementType contains a human readable summary of the
+type of movement (e.g., dip-slip, strike-slip) on the
+ShearDisplacementStructure. To report an identifier from a controlled
+vocabulary, movementType_uri shall be used.
+
+|deformationStyle |deformationStyle contain a human readable description
+of the style of deformation (e.g., brittle, ductile etc.) for the
+ShearDisplacementStructure. To report an identifier from a controlled
+vocabulary, deformationStyle_uri shall be used.
+
+|displacement |displacement contains a text summarizing the displacement
+across the ShearDisplacementStructure.
+
+|geologicHistory |geologicHistory contains a text, possibly formatted
+with formal syntax, describing the age of the ShearDisplacementStructure
+(where age is a sequence of events and may include process and
+environment information).
+
+|observationMethod |observationMethod contains a metadata snippet
+indicating how the spatial extent of the feature was determined.
+ObservationMethod is a convenience property that provides a quick and
+dirty approach to observation metadata when data are reported using a
+feature view (as opposed to observation view).
+
+| |
+
+|numericOlderAge |numericOlderAge reports the older age of the
+fault/shear structure, represented million years (Ma).
+
+|numericYoungerAge |numericYoungerAge reports the younger age of the
+fault/shear structure, represented million years (Ma).
+
+| |
+
+|source |source contains a text describing feature-specific details and
+citations to source materials, and if available providing URLs to
+reference material and publications describing the geologic feature.
+This could be a short text synopsis of key information that would also
+be in the metadata record referenced by metadata_uri.
+
+|metadata_uri |If present, the property
+metadata_uri:Primitive::CharacterString contains a URI referring to a
+metadata record describing the provenance of data.
+
+| |
+
+|shape |The property shape:GM_Object contains a geometry defining the
+extent of the feature of interest.
+
+|positionalAccuracy |If present, the property
+positionAccuracy:Primitive::CharacterString contains quantitative
+representation defining the radius of an uncertainty buffer around a
+MappedFeature (e.g., a positionalAccuracy of 100 m for a line feature
+defines a buffer polygon of total width 200 m centred on the line).
+
+| |
+
+|FaultActivity |Qualitative rating of the fault activity. A fault that
+has slipped in historic time and which is likely to slip again in the
+future.
+
+|FaultAperture |GT1R1A1
+
+|FaultLength |Fault length (L) is the longest horizontal or
+subhorizontal dimension along the fault plane
+
+|FaultDepth |Fault depth is the depth where no further relative
+displacement is recorded
+
+|FaultInfilling |Substance interspersed between the wall surfaces of a
+discontinuity (JGS) generally, the material occupying the space between
+joint surfaces, faults, and other rock discontinuities. The filling
+material may be clay, gouge, various natural cementing agents, or
+alteration products of the adjacent rock.(ASTM, ISRM)
+
+|DipDirection |The geographic direction of a line created by the
+intersection of a plane and the horizontal plane. If non specific
+convention is used, this angular value is in the range 0 to 18 degrees.
+In this case, there is an ambiguity on the dip orientation. For example,
+a plane with an orientation of 90 degrees from the north could either
+have a dip direction to the North or to the South. Thus, to avoid this
+ambiguity, a strike value is generally completed with an indication of
+the dip orientation (Quadrant).
+
+|FaultSlipDirection |Observed relative displacement direction of the
+hanging wall (top) to the footwall, e.g., up. Down, left, right or
+combinations (like top down - left)
+
+|FaultPitchAngle |angle between the strike of the slip surface and the
+slip vector (striation)
+
+|FaultThrow |the vertical displacement between the Hanging wall and
+Footwall
+
+|FaultHeave |the horizontal displacement between the Hanging wall and
+Footwall.
+
+|FaultOffset |The horizontal displacement between points on either side
+of a fault, which can range from millimeters to kilometers.
+
+|FaultDipSeparation |offset of beds parallel to fault
+
+|FaultStrikeSeparation |offset of beds parallel to dip
+|===
+
+===== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/20

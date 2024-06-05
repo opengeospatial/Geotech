@@ -1,0 +1,687 @@
+[[ObservableProperties]]
+==== Observable Properties
+
+A quality (property, characteristic) of the feature-of-interest that can
+be observed.
+
+===== Realizations
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Source |Type |Link |Definition
+|BRGM |Registry |https://data.geoscience.fr/ncl/ObsProp |This register
+contains the observable properties.
+
+|DIGGS |XML file
+|https://www.diggsml.org/dictionaries/DIGGSTestPropertyDefinitions.xml
+|This is an XML dictionary file (extension of GML Dictionary) containing
+the controlled property code, name, definition and associated test
+procedures for currently adopted observed properties for DOGGS Test and
+Monitor measurement objects
+|===
+
+===== Result types
+
+A non-exhaustive list of Observable Properties for geotechnics includes the following.
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Name |Definition EN |Definition FR
+|natural water content |Ratio of the mass of free water to the mass of
+dry soil |Rapport de la masse d’eau sur la masse sèche
+
+|dry density |Ratio of the mass of solid to the unit total volume
+|Rapport de la masse solide sur le volume total
+
+|dry unit weight |Product of the dry density times the gravity
+acceleration g |Produit de la masse volumique sèche par l’accélération
+de la pesanteur g
+
+|bulk density |Ratio of the total mass of the soil to the unit total
+volume |Rapport de la masse totale sur le volume total
+
+|bulk unit weight |Product of the bulk density times the gravity
+acceleration g |produit de la masse volumique humide par l’accélération
+de la pesanteur g
+
+|particle density or density of solid particles |Ratio of the mass of
+solid to the volume of solid |Rapport de la masse solide sur le volume
+de grains solides
+
+|specific gravity |Product of the particle density times the gravity
+acceleration g |Produit de la masse volumique des grains par
+l’accélération de la pesanteur g
+
+|total porosity |Ratio of the volume of void to the total volume
+|Rapport entre le volume de vide et le volume total
+
+|void index |Ratio of the volume of voids to the volme of solid |Rapport
+entre le volume de vide et le volume des grains solides
+
+|saturation ratio or degree of saturation |Ratio of the volume of water
+to the volume of voids |Rapport entre le volume de l’eau et le volume
+des vides
+
+|lithology classification |The value that describes the lithology as a
+controlled term (classification code or controlled name), rather than a
+simply descriptive one. |Valeur qui décrit la lithologie comme un terme
+contrôlé (code de classification ou nom contrôlé), plutôt que simplement
+descriptif.
+
+|lithology description |Descriptive information about the soil or rock
+lithology and should be used in conjunction with lithology
+classification. A lithology description typically includes a description
+of color, grain size disctribution, constituents and field properties
+(eg. well-graded sand (SW), fine-grained, dark grey, massive, dry,
+hard). |Informations descriptives sur la lithologie du sol ou des roches
+et doivent être utilisées conjointement avec la classification
+lithologique. Une description lithologique comprend généralement une
+description de la couleur, de la distribution granulométrique, des
+constituants et des propriétés du terrain (par exemple, sable bien
+classé (SW), à grains fins, gris foncé, massif, sec, dur).
+
+|lithology symbol |A string or numeric value that is used to define a
+graphic pattern that may be used to symbolize the unit on a borehole log
+or map. |Une chaîne ou une valeur numérique utilisée pour définir un
+motif graphique pouvant être utilisé pour symboliser l’unité sur un
+journal ou une carte de forage.
+
+|unit name |The name of the geological or geotechnical unit |
+
+|*_Atterberg limits_* | |
+
+|liquid limit |Water content at which the soil changes from the liquid
+state to the plastic state |Teneur en eau pour laquelle le sol passe de
+l’état liquide à l’état plastique
+
+|plastic limit |Water content at which the soil changes from the plastic
+state to a semi-solid state |Teneur en eau pour laquelle le sol passe de
+l’état plastique à l’état semi-solide
+
+|plasticity index |Difference between the liquid limit and the plastic
+limit |Différence entre la limite de liquidité et la limite de
+plasticité
+
+|shrinkage limit |Water content at which the soil changes from a solid
+state without shrinkage and a solid state with shrinkage |Teneur en eau
+pour laquelle le sol passe d’un état solide sans retrait et un état
+solide avec retrait
+
+|*_Particle size parameters_* | |
+
+|methylene blue test value |weight of methylene blue adsorbed (fixed) to
+100g of the fraction 0/50mm of the soil particles |Masse de bleu de
+méthylène adsorbée pour 100g de la fraction 0/50mm du sol étudié
+
+|maximal particle diameter |maximum diameter of particles |diamètre
+maximum des grains
+
+|passing |Mass percentage of grain particles passing through a given
+sieve size opening, to the total dry mass of the tested sample.
+|Pourcentage massique de particules d’un sol traversant un tamis
+d’ouverture donnée, rapporté à la masse sèche totale de l’échantillon.
+
+|retained |Mass percentage of grain particles retained on a given sieve
+size opening, to the total dry mass of the tested sample. |Pourcentage
+massique de particules de grains retenues sur une ouverture de tamis de
+taille donnée, par rapport à la masse sèche totale de l’échantillon
+testé.
+
+|particle diameter d60 |Particle size such that 60% of the particles by
+weight are smaller than size |Diamètre de grains tel que 60% des grains
+en poids sont plus petits que ce diamètre
+
+|median particle diameter d50 |Particle size such that 50% of the
+particles by weight are smaller than size |Diamètre de grains tel que
+50% des grains en poids sont plus petits que ce diamètre
+
+|particle diameter d30 |Particle size such that 30% of the particles by
+weight are smaller than size |Diamètre de grains tel que 30% des grains
+en poids sont plus petits que ce diamètre
+
+|particle diameter d10 |Particle size such that 10% of the particles by
+weight are smaller than size |Diamètre de grains tel que 10% des grains
+en poids sont plus petits que ce diamètre
+
+|boulder content |Mass percentage of the sample with particles larger
+than 300 mm or 256 mm depending on classification system used.
+|Pourcentage massique de l’échantillon avec des particules supérieures à
+300 mm ou 256 mm selon le système de classification utilisé.
+
+|cobble content |Mass percentage of the sample with particle sizes
+between 75 and 300 mm or between 64 and 256 mm depending on
+classification system used. |Pourcentage massique de l’échantillon avec
+des granulométries comprises entre 75 et 300 mm ou entre 64 et 256 mm
+selon le système de classification utilisé.
+
+|pebble content |Mass percentage of the sample with particle sizes
+between 4 and 64 mm. |Pourcentage massique de l’échantillon avec des
+tailles de particules comprises entre 4 et 64 mm.
+
+|gravel content |Mass percentage of the sample with particle sizes
+between 4.75 and 75 mm, or greater than 2 mm, depending on the
+classification system used. |Pourcentage massique de l’échantillon dont
+la granulométrie est comprise entre 4,75 et 75 mm, ou supérieure à 2 mm,
+selon le système de classification utilisé.
+
+|granule content |Mass percentage of the sample with particle sizes
+between 2 and 4 mm |Pourcentage massique de l’échantillon dont la
+granulométrie est comprise entre 2 et 4 mm.
+
+|sand content |Mass percentage of the sample with particle sizes between
+0.075 and 4.75 mm, or between than 0.625 and 2 mm, depending on the
+classification system used. |Pourcentage massique de l’échantillon avec
+des tailles de particules comprises entre 0,075 et 4,75 mm, ou entre
+0,625 et 2 mm, selon le système de classification utilisé.
+
+|un |Mass percentage of the sample with particle sizes between 2 and
+4.75 mm. |Pourcentage massique de l’échantillon avec des tailles de
+particules comprises entre 2 et 4,75 mm.
+
+|medium sand content |Mass percentage of the sample with particle sizes
+between 0.425 mm and 2 mm. |Pourcentage massique de l’échantillon avec
+des tailles de particules comprises entre 0,425 mm et 2 mm.
+
+|fine sand content |Mass percentage of the sample with particle sizes
+between 0.075 and 0.425 mm |Pourcentage massique de l’échantillon avec
+des tailles de particules comprises entre 0,075 et 0,425 mm
+
+|silt content | |
+
+|clay content |Mass percentage of the sample smaller than 0.002 mm
+|Pourcentage massique de l’échantillon inférieur à 0,002 mm
+
+|fines content |Mass percentage of the sample smaller than 0.075 mm or
+0,0625 mm depending on the classification system used |Poucentage
+massique de particule passant par le tamis de 0,063 mm
+
+|uniformity coefficient (or hazen coefficient) |Ratio of d60/d10.
+|Rapport des diamètres d60/d10
+
+|*_Geochemical parameters_* | |
+
+|carbonate content |Percentage of equivalent calcium carbonate obtained
+from the amount of CO2, as percentage of dry weight. |Pourcentage
+massique de la fraction carbonatée contenue dans un sol rapportée au
+poids du sol sec
+
+|sulfate content |Amount of sulfate (expressed as SO42-) in milligrams
+per kilogram of dry soil. |Concentration en sulfate (exprimée sous la
+forme SO42-), en milligrames par kilogramme de sol séché à l’air.
+
+|organic matter content |Ratio of the mass of organic matter in a soil
+sample by the total solid particle mass. |Quotient de la masse de
+matière organique contenues dans un échantillon de sol par la masse des
+particules solides
+
+|gtr class |Soil class as per French GTR guidelines or NF P11-300
+standard |classe de sol au sens du GTR (Guide des terrassements
+routiers) et de la norme NF P 11-300
+
+|*_Mechanical parameters of soils_* | |
+
+|uniaxial compressive strength |The maximum axial compressive stress
+that a right-cylindrical sample of material can withstand under
+unconfined conditions—the confining stress is zero. Also known as
+unconfirmed compressive strength. |Contrainte de compression axiale
+maximale à laquelle un échantillon de matériau cylindrique droit peut
+résister dans des conditions non confinées : la contrainte de
+confinement est nulle. Également connue sous le nom de résistance à la
+compression non confirmée.
+
+|shear strength |Maximum value of the shear stress that a soil can
+support before it fails along a shear plane, when it is submitted to a
+deviator of stresses. The shear strength is usually expressed by the
+Coulomb criterion τ = c + σ.tgϕ, with c, the cohesion, and ϕ, the
+friction angle. |Valeur de la contrainte de cisaillement maximale que le
+sol peut supporter, avant la rupture par glissement le long d’un plan,
+lorsqu’il est soumis à un déviateur des contraintes. Selon le critère de
+Coulomb, la résistance au cisaillement d’un sol est τ = c + σ.tgϕ, avec
+c, la cohésion, et ϕ, l’angle de frottement.
+
+|undrained shear strength |Value of the shear stress at failure of a
+cohesive soil, under undrained loading conditions. |Valeur de la
+contrainte ou taux de cisaillement à la rupture dans un sol cohérent, en
+conditions de chargement non drainées
+
+|undrained friction angle |Value of the friction angle of a soil under
+undrained loading condtions (null for a saturated cohesive soil) |Valeur
+de l’angle de frottement d’un sol, en conditions de chargement non
+drainées (égal à 0 pour un sol cohérent saturé)
+
+|drained cohesion |Value of the shear strength of a soil, for a null
+normal stress, under drained loading conditions |Valeur de la résistance
+au cisaillement d’un sol pour une contrainte normale nulle, en
+conditions de chargement drainées
+
+|drained friction angle |Value of the friction angle of a soil under
+drained loading conditions |Valeur de l’angle de frottement d’un sol, en
+conditions de chargement drainées
+
+|residual cohesion |Value of cohesion for high displacements on a
+failure plane. |Valeur de la cohésion après de grands déplacements sur
+une surface de rupture.
+
+|residual friction angle |Value of friction angle for high displacements
+on a failure plane. |Valeur de l’angle de frottement après de grands
+déplacement sur une surface de rupture
+
+|soil compressibility parameters | |
+
+|compression index cc |Gradient of the linear portion of the oedometer
+test curve (void ratio versus the logarithm of vertical effective
+stress), beyond the pressure of pre-consolidation . |Pente de la partie
+linéaire de la courbe oedométrique (indice de vides en fonction du
+logarithme de la contrainte verticale effective), lors du chargement,
+pour une contrainte verticale appliquée supérieure à la pression de
+consolidation.
+
+|unloading / recompression index cs (or cg) |Gradient of the linear
+portion of the oedometer test curve (void ratio versus the logarithm of
+vertical effective stress ), before the pressure of pre-consolidation.
+|Pente de la partie linéaire de la courbe oedométrique (indice de vides
+en fonction du logarithme de la contrainte verticale effective), lors du
+chargement pour une contrainte verticale appliquée inférieure à la
+pression de consolidation ou lors du déchargement.
+
+|consolidation pressure (or yield stress) |Highest value of vertical
+effective stress applied on a soil in its geological history. In an
+oedometer test, vertical effective pressure at the intersection of the
+reloading and first loading linear portions. |Contrainte effective
+verticale la plus élevée à laquelle un sol a été soumis au cours de son
+histoire géologique. Dans un essai oedométrique, contrainte effective
+verticale à l’intersection de la droite de recompression réelle et de la
+droite de compression normale.
+
+|coefficient of vertical consolidation |Parameter which relates the
+degree of consolidation to time from the start of consolidation.
+|Paramètre qui relie le degré de consolidation au temps écoulé depuis le
+début de la consolidation.
+
+|creep coefficient |The ratio of the change in height to the inital
+height over one log cycle of time during the secondary compression
+phase. |Rapport entre la variation de hauteur et la hauteur initiale de
+l’éprouvette au cours de la compression secondaire.
+
+|swelling index cg |Gradient of the linear portion of the void ratio
+versus the logarithm of vertical effective stress curve, during
+unloading. |Pente de la courbe oedométrique (indice de vides en fonction
+du logarithme de la contrainte verticale effective), lors du
+déchargement.
+
+|swelling pressure |Vertical pressure necessary to maintain a constant
+volume (i.e to prevent absorption of water) when a soil is saturated.
+|Pression nécessaire pour maintenir un volume constant (c’est-à-dire
+pour empêcher l’absorption d’eau) dans un sol saturé.
+
+|pressuremeter test parameters | |
+
+|menard limit pressure |Pressure that characterizes the failure of the
+soil during the Ménard pressuremeter test. It corresponds conventionally
+to the pressure that leads to double the volume of the tested cavity.
+|Pression caractérisant la rupture du sol lors de l’essai
+pressiométrique Ménard. Par convention, elle correspond à la pression
+qui entraine le doublement du volume de la cavité initiale.
+
+|net limit pressure |Ménard limit pressure to which the total horizontal
+stress at tested depth is substracted. |Pression limite de l’essai
+pressiométrique à laquelle on déduit la contrainte totale horizontale à
+la profondeur de l’essai.
+
+|menard creep pressure |Pressure that characterizes the limit between
+the pseudo-elastic eand the plastic behaviour of the soil, during the
+Ménard pressuremeter test. |Pression caractérisant la limite entre le
+comportement élastique et le comportement plastique du sol, lors de
+l’essai pressiométrique.
+
+|net creep pressure |Ménard creep pressure to which the total horizontal
+stress at tested depth is substracted. |Pression de fluage à laquelle on
+déduit la contrainte horizontale totale à la profondeur de l’essai
+
+|menard pressuremeter modulus |Deformation modulus during the
+pseudo-elastic phase of the Ménard pressuremeter test. |Module de
+déformation du sol mesuré lors de l’essai pressiométrique pendant la
+phase pseudo-élastique de l’essai.
+
+|*_Static penetration test parameters_* | |
+
+|cone resistance |Ratio of the axial load Qc divided by the total area
+of the cone basis Ac. |Rapport de la force axiale mesurée Qc divisée par
+l’aire totale de la base du cône Ac.
+
+|sleeve friction |The sleeve friction is determined by the force
+required to push the sleeve through the soil |Frottement latéral mesuré
+sur le manchon
+
+|friction ratio |Ratio of the lateral side friction divided by the cone
+resistance, both measured at the same depth. |Rapport entre le
+frottement latéral mesuré sur le manchon et la résistance de pointe, les
+deux étant réalisés à la même profondeur.
+
+|piezocone pore pressure |Fluid pressure measured in the filter element
+placed an the cone basis, during the cone penetration. |Pression mesurée
+dans l’élément filtrant au cours des essais de pénétration au cône.
+
+|*_Dynamic penetration test parameters_* | |
+
+|N value |Value of a Standard Penetration Test (SPT) defined as the
+number of blows exerted by the hammer to achieve a penetration of the
+last 30 cm, on a total penetration of 45 cm. |Nombre de coups de battage
+d’un carottier SPT pour s’enfoncer des 30 derniers cm, lors d’une passe
+de 45 cm.
+
+|N60 |Calculated value that corrects the value of the Standard
+Penetration Blow Count (N-value), to account for energy of the hammer
+(specifically normalized to 60% energy). |Valeur calculée qui corrige la
+valeur du nombre de coups de pénétration standard (valeur N), pour tenir
+compte de l’énergie du marteau (spécifiquement normalisée à 60 %
+d’énergie).
+
+|N1,60 |Calculated value that corrects the value of the Standard
+Penetration Blow Count (N), to account for energy of the hammer
+(specifically normalized to 60% energy) and specific overburden
+conditions (specifically to an overburden stress of 1 ton per square
+foot). |Valeur calculée qui corrige la valeur du nombre de coups de
+pénétration standard (N), pour tenir compte de l’énergie du marteau
+(spécifiquement normalisée à 60 % d’énergie) et des conditions de
+surcharger spécifiques (en particulier pour une contrainte de surcharger
+de 1 tonne par pied carré).
+
+|first increment spt number of blows n1 |Number of blows exerted by the
+hammer to achieve a penetration of a first increment of 15 cm. |Nombre
+de coups de battage d’un carottier SPT pour s’enfoncer d’un premier
+incrément de 15 cm
+
+|second increment spt number of blows n2 |Number of blows exerted by the
+hammer to achieve a penetration of a second increment of 15 cm. |Nombre
+de coups de battage d’un carottier SPT pour s’enfoncer d’un deuxième
+incrément de 15 cm
+
+|third increment spt number of blows |Number of blows exerted by the
+hammer to achieve a penetration of a third increment of 15 cm. |Nombre
+de coups de battage d’un carottier SPT pour s’enfoncer d’un troisième
+incrément de 15 cm
+
+|driveset blowcount |Number of blows exerted by the hammer in this
+driveset to achieve a given penetration into the soil |
+
+|driveset penetration |Penetraton distance into the soil that is
+achieved given a specific driveset blowcount |
+
+|driveset index |A number that defines the specific increment number for
+a driveset, which consist of a blowcount paired with the penetration
+achieved. The first driveset has an index of 1, the second, 2 and so on.
+|
+
+|*_Rock mechanics parameters_* | |
+
+|unconfined compressive strength |Ratio between the force applied during
+fracture of the cylindrical test piece and the area of the cross section
+determined before the test |Rapport entre la force appliquée lors de la
+rupture de l’éprouvette cylindrique et l’aire de la section transversale
+déterminée avant essai
+
+|young modulus |The Young modulus is the ratio between the normal stress
+and the axial strain in a linear elastic and isotropic medium. |Le
+module d’Young est le rapport entre la contrainte normale et la
+déformation axiale, dans un matériau élastique linéaire isotrope.
+
+|poisson coefficient |The Poisson’s ratio is a measure of the
+deformation of a material in direction perpendicular to the specific
+direction of loading. |Le coefficient de Poisson est le rapport entre la
+déformation latérale et la déformation dans l’axe du chargement
+
+|tensile strength (brazilian test) |Ratio between the force applied
+during fracture of the cylindrical test piece and the area of the cross
+section determined before the test. It is an indirect measurement of
+tensile strength. |Rapport entre l’effort de compression appliqué le
+long d’un diamètre d’une éprouvette cylindrique, et la surface du plan
+de rupture.
+
+|tensile strength (franklin point load test) |Ratio between the punctual
+force applied on both sides of a cylindrical test piece and the area of
+the cross section determined before the test. It is an indirect
+measurement of tensile strength. |Rapport entre l’effort de compression
+ponctuel de part et d’autre du diamètre d’une éprouvette cylindrique, et
+la surface du plan de rupture. Il s’agit d’une mesure indirecte de
+résistance à la traction.
+
+|hoek & brown coefficient mi |Constant introduced by Hoek & Brown
+ranging from 4 (for some clayey rocks) to more than 30 (for igneous and
+some metamorphic rocks), used in the Hoek & Brown parabolic failure
+criterion. |Constante introduite par Hoek 1 Brown, variant entre 4 (pour
+les roches argileuses) et plus de 30 (pour les roches ignées et
+métamorphiques), utilisée dans le critère de rupture de Hoek & Brown.
+
+|hardness (cerchar) |Index characterising the resistance to penetration
+of a rock by a drill bit under standard test conditions. |Indice
+traduisant la résistance à la pénétration d’un foret dans une roche sous
+des conditions de chargement normalisées
+
+|abrasivity index (cerchar) |Index characterinsing the ability of a rock
+to cause wear of cutting tool. |Indice caractérisant la capacité d’une
+roche à causer l’usure des outils de coupe du rocher.
+
+|los angeles index |Index characterising the fragmentability of a rock
+material under mechanical actions. Percentage of the initial sample
+reduced to a size less than 1.6mm during its rotation in a cylinder
+loaded with steel balls |Indice traduisant la fragmentabilité d’une
+roche sous l’effet d’une usure mécanique. Il correspond au rapport de la
+masse initiale d’un échantillon de roche sur la masse des fragments de
+moins de 1,6 mm de diamètre, produit par la rotation de l’échantillon
+dans un cylindre rempli de billes d’acier.
+
+|micro-deval index |Index characterising the fragmentability of a rock
+material under mechanical actions. Percentage of the initial sample
+reduced to a size less than 1.6mm during its rotation in a cylinder
+loaded with an abrasive charge |Indice traduisant la fragmentatibilité
+d’une roche sous l’effet d’une usure mécanique. Il correspond au rapport
+de la masse initiale d’un échantillon de roche sur la masse des
+fragments de moins de 1,6 mm de diamètre, produit par la rotation de
+l’échantillon dans un cylindre avec une charge abrasive.
+
+|core recovery |Ratio in percent of the length of core recovered to the
+total length of the core drilled on a given run. |Rapport en pourcent de
+la longueur de carotte récupérée à la sortie du carottier sur la
+longueur de la passe de carottage.
+
+|rqd rock quality designation |The cumulative length of cores with a
+length greater than 10 cm, divided by the total length of the core pass
+with a length greater than or equal to 1m, in percent. |Longueur cumulée
+des tronçons de carottes de longueur supérieure à 10cm, divisée par la
+longueur totale de la passe carottée de longueur supérieure ou égale à
+1m, exprimée en pourcent.
+
+|weathering grade |Level of weathering of a rock mass determined by
+visual observation, on a scale between I (sound rock) to VI (completely
+weathered rock - residual soil). |Niveau d’altération d’un massif
+rocheux déterminé par observation visuelle, sur une échelle de I (roche
+saine) à VI (roche totalement décomposée - sol résiduel)
+
+|gsi : geological strength index |Empirical index introduced by E.Hoek,
+derived from the RMR and Barton-Q indices, and that characterises the
+quality of the rock mass. |Indice empirique introduit par E.Hoek
+déterminé à partir des indices RMR et Q-Barton, permettant de
+caractériser la qualité du massif rocheux.
+
+|rmr : rock mass rating |Index developped by Bieniawski, to provide an
+quantitative estimate of the quality of a rock mass. RMR is equal to the
+sum of the six following ratings : 1. Strength of intact rock rating 2.
+RQD rating 3. Spacing of discontinuities rating 4. Conditions of
+dicontinuities rating 5 . Groundwater condition rating 6. Adjustment for
+orientation of discontinuities Bieniawski (1989) |Indice proposé par
+Bieniawski, permettant de fournir une évaluation quantitative de la
+qualité d’un massif rocheux. Le RMR est la somme des six notes suivantes
+: 1. Note "`résistance de la matrice rocheuse`" 2. Note RQD 3. Note
+"`espacement des discontinuités`" 4. Note "`Conditions des
+dicontinuités`" 5. Note "`Conditions hydrauliques`" 6. Ajustement selon
+l’orientation des discontinuités. Bieniawski (1989)
+
+|q-barton index |Index introduced by Barton, tha tprovides an
+quantitative estimate of the quality of rock mass. It is calculated from
+6 parameters : . Le RQD . Jn : Joint set number . Jr Joint roughness
+number . Ja : Joint alteration number . Jw : Joint water reduction
+factor . SRF : Stress reduction factor |Indice introduit par Barton qui
+fournit une estimation quantitative de la qualité du massif rocheux à
+partir de 6 paramètres : . Le RQD . Jn : Joint set number . Jr Joint
+roughness number . Ja : Joint alteration number . Jw : Joint water
+reduction factor . SRF : Stress reduction factor
+
+|discontinuity |In rock mechanics, any mechanical crack or fissure in a
+rock mass having a null or a much lower strength than the rock matrix.
+|En mécanique des roches, toute fissure ou joint au sein d’un massif
+rocheux ayant une résistance nulle ou faible comparativement à la
+résistance de la matrice rocheuse.
+
+|type of discontinuity set |Type of the discontinuity set, for example :
+bedding plane, schistosity, etc. |Type de discontinuité. Par exemple :
+joint de stratification, diaclase, schistosité, etc.
+
+|strike |The geographic direction of the discontinuity plane in space
+with respect to the North. |Direction géographique d’une ligne créée par
+l’intersection du plan de la discontinuité avec le plan horizontal.
+
+|dip angle |The angle that a rock unit, fault or other structure makes
+with a horizontal plane. The angle is measured in a plane perpendicular
+to the strike of the rock structure. |Angle d’une surface (formation
+géologique, faille, ou autre structure) avec le plan horizontal. Sa
+mesure est celle du plongement de la ligne de plus grande pente de cette
+surface.
+
+|spacing |The perpendicular distance between adjacent dicontinuities in
+a set. |Distance entre deux discontinuités les plus proches d’une même
+famille mesurée perpendiculairement à celles-ci.
+
+|interval between discontinuity (id index) |The mean of the intact rock
+legnth between successive discontinuities along a survey line whose
+length and orientation must be recorded. |Moyenne des intervalles
+découpés par les discontinuités successives le long d’une ligne de
+mesure, dont il convient de préciser la longueur et l’orientation.
+
+|extension |The total area of the discontinuity in all directions.
+|L’extension ou la persistence des discontnuités correspond à la surface
+totale de la discontinuité dans l’espace.
+
+|aperture |Size of the gap between the joint walls of the discontinuity,
+measured perpendicularly to the joint plane |Distance entre épontes
+comptée perpendiculairement au plan de discontinuité.
+
+|roughness |Qualifies the surface irregularities on the joint walls of a
+discontinuity, from very rough to slickensided. |La rugosité qualifie
+les irrégularités de surface des épontes d’une discontinuité. Elle varie
+de : surface très rugueuse à lustrée.
+
+|joint roughness coefficient (jrc) |Dimensionless coefficient relating
+to joint roughness and size, ranked in ascending order from 0 for a flat
+smooth discontinuity to 20 for a wavy rough discontinuity, according to
+Barton’s standard profiles (1977). |Coefficient sans dimension relié à
+la rugosité et à la taille des épontes ; il varie entre 0 (pour une
+discontinuité planne et lisse) à 20 (pour une discontinuité ondulée et
+rugueuse), selon la classification établie par Barton (1977).
+
+|infill |The nature of the material filling the discontinuity or coating
+the walls. |Nature du matériau de remplissage ou de l’enduit des
+épontes.
+
+|shear strength |Value of the shear stress at failure. For a
+discontinuity, the shear strength is usually expressed by the Coulomb
+criterion τ = c + σ.tgϕ, with c, the cohesion, and ϕ, the friction
+angle. |Valeur de la contrainte de cisaillement à la rupture. Pour une
+discontinuité, la résistance au cisaillement est exprimée par le critère
+de Coulomb : τ = c + σ.tgϕ, avec c, la cohésion, et ϕ, l’angle de
+frottement.
+
+|cohesion |Shear stress at failure, for a normal stress equal to zero.
+For a discontinuity, appraent cohesion which does not express an
+intrisic property of the joint wall material but the influence of
+irregularites in the walls on shear behaviour. |Contrainte de
+cisaillement à la rupture pour une contrainte normale nulle. Pour une
+discontinuité, il s’agit d’une cohésion apparente et non une propriété
+intrinsèque du materiau de remplissage du joint, cette cohésion
+caractérisant l’influence des irrégularités de surfaces des épontes.
+
+|friction angle |Friction angle of the discontinuity that depends on the
+rock nature, the roughness of joint walls and the weathering grade on
+the walls. |Angle de frottement du joint dépendant de la nature
+pétrographique, de la rugosité de la surface et du dégré d’altération
+des épontes.
+
+|normal stiffness |In an uniaxial compression tests on joints oriented
+perpendicular to the direction of load application, slope of the curve
+of normal stress versus normal displacement, . |Lors d’un essai de
+compression simple, dirigé perpendiculairement au joint de
+discontinuité, pente de la courbe de la contrainte normale en fonction
+du déplacement normal.
+
+|tangential stiffness |In a shear test on joints, slope of the curve of
+tangential stress versus tangential displacement. |Lors d’un essai de
+cisaillement direct le long d’une discontinuité, pente de la courbe
+contrainte tangentielle en fonction du déplacement tangentiel.
+
+|compression wave velocity |Ratio of the propagation time of a
+compression wave in an elastic body medium between two points divided by
+the distance between these points |Rapport de la durée de propagation
+d’une onde de compression entre deux points dans un milieu élastique,
+divisé par la distance entre ces deux points
+
+|shear wave velocity |Ratio of the propagation time of a shear wave in
+an elastic body medium between two points divided by the distance
+between these points |Rapport de la durée de propagation d’une onde de
+cisaillement entre deux poinst dans un milieu élastique, divisé par la
+distance entre ces deux points
+
+|*_Geo-hydraulics parameters_* | |
+
+|darcy’s permeability |Parameter that characterizes the ability of a
+porous (continous) medium to be crossed by a fluid, to a flow from the
+same direction |Paramètre caractérisant l’aptitude d’un milieu poreux
+(continu) à se laisser traverser par un fluide, vis-à-vis d’un flux de
+même direction.
+
+|intrinsic permeability |Parameter characterizing a porous medium
+isotropic, which measures its permeability to a homogeneous fluid
+arbitrary, regardless of the characteristics of the fluid. Volume of
+kinematic viscosity unit fluid flowing through in a unit of time, under
+the effect of a unit of potential gradient, one unit surface orthogonal
+to the direction of flow. It can be expressed in darcy s |Paramètre
+caractérisant un milieu poreux isotrope, qui mesure sa perméabilité
+vis-à-vis d’un fluide homogène quelconque, indépendamment des
+caractéristiques du fluide. Volume de fluide d’unité de viscosité
+cinématique qui traverse en une unité de temps, sous l’effet d’une unité
+de gradient de potentiel, une unité de surface orthogonale à la
+direction du flux. ll est exprimable en darcy s.
+
+|packer test - lugeon unit |1 Lugeon unit is equivalent to 1 liter of
+water flow per meter of tested zone, per minute, under a pressure of 1
+MPa. |1 unité Lugeon équivaut à 1 litre d’eau prélevé par mètre de
+longueur d’essai, par minute, sous une pression de 1 MPa.
+
+|transmissivity |Parameter governing the flow of water flowing per unit
+width of the saturated zone of a continuous aquifer (measured in a
+direction orthogonal to that of flow), and per unit of hydraulic
+gradient |Paramètre régissant le débit d’eau qui s’écoule par unité de
+largeur de la zone saturée d’un aquifère continu (mesurée selon une
+direction orthogonale à celle de l’écoulement), et par unité de gradient
+hydraulique.
+
+|storage coefficient |Ratio of the volume of water released or stored
+per unit area of an aquifer, to the corresponding charge in hydraulic
+head, without reference to time |Rapport du volume d’eau libérée ou
+emmagasinée par unité de surface d’un aquifère, à la variation de charge
+hydraulique correspondante, sans référence au temps (ou en un temps
+illimité).
+
+|specific storage coefficient |Volume of water released or stored per
+unit area of an aquifer, to the corresponding charge in hydraulic head,
+without reference to time |Volume d’eau libérée ou emmagasinée par unité
+de volume du milieu aquifère, par unité de variation de charge
+hydraulique correspondante, sans référence au temps.
+
+|piezometric level |Upper level of the static liquid column that
+balances the hydrostatic pressure at the point to which it relates. It
+is materialized by the free level of the water in a vertical tube open
+at th epoint considered (piezometer). |Niveau supérieur de la colonne
+liquide statique qui équilibre la pression hydrostatique au point auquel
+elle se rapporte. Il est matérialisé par le niveau libre de l’eau dans
+un tube vertical ouvert au point considéré (piézomètre).
+|===

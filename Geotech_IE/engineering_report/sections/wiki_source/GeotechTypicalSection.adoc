@@ -1,0 +1,132 @@
+[[GeotechTypicalSection]]
+==== GeotechTypicalSection
+
+Interval along the alignment/building structure with similar ground
+conditions, as part of the link:GeotechSynthesisModel[GeotechSynthesis
+model] that represents the connection between the ground model and the
+building. Includes key-properties like expected distribution of ground
+types (reference to GeotechUnits) and baseline-definition of expected
+ground conditions and potential hazards, and may also include
+key-information on design like excavation measures, distribution of
+support types etc.
+
+===== Realizations
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Data model |Concept name |Definition
+|IFC
+|GeotechTypicalSection |Interval along the alignment/building structure
+with similar ground conditions, as part of the GeotechSynthesis model
+that represents the connection between the ground model and the
+building. Includes key-properties like expected distribution of ground
+types (reference to GeotechUnits) and baseline-definition of expected
+ground conditions and potential hazards, and may also include
+key-information on design like excavation measures, distribution of
+support types etc.
+
+|OGC LandInfra |FacilityPart |Land and Infrastructure facility, such as
+a road or bridge. A facility has a life cycle, including planning,
+design, construction, maintenance, operation, and removal phases The
+design and construction phases are typically performed as part of a
+project. There may be multiple such projects during the life cycle of
+the facility to enable phased construction and incremental improvement.
+
+|ISO 19148 |FeatureEvent |The FeatureEvent interface is used to linearly
+reference a feature along a LinearElement and possibly further qualified
+as applying at an instant in, or during a period of, time.
+|===
+
+Note: the GeotechTypicalSection can be seen on different aspect and then
+have multiple realizations: - a part of a tunnel (a part of a facility)
+- an event along an alignment.
+
+===== Properties
+
+[width="100%",cols="17%,83%",options="header",]
+|===
+|PropertyName |Definition
+|ExpGeotechUnit |Representative GeotecUnit expected in the subject
+typical section
+
+|ExpDistGeotechUnits |Expected distribution of project related
+"`geotechnical units`"(= ground types) in subject tunnel section
+
+|DiscontinuitySettings |Expected Sets of discontinuities, with typical
+orientation and properties like spacing, persistence etc.
+
+|Overburden |Range of overburden (distane from tunnel to ground
+surface) in the subject section
+
+|GroundwaterDesignPressure |Groundwater pressure to be considered in the
+design
+
+|GroundwaterInflowSum |Groundwater inflow measured or expected during a
+certain time span
+
+|GroundwaterAgressiveness |Rating of the aggressiveness e.g., towards
+concrete
+
+|GroundwaterTemperature |Groundwater temperature observed at specific
+location or expected in the subject section
+
+|Karst |Description of expected or observed karst features
+
+|Boulders |Description of expected or observed boulders features
+
+|GasType |Type of natural gas occurrence in subject section
+
+|GasConcentration |Expected concentration of gas to be encountered
+during excavation
+
+|DumpCategory |Project-related category for re-use and storage of the
+excavated material
+
+|Contamination |Expected anthropogenic contaminations
+
+|InSituStress |Anisotropic stress regime, with direction and magnitude
+of principal stresses
+
+|Swelling |Expected swelling behavior
+
+|GroundTemperature |Ground temperature expected in the subject section
+
+|CloggingPotential |Description or rating of the potential for clogging
+equipment in sticky ground
+
+|AsbestosPotential |Description or rating of the potential presence of
+asbestos in the ground
+
+|HeavyMetalsPotential |Description or rating of the potential presence
+of heavy metals in the ground
+
+|RiskIdentification |Name and Description of the risk
+
+|RiskNature |Description of the nature of the risk
+
+| |
+
+|RiskSource |Description of the source of the risk related to a specific
+uncertainty
+
+|Event |Occurrence or change of a particular set of circumstances
+
+|Likelihood |chance of something happening
+
+|Consequences |outcome of an event affecting the objectives
+
+|LevelOfRisk |Magnitude of a risk or combination of risks, expressed in
+terms of the combination of consequences and their likelihood
+
+|PreventiveTreatment |Description of the preventive treatment
+
+|LevelOfResidualRisk |Description of the preventive treatment
+
+|CurativeTreatment |Description of the curative treatment
+|===
+
+===== FAQ
+
+====== GitHub issue
+
+https://github.com/opengeospatial/Geotech/issues/44

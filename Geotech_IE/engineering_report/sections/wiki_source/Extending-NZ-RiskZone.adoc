@@ -1,0 +1,23 @@
+[[Extending-NZ-RiskZone]]
+==== What is an RiskZone according to INSPIRE:NZ?
+
+From the
+https://knowledge-base.inspire.ec.europa.eu/publications/inspire-data-specification-natural-risk-zones-technical-guidelines_en[INSPIRE
+Data Specification on Natural Risk Zones – Technical Guidelines]
+
+____
+Discrete spatial objects representing the spatial extent of a
+combination of the consequences of an event (hazard) and the associated
+probability/likelihood of its occurrence.
+____
+
+===== Geotech concept that can use this concept
+
+RiskZone is identified to realize the geotech concept called
+<<RiskZone>>.
+
+===== Proposed adjustments for geotech
+
+It is recommended to rely on ISO 19156 for the provision of the
+"`LevelOrIntensity`" estimation with the RiskZone being the
+FeatureOfInterest.
