@@ -11,6 +11,10 @@ If you are new to GitHub, instructions on its basic use are provided in this [Us
 
 ## Repository Contents
 
+### ISSMGE TC222
+The [ISSMGE TC222](https://github.com/opengeospatial/Geotech/ISSMGE_TC222) folder contains resources shared or presented during events from the ISSMGE TC222 dedicated to BIM and Digital Twins for Geotechnics. More information on this IE can be found at the [ISSMGE web page](https://www.issmge.org/committees/technical-committees/applications/geotechnical-bim-and-dt).
+
+
 ### Geotech IE
 The [Geotech_IE](https://github.com/opengeospatial/Geotech/Geotech_IE) folder contains resources associated with the OGC Geotech Interoperability Experiment (IE). More information on this IE can be found at the [OGC Geotech IE initiative page](https://www.ogc.org/projects/initiatives/geotechie).
 
